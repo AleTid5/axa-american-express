@@ -19,40 +19,37 @@ export default function ImageCarousel({ content }) {
       swipeScrollTolerance={5}
       className={classes.carouselBorderTop}
     >
-      {content.map(({ image, content }, key) => {
-        console.log(content);
-        return (
-          <div
-            key={key}
-            className={classes.carouselImage}
-            style={{
-              background: `url(${image}) center 40% no-repeat`,
-              backgroundSize: "cover",
-            }}
-          >
-            {content && (
-              <div className={classes.content}>
-                {content.title && (
-                  <div className={classes.title}>{content.title}</div>
-                )}
-                {content.subtitle && (
-                  <div className={classes.subtitle}>{content.subtitle}</div>
-                )}
-                {content.button && (
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    size="medium"
-                    className={classes.button}
-                  >
-                    {content.button}
-                  </Button>
-                )}
-              </div>
-            )}
-          </div>
-        );
-      })}
+      {content.map(({ image, content }, key) => (
+        <div
+          key={key}
+          className={classes.carouselImage}
+          style={{
+            background: `url(${image}) center 40% no-repeat`,
+            backgroundSize: "cover",
+          }}
+        >
+          {content && (
+            <div className={classes.content}>
+              {content.title && (
+                <div className={classes.title}>{content.title}</div>
+              )}
+              {content.subtitle && (
+                <div className={classes.subtitle}>{content.subtitle}</div>
+              )}
+              {content.button && (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="medium"
+                  className={classes.button}
+                >
+                  {content.button}
+                </Button>
+              )}
+            </div>
+          )}
+        </div>
+      ))}
     </Carousel>
   );
 }

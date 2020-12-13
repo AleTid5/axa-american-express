@@ -22,7 +22,7 @@ export default function navbar({ isAuthenticated }) {
           variant="contained"
           color="secondary"
           size="large"
-          className={`${classes.textPrimaryDark} ${classes.smallText} ${classes.marginRight10}`}
+          className={`${classes.textPrimaryDark} ${classes.smallText} ${classes.mr10}`}
         >
           Registrarme
         </Button>
