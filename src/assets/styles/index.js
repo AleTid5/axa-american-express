@@ -2,7 +2,7 @@ const styles = {
   whiteText: {
     color: "white",
   },
-  deepBlueText: {
+  textPrimaryDark: {
     color: "#0b276d",
   },
   smallText: {
