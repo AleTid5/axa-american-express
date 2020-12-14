@@ -4,11 +4,8 @@ import styles from "../../assets/styles";
 export default makeStyles((theme) =>
   createStyles({
     ...styles,
-    root: {
-      flexGrow: 1,
-    },
     appbar: {
-      backgroundColor: "white",
+      ...styles.whiteBackground,
       padding: "10px",
     },
     menuButton: {

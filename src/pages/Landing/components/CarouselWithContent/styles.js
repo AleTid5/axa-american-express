@@ -1,5 +1,5 @@
 import { createStyles, makeStyles } from "@material-ui/core/styles";
-import styles from "../../assets/styles";
+import styles from "../../../../assets/styles";
 
 export default makeStyles((theme) =>
   createStyles({
@@ -11,6 +11,9 @@ export default makeStyles((theme) =>
       height: 300,
       display: "grid",
       gridTemplateRows: "repeat(3, 1fr)",
+      [theme.breakpoints.up("lg")]: {
+        height: 400,
+      },
     },
     carouselArrow: {
       position: "absolute",
@@ -30,22 +33,31 @@ export default makeStyles((theme) =>
       ...styles.textPrimaryDark,
       fontSize: 30,
       fontWeight: "bold",
-      gridColumn: "13/20",
+      gridColumn: "1/20",
       gridRow: 1,
       textAlign: "right",
+      [theme.breakpoints.up("sm")]: {
+        gridColumn: "13/20",
+      },
     },
     subtitle: {
       ...styles.textPrimaryDark,
       fontSize: 18,
       textAlign: "right",
-      gridColumn: "-7 / span 5",
+      gridColumn: "1/20",
       gridRow: 2,
+      [theme.breakpoints.up("sm")]: {
+        gridColumn: "-7 / span 5",
+      },
     },
     button: {
       backgroundColor: theme.palette.primary.dark,
-      gridColumn: "16/20",
+      gridColumn: "10/20",
       gridRow: 3,
       marginTop: 10,
+      [theme.breakpoints.up("sm")]: {
+        gridColumn: "16/20",
+      },
     },
   })
 );

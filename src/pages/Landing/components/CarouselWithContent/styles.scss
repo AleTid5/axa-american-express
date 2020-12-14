@@ -1,5 +1,11 @@
+@import "../../../../assets/styles/scss";
+
 .carousel-slider {
   max-height: 300px;
+
+  @include media(lg) {
+    max-height: 400px;
+  }
 }
 
 .carousel.carousel-slider .control-arrow:hover {

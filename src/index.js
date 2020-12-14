@@ -4,14 +4,17 @@ import React, { StrictMode } from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "@material-ui/styles";
 import { CssBaseline } from "@material-ui/core";
-import Pages from "./pages";
 import theme from "./assets/styles/theme";
+import { LanguageProvider } from "./contexts/LanguageContext";
+import Pages from "./pages";
 
 ReactDOM.render(
   <StrictMode>
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Pages />
+      <LanguageProvider>
+        <CssBaseline />
+        <Pages />
+      </LanguageProvider>
     </ThemeProvider>
   </StrictMode>,
   document.getElementById("root")

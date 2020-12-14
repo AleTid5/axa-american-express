@@ -1,5 +1,5 @@
 import { createStyles, makeStyles } from "@material-ui/core/styles";
-import styles from "../../assets/styles";
+import styles from "../../../../assets/styles";
 
 export default makeStyles((theme) =>
   createStyles({
@@ -12,6 +12,7 @@ export default makeStyles((theme) =>
     container: {
       ...styles.mt50,
       textAlign: "center",
+      paddingBottom: 50,
     },
     typographyH4: {
       fontSize: "2rem",

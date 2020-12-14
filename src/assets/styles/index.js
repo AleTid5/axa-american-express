@@ -1,4 +1,10 @@
 const styles = {
+  alignSelfCenter: {
+    alignSelf: "center",
+  },
+  whiteBackground: {
+    backgroundColor: "white",
+  },
   whiteText: {
     color: "white",
   },
@@ -11,6 +17,9 @@ const styles = {
   mr10: {
     marginRight: "10px",
   },
+  mt5: {
+    marginTop: 5,
+  },
   mt10: {
     marginTop: 10,
   },
@@ -22,6 +31,9 @@ const styles = {
   },
   mt50: {
     marginTop: 50,
+  },
+  ml10: {
+    marginLeft: 10,
   },
 };
 

@@ -1,11 +1,12 @@
 import React from "react";
 import { Button } from "@material-ui/core";
 import { Carousel } from "react-responsive-carousel";
-import styles from "./styles";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { carouselContent } from "../../../../mocks/landing.mock";
+import styles from "./styles";
 import "./styles.scss";
 
-export default function ImageCarousel({ content }) {
+export default function ImageCarousel() {
   const classes = styles();
   return (
     <Carousel
@@ -19,7 +20,7 @@ export default function ImageCarousel({ content }) {
       swipeScrollTolerance={5}
       className={classes.carouselBorderTop}
     >
-      {content.map(({ image, content }, key) => (
+      {carouselContent.map(({ image, content }, key) => (
         <div
           key={key}
           className={classes.carouselImage}
