@@ -5,14 +5,24 @@ const styles = {
   whiteBackground: {
     backgroundColor: "white",
   },
-  whiteText: {
+  lightgreyBackground: {
+    backgroundColor: "#f1f1f1",
+  },
+  textWhite: {
     color: "white",
   },
   textPrimaryDark: {
     color: "#0b276d",
   },
+  textPrimaryBoldDark: {
+    color: "#0b276d",
+    fontWeight: 700,
+  },
   smallText: {
     fontSize: "10px",
+  },
+  boldText: {
+    fontWeight: 700,
   },
   mr10: {
     marginRight: "10px",

@@ -2,12 +2,17 @@ import React from "react";
 import { Button } from "@material-ui/core";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { carouselContent } from "../../../../mocks/landing.mock";
 import styles from "./styles";
 import "./styles.scss";
 
-export default function ImageCarousel() {
+export default function CarouselWithContent({
+  align = "right",
+  color = "primary",
+  withBorder = true,
+  carouselContent = [],
+}) {
   const classes = styles();
+  const className = (content) => classes[`${align}_${color}_${content}`];
   return (
     <Carousel
       autoPlay={false}
@@ -18,7 +23,7 @@ export default function ImageCarousel() {
       showIndicators={false}
       showThumbs={false}
       swipeScrollTolerance={5}
-      className={classes.carouselBorderTop}
+      className={withBorder ? classes.carouselBorderTop : null}
     >
       {carouselContent.map(({ image, content }, key) => (
         <div
@@ -30,19 +35,19 @@ export default function ImageCarousel() {
           }}
         >
           {content && (
-            <div className={classes.content}>
+            <div className={className("content")}>
               {content.title && (
-                <div className={classes.title}>{content.title}</div>
+                <div className={className("title")}>{content.title}</div>
               )}
               {content.subtitle && (
-                <div className={classes.subtitle}>{content.subtitle}</div>
+                <div className={className("subtitle")}>{content.subtitle}</div>
               )}
               {content.button && (
                 <Button
                   variant="contained"
                   color="primary"
                   size="medium"
-                  className={classes.button}
+                  className={className("button")}
                 >
                   {content.button}
                 </Button>
