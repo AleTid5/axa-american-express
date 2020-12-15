@@ -66,6 +66,7 @@ export const Authorized = ({ fullName }) => {
               to={path}
               exact
               activeClassName={classes.textPrimaryBoldDark}
+              className={classes.displayContents}
             >
               <span>{name}</span>
               <div className={classes.horizontalDivider} />

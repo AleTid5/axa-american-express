@@ -2,6 +2,9 @@ const styles = {
   alignSelfCenter: {
     alignSelf: "center",
   },
+  displayContents: {
+    display: "contents",
+  },
   whiteBackground: {
     backgroundColor: "white",
   },
@@ -24,6 +27,9 @@ const styles = {
   boldText: {
     fontWeight: 700,
   },
+  mb15: {
+    marginBottom: 15,
+  },
   mr10: {
     marginRight: "10px",
   },
@@ -38,6 +44,9 @@ const styles = {
   },
   mt30: {
     marginTop: 30,
+  },
+  mt40: {
+    marginTop: 40,
   },
   mt50: {
     marginTop: 50,

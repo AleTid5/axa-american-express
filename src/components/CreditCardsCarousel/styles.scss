@@ -1,0 +1,19 @@
+.slick-prev:before, .slick-next:before {
+  font-size: 30px;
+  line-height: 0;
+  color: #007ad5;
+}
+
+.slick-next:before {
+  content: '>';
+}
+
+.slick-prev:before {
+  content: '<';
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+  min-height: inherit;
+  display: flex;
+  align-items: flex-end;
+}
