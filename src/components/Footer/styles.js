@@ -22,6 +22,8 @@ export default makeStyles((theme) =>
       fontSize: 12,
       ...styles.textPrimaryDark,
       fontWeight: 700,
+      border: "1px solid #0b276d",
+      padding: 5,
     },
     actionsContainer: {
       padding: "16px 0 0 8px",

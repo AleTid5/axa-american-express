@@ -42,9 +42,6 @@ export default makeStyles((theme) =>
       [theme.breakpoints.up("lg")]: {
         height: 100,
       },
-      [theme.breakpoints.up("xl")]: {
-        height: 110,
-      },
     },
     horizontalDivider: {
       flexGrow: 1,
@@ -72,16 +69,16 @@ export default makeStyles((theme) =>
         fontSize: 16,
       },
       [theme.breakpoints.up("lg")]: {
-        marginRight: theme.spacing(3),
+        marginRight: theme.spacing(2),
         width: 220,
         height: 50,
         fontSize: 18,
       },
       [theme.breakpoints.up("xl")]: {
-        marginRight: theme.spacing(8),
-        width: 270,
-        height: 70,
-        fontSize: 20,
+        marginRight: theme.spacing(2),
+        width: 250,
+        height: 60,
+        fontSize: 18,
       },
     },
     menuList: {

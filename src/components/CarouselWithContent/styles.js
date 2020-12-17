@@ -71,7 +71,7 @@ export default makeStyles((theme) =>
       },
       [theme.breakpoints.up("xl")]: {
         gridColumn: "25/39",
-        fontSize: 60,
+        fontSize: 54,
         textAlign: "right",
       },
     },
@@ -101,7 +101,7 @@ export default makeStyles((theme) =>
       },
       [theme.breakpoints.up("xl")]: {
         gridColumn: "-14 / span 11",
-        fontSize: 40,
+        fontSize: 37,
         marginTop: -30,
         textAlign: "right",
       },
@@ -132,6 +132,7 @@ export default makeStyles((theme) =>
       [theme.breakpoints.up("xl")]: {
         gridColumn: "31/39",
         marginLeft: 35,
+        fontSize: 25,
         height: 70,
       },
     },
