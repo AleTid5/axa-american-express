@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/axa-american-express/static/css/main.8b17ebb6.chunk.css",
-    "main.js": "/axa-american-express/static/js/main.2044e005.chunk.js",
-    "main.js.map": "/axa-american-express/static/js/main.2044e005.chunk.js.map",
+    "main.js": "/axa-american-express/static/js/main.fb18d03c.chunk.js",
+    "main.js.map": "/axa-american-express/static/js/main.fb18d03c.chunk.js.map",
     "runtime-main.js": "/axa-american-express/static/js/runtime-main.8edc30a6.js",
     "runtime-main.js.map": "/axa-american-express/static/js/runtime-main.8edc30a6.js.map",
     "static/css/2.428a3974.chunk.css": "/axa-american-express/static/css/2.428a3974.chunk.css",
@@ -29,6 +29,6 @@
     "static/css/2.428a3974.chunk.css",
     "static/js/2.5c2ef7d1.chunk.js",
     "static/css/main.8b17ebb6.chunk.css",
-    "static/js/main.2044e005.chunk.js"
+    "static/js/main.fb18d03c.chunk.js"
   ]
 }
