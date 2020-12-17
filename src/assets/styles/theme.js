@@ -42,4 +42,14 @@ export default createMuiTheme({
       },
     },
   },
+  breakpoints: {
+    values: {
+      xxs: 0,
+      xs: 320,
+      sm: 576,
+      md: 960,
+      lg: 1200,
+      xl: 1920,
+    },
+  },
 });

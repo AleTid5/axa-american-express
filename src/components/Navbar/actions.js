@@ -25,7 +25,7 @@ export const Unauthorized = () => {
         variant="contained"
         color="secondary"
         size="large"
-        className={`${classes.textPrimaryDark} ${classes.smallText} ${classes.mr10}`}
+        className={`${classes.button} ${classes.textPrimaryDark}`}
       >
         Registrarme
       </Button>
@@ -33,7 +33,7 @@ export const Unauthorized = () => {
         variant="contained"
         color="primary"
         size="large"
-        className={classes.smallText}
+        className={classes.button}
         component={Link}
         to="/home"
       >

@@ -1,5 +1,7 @@
-import { Redeem, CardMembership, QuestionAnswer } from "@material-ui/icons";
-import AMEX01 from "../assets/images/AMEX-landing-1.jpg";
+import AMEX01 from "../assets/images/banner-home.jpg";
+import IconGift from "../assets/icons/ico-beneficios-azul.png";
+import IconCert from "../assets/icons/ico-certificados-azul.png";
+import IconClaim from "../assets/icons/ico-reclamo-azul.png";
 
 export const carouselContent = [
   {
@@ -17,19 +19,19 @@ export const carouselContent = [
 
 export const appFeatures = [
   {
-    icon: Redeem,
+    icon: IconGift,
     title: "Beneficios",
     description:
       "Al ser socio de American Express, a la hora de viajar cuentas con múltiples beneficios pensados para tu tranquilidad.",
   },
   {
-    icon: CardMembership,
+    icon: IconCert,
     title: "Certificados",
     description:
       "En tan solo unos minutos podrás generar tu certificado de viaje, de forma 100% online, desde cualquier dispositivo antes o después de viajar.",
   },
   {
-    icon: QuestionAnswer,
+    icon: IconClaim,
     title: "Reclamos",
     description:
       "Ante cualquier inconveniente, tendrás la posibilidad de gestionar tus reclamos de forma online y hacer seguimiento a cualquier hora.",

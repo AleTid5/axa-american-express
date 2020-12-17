@@ -36,12 +36,20 @@ export default function Footer() {
             </FormControl>
           </Box>
           <Box flexShrink={1} className={classes.mt10}>
-            <Link href="#" onClick={({ preventDefault }) => preventDefault()}>
+            <Link
+              href="#"
+              onClick={({ preventDefault }) => preventDefault()}
+              style={{ textDecoration: "underline" }}
+            >
               FAQ
             </Link>
           </Box>
           <Box flexShrink={0} className={`${classes.mt10} ${classes.ml10}`}>
-            <Link href="#" onClick={({ preventDefault }) => preventDefault()}>
+            <Link
+              href="#"
+              onClick={({ preventDefault }) => preventDefault()}
+              style={{ textDecoration: "underline" }}
+            >
               Contactanos
             </Link>
           </Box>
@@ -51,6 +59,7 @@ export default function Footer() {
             href="#"
             onClick={({ preventDefault }) => preventDefault()}
             variant="caption"
+            style={{ textDecoration: "underline" }}
           >
             Requisitos Regulatorios
           </Link>
@@ -59,6 +68,7 @@ export default function Footer() {
             className={classes.ml10}
             onClick={({ preventDefault }) => preventDefault()}
             variant="caption"
+            style={{ textDecoration: "underline" }}
           >
             Términos y Condiciones
           </Link>
@@ -67,6 +77,7 @@ export default function Footer() {
             className={classes.ml10}
             onClick={({ preventDefault }) => preventDefault()}
             variant="caption"
+            style={{ textDecoration: "underline" }}
           >
             Política de Privacidad
           </Link>

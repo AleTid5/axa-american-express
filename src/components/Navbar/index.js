@@ -1,7 +1,7 @@
 import React from "react";
 import { AppBar, IconButton, Toolbar } from "@material-ui/core";
 import styles from "./styles";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.jpg";
 import { Authorized, Unauthorized } from "./actions";
 
 export default function navbar({ isAuthenticated = true, fullName }) {

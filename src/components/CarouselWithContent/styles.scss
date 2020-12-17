@@ -3,8 +3,16 @@
 .carousel-slider {
   max-height: 300px;
 
-  @include media(lg) {
+  @include media(md) {
     max-height: 400px;
+  }
+
+  @include media(lg) {
+    max-height: 500px;
+  }
+
+  @include media(xl) {
+    max-height: 600px;
   }
 }
 

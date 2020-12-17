@@ -4,7 +4,7 @@ import {
   CardMembership,
   QuestionAnswer,
 } from "@material-ui/icons";
-import ShutterStock from "../assets/images/shutterstock_315931403.jpg";
+import ShutterStock from "../assets/images/banner-user.jpg";
 
 export const carouselContent = [
   {

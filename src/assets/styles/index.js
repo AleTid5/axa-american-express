@@ -51,6 +51,9 @@ const styles = {
   mt50: {
     marginTop: 50,
   },
+  mt100: {
+    marginTop: 100,
+  },
   ml10: {
     marginLeft: 10,
   },

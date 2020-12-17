@@ -1,7 +1,7 @@
-import CreditCard1 from "../assets/images/aerolineasplus_di_1920x1216.png";
-import CreditCard2 from "../assets/images/chg_green_2019_di_arg_1920x1216.png";
-import CreditCard3 from "../assets/images/chg_plat_2018_di_arg_1920x1216.png";
-import CreditCard4 from "../assets/images/grcc_plat_di_arg_1920x1216.png";
+import CreditCard1 from "../assets/images/card-aaplus.png";
+import CreditCard2 from "../assets/images/card-green.png";
+import CreditCard3 from "../assets/images/card-platinum-cc.png";
+import CreditCard4 from "../assets/images/card-platinum.png";
 
 export const creditsCards = [
   {
@@ -24,9 +24,8 @@ export const creditsCards = [
     name: "The Platinum Credit Card®",
     number: "3764XX00000",
   },
-  ,
   {
-    image: CreditCard4,
+    image: CreditCard2,
     name: "The Platinum Credit Card®",
     number: "3764XX00000",
   },

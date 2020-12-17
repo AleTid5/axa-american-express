@@ -30,7 +30,7 @@ export default function CarouselWithContent({
           key={key}
           className={classes.carouselImage}
           style={{
-            background: `url(${image}) center 40% no-repeat`,
+            background: `url(${image}) center 100% no-repeat`,
             backgroundSize: "cover",
           }}
         >
