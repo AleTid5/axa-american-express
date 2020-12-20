@@ -1,34 +1,37 @@
 {
   "files": {
-    "main.css": "/axa-american-express/static/css/main.8b17ebb6.chunk.css",
-    "main.js": "/axa-american-express/static/js/main.66e6f1f9.chunk.js",
-    "main.js.map": "/axa-american-express/static/js/main.66e6f1f9.chunk.js.map",
+    "main.css": "/axa-american-express/static/css/main.3dda53b6.chunk.css",
+    "main.js": "/axa-american-express/static/js/main.ca979797.chunk.js",
+    "main.js.map": "/axa-american-express/static/js/main.ca979797.chunk.js.map",
     "runtime-main.js": "/axa-american-express/static/js/runtime-main.8edc30a6.js",
     "runtime-main.js.map": "/axa-american-express/static/js/runtime-main.8edc30a6.js.map",
-    "static/css/2.428a3974.chunk.css": "/axa-american-express/static/css/2.428a3974.chunk.css",
-    "static/js/2.1cb0995f.chunk.js": "/axa-american-express/static/js/2.1cb0995f.chunk.js",
-    "static/js/2.1cb0995f.chunk.js.map": "/axa-american-express/static/js/2.1cb0995f.chunk.js.map",
+    "static/css/2.011c9eef.chunk.css": "/axa-american-express/static/css/2.011c9eef.chunk.css",
+    "static/js/2.939aaff4.chunk.js": "/axa-american-express/static/js/2.939aaff4.chunk.js",
+    "static/js/2.939aaff4.chunk.js.map": "/axa-american-express/static/js/2.939aaff4.chunk.js.map",
     "index.html": "/axa-american-express/index.html",
-    "static/css/2.428a3974.chunk.css.map": "/axa-american-express/static/css/2.428a3974.chunk.css.map",
-    "static/css/main.8b17ebb6.chunk.css.map": "/axa-american-express/static/css/main.8b17ebb6.chunk.css.map",
-    "static/js/2.1cb0995f.chunk.js.LICENSE.txt": "/axa-american-express/static/js/2.1cb0995f.chunk.js.LICENSE.txt",
+    "static/css/2.011c9eef.chunk.css.map": "/axa-american-express/static/css/2.011c9eef.chunk.css.map",
+    "static/css/main.3dda53b6.chunk.css.map": "/axa-american-express/static/css/main.3dda53b6.chunk.css.map",
+    "static/js/2.939aaff4.chunk.js.LICENSE.txt": "/axa-american-express/static/js/2.939aaff4.chunk.js.LICENSE.txt",
     "static/media/BentonSans-Bold.86cfda7e.ttf": "/axa-american-express/static/media/BentonSans-Bold.86cfda7e.ttf",
     "static/media/BentonSans-Book.6fb8fd1f.ttf": "/axa-american-express/static/media/BentonSans-Book.6fb8fd1f.ttf",
     "static/media/BentonSans-Light.a3c899c2.ttf": "/axa-american-express/static/media/BentonSans-Light.a3c899c2.ttf",
     "static/media/BentonSans-Medium.3cd826c4.ttf": "/axa-american-express/static/media/BentonSans-Medium.3cd826c4.ttf",
-    "static/media/banner-home.be9aa240.jpg": "/axa-american-express/static/media/banner-home.be9aa240.jpg",
-    "static/media/banner-user.9ed5a700.jpg": "/axa-american-express/static/media/banner-user.9ed5a700.jpg",
     "static/media/card-aaplus.6e3e77dd.png": "/axa-american-express/static/media/card-aaplus.6e3e77dd.png",
     "static/media/card-green.a5629fff.png": "/axa-american-express/static/media/card-green.a5629fff.png",
     "static/media/card-platinum-cc.91905aea.png": "/axa-american-express/static/media/card-platinum-cc.91905aea.png",
     "static/media/card-platinum.23ecdc79.png": "/axa-american-express/static/media/card-platinum.23ecdc79.png",
-    "static/media/slick-theme.css": "/axa-american-express/static/media/slick.c94f7671.ttf"
+    "static/media/slick-theme.css": "/axa-american-express/static/media/slick.c94f7671.ttf",
+    "static/media/slider-home.7a14ffe8.png": "/axa-american-express/static/media/slider-home.7a14ffe8.png",
+    "static/media/slider-home1.e6656961.png": "/axa-american-express/static/media/slider-home1.e6656961.png",
+    "static/media/slider-landing.87d876df.jpg": "/axa-american-express/static/media/slider-landing.87d876df.jpg",
+    "static/media/slider-landing1.004658cd.png": "/axa-american-express/static/media/slider-landing1.004658cd.png",
+    "static/media/slider-landing2.a3ec602b.png": "/axa-american-express/static/media/slider-landing2.a3ec602b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.8edc30a6.js",
-    "static/css/2.428a3974.chunk.css",
-    "static/js/2.1cb0995f.chunk.js",
-    "static/css/main.8b17ebb6.chunk.css",
-    "static/js/main.66e6f1f9.chunk.js"
+    "static/css/2.011c9eef.chunk.css",
+    "static/js/2.939aaff4.chunk.js",
+    "static/css/main.3dda53b6.chunk.css",
+    "static/js/main.ca979797.chunk.js"
   ]
 }
