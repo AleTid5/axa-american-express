@@ -7,14 +7,10 @@ export default function HomeHeader({ name }) {
   return (
     <div className={classes.lightgreyBackground}>
       <Container className={classes.container}>
-        <Typography variant="h4" color="primary" className={classes.boldText}>
+        <Typography variant="h4" color="primary" className={classes.title}>
           Hola {name},
         </Typography>
-        <Typography
-          variant="h6"
-          color="primary"
-          classes={{ h6: classes.typographyH6 }}
-        >
+        <Typography variant="h6" color="primary" className={classes.subtitle}>
           ¿Con qué te podemos ayudar hoy?
         </Typography>
       </Container>

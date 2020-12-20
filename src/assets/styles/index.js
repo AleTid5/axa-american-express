@@ -5,6 +5,9 @@ const styles = {
   displayContents: {
     display: "contents",
   },
+  displayFlex: {
+    display: "flex",
+  },
   whiteBackground: {
     backgroundColor: "white",
   },
@@ -23,6 +26,9 @@ const styles = {
   },
   smallText: {
     fontSize: "10px",
+  },
+  semiBoldText: {
+    fontWeight: 500,
   },
   boldText: {
     fontWeight: 700,

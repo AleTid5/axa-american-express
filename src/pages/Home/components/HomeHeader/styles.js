@@ -8,8 +8,49 @@ export default makeStyles((theme) =>
       padding: "20px 0 20px",
       textAlign: "center",
     },
-    typographyH6: {
+    title: {
+      fontWeight: 600,
+      fontSize: 18,
+      [theme.breakpoints.up("xs")]: {
+        fontSize: 24,
+      },
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 30,
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 40,
+      },
+      [theme.breakpoints.up("lg")]: {
+        fontSize: 56,
+      },
+      [theme.breakpoints.up("xl")]: {
+        fontSize: 64,
+      },
+    },
+    subtitle: {
       fontWeight: 300,
+      fontSize: 15,
+      [theme.breakpoints.up("xs")]: {
+        fontSize: 18,
+      },
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 20,
+        marginTop: 5,
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 26,
+        marginTop: 15,
+      },
+      [theme.breakpoints.up("lg")]: {
+        fontSize: 36,
+        marginTop: 15,
+        marginBottom: 10,
+      },
+      [theme.breakpoints.up("xl")]: {
+        fontSize: 42,
+        marginBottom: 20,
+        marginTop: 20,
+      },
     },
   })
 );

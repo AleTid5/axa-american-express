@@ -87,16 +87,135 @@ export default makeStyles((theme) =>
       backgroundColor: "#e9e9e9",
     },
     menuPaper: {
-      marginTop: 0,
+      marginTop: 45,
+      [theme.breakpoints.up("md")]: {
+        marginTop: 55,
+      },
+      [theme.breakpoints.up("lg")]: {
+        marginTop: 70,
+      },
+    },
+    menuItem: {
+      width: 180,
+      height: 40,
+      [theme.breakpoints.up("sm")]: {
+        width: 190,
+      },
+      [theme.breakpoints.up("md")]: {
+        width: 220,
+      },
+      [theme.breakpoints.up("lg")]: {
+        width: 240,
+      },
+      [theme.breakpoints.up("xl")]: {
+        width: 270,
+        height: 50,
+      },
+    },
+    menuName: {
+      fontSize: 16,
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 16,
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 18,
+      },
+      [theme.breakpoints.up("xl")]: {
+        fontSize: 22,
+      },
+    },
+    menuRightArrowIcon: {
+      fontSize: 18,
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 20,
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 22,
+      },
+      [theme.breakpoints.up("xl")]: {
+        fontSize: 30,
+      },
     },
     userIcon: {
       marginTop: 12,
+      maxWidth: 20,
+      [theme.breakpoints.up("xs")]: {
+        maxWidth: 30,
+      },
+      [theme.breakpoints.up("sm")]: {
+        maxWidth: 40,
+      },
+      [theme.breakpoints.up("md")]: {
+        maxWidth: 50,
+      },
+      [theme.breakpoints.up("lg")]: {
+        maxWidth: 70,
+      },
+      [theme.breakpoints.up("xl")]: {
+        maxWidth: 100,
+      },
     },
     userName: {
-      margin: "12px 0 0 12px",
       color: "#007ad5",
       fontWeight: 700,
-      fontSize: 14,
+      lineHeight: 2,
+      margin: "10px 0 0 6px",
+      fontSize: 12,
+      [theme.breakpoints.up("xs")]: {
+        margin: "12px 0 0 12px",
+        fontSize: 16,
+      },
+      [theme.breakpoints.up("sm")]: {
+        margin: "12px 0 0 12px",
+        fontSize: 22,
+      },
+      [theme.breakpoints.up("md")]: {
+        margin: "12px 0 0 12px",
+        fontSize: 25,
+        lineHeight: 2,
+      },
+      [theme.breakpoints.up("lg")]: {
+        margin: "12px 0 0 12px",
+        fontSize: 28,
+        lineHeight: 2.3,
+      },
+      [theme.breakpoints.up("xl")]: {
+        margin: "12px 0 0 12px",
+        fontSize: 32,
+        lineHeight: 2,
+      },
+    },
+    menuIcon: {
+      [theme.breakpoints.up(0)]: {
+        padding: 3,
+      },
+      [theme.breakpoints.up("xs")]: {
+        padding: 12,
+      },
+    },
+    arrowIcon: {
+      marginTop: 6,
+      fontSize: 25,
+      [theme.breakpoints.up("xs")]: {
+        marginTop: 3,
+        fontSize: 25,
+      },
+      [theme.breakpoints.up("sm")]: {
+        ...styles.mt5,
+        fontSize: 32,
+      },
+      [theme.breakpoints.up("md")]: {
+        ...styles.mt5,
+        fontSize: 40,
+      },
+      [theme.breakpoints.up("lg")]: {
+        ...styles.mt5,
+        fontSize: 45,
+      },
+      [theme.breakpoints.up("xl")]: {
+        ...styles.mt5,
+        fontSize: 50,
+      },
     },
   })
 );

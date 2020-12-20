@@ -10,10 +10,37 @@ import {
 } from "@material-ui/core";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import styles from "./styles";
+import useScreenResizer from "../../customHooks/useScreenResizer";
+import { brown } from "@material-ui/core/colors";
 
 export default function Footer() {
   const { language, setLanguage, languages } = useContext(LanguageContext);
+  const [{ width }] = useScreenResizer();
   const classes = styles();
+  const isTinyMobile = width < 270;
+
+  const FAQLinks = () => (
+    <>
+      <Box flexShrink={1} className={classes.mt10}>
+        <Link
+          href="#"
+          onClick={({ preventDefault }) => preventDefault()}
+          style={{ textDecoration: "underline" }}
+        >
+          FAQ
+        </Link>
+      </Box>
+      <Box flexShrink={0} className={`${classes.mt10} ${classes.ml10}`}>
+        <Link
+          href="#"
+          onClick={({ preventDefault }) => preventDefault()}
+          style={{ textDecoration: "underline" }}
+        >
+          Contactanos
+        </Link>
+      </Box>
+    </>
+  );
 
   return (
     <div className={classes.appFooter}>
@@ -35,25 +62,13 @@ export default function Footer() {
               </Select>
             </FormControl>
           </Box>
-          <Box flexShrink={1} className={classes.mt10}>
-            <Link
-              href="#"
-              onClick={({ preventDefault }) => preventDefault()}
-              style={{ textDecoration: "underline" }}
-            >
-              FAQ
-            </Link>
-          </Box>
-          <Box flexShrink={0} className={`${classes.mt10} ${classes.ml10}`}>
-            <Link
-              href="#"
-              onClick={({ preventDefault }) => preventDefault()}
-              style={{ textDecoration: "underline" }}
-            >
-              Contactanos
-            </Link>
-          </Box>
+          {!isTinyMobile && <FAQLinks />}
         </Box>
+        {isTinyMobile && (
+          <Box display="flex" style={{ padding: "8px 0 0 8px" }}>
+            <FAQLinks />
+          </Box>
+        )}
         <Box display="flex" className={classes.actionsContainer}>
           <Link
             href="#"

@@ -1,7 +1,7 @@
 @import "../../assets/styles/scss/index";
 
 .carousel-slider {
-  max-height: 300px;
+  /*max-height: 300px;
 
   @include media(md) {
     max-height: 400px;
@@ -13,6 +13,12 @@
 
   @include media(xl) {
     max-height: 600px;
+  }*/
+
+  .slider-wrapper {
+    .slide {
+      background: transparent;
+    }
   }
 }
 

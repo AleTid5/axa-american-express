@@ -1,19 +1,24 @@
-import AMEX01 from "../assets/images/banner-home.jpg";
+import imageLanding1 from "../assets/images/slider-landing.jpg";
+import imageLanding2 from "../assets/images/slider-landing1.png";
+import imageLanding3 from "../assets/images/slider-landing2.png";
 import IconGift from "../assets/icons/ico-beneficios-azul.png";
 import IconCert from "../assets/icons/ico-certificados-azul.png";
 import IconClaim from "../assets/icons/ico-reclamo-azul.png";
 
 export const carouselContent = [
   {
-    image: AMEX01,
-    content: {
+    image: imageLanding1,
+    /*content: {
       title: "¿Estás por irte de viaje?",
       subtitle: "Genera tu certificado de viaje y disfruta sin preocupaciones",
       button: "Generá certificados",
-    },
+    },*/
   },
   {
-    image: AMEX01,
+    image: imageLanding2,
+  },
+  {
+    image: imageLanding3,
   },
 ];
 

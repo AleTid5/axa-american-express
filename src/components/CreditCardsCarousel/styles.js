@@ -15,6 +15,38 @@ export default makeStyles((theme) =>
       ...styles.mt30,
       padding: "0 32px 0 32px",
     },
+    cardTitle: {
+      fontSize: 12,
+      whiteSpace: "nowrap",
+      paddingBottom: 15,
+      [theme.breakpoints.up(264)]: {
+        fontSize: 14,
+      },
+      [theme.breakpoints.up("xs")]: {
+        fontSize: 16,
+        paddingBottom: 30,
+      },
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 16,
+        paddingBottom: 20,
+      },
+      [theme.breakpoints.up(601)]: {
+        fontSize: 16,
+        paddingBottom: 0,
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 18,
+        paddingBottom: 30,
+      },
+      [theme.breakpoints.up("lg")]: {
+        fontSize: 23,
+        paddingBottom: 50,
+      },
+      [theme.breakpoints.up("xl")]: {
+        fontSize: 30,
+        paddingBottom: 0,
+      },
+    },
     creditCard: {
       padding: 10,
       textAlign: "center",
@@ -41,11 +73,13 @@ export default makeStyles((theme) =>
     title: {
       ...styles.mt5,
       color: "#949494",
+      whiteSpace: "nowrap",
     },
     selectedTitle: {
       ...styles.mt5,
       color: "black",
       fontWeight: 700,
+      whiteSpace: "nowrap",
     },
     subtitle: {
       color: "#949494",

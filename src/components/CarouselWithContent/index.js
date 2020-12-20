@@ -13,6 +13,38 @@ export default function CarouselWithContent({
 }) {
   const classes = styles();
   const className = (content) => classes[`${align}_${color}_${content}`];
+
+  const ImageWithContent = ({ content, image }) => (
+    <div
+      className={classes.carouselImage}
+      style={{
+        background: `url(${image}) center 100% no-repeat`,
+        backgroundSize: "cover",
+      }}
+    >
+      {content && (
+        <div className={className("content")}>
+          {content.title && (
+            <div className={className("title")}>{content.title}</div>
+          )}
+          {content.subtitle && (
+            <div className={className("subtitle")}>{content.subtitle}</div>
+          )}
+          {content.button && (
+            <Button
+              variant="contained"
+              color="primary"
+              size="medium"
+              className={className("button")}
+            >
+              {content.button}
+            </Button>
+          )}
+        </div>
+      )}
+    </div>
+  );
+
   return (
     <Carousel
       autoPlay={false}
@@ -25,37 +57,13 @@ export default function CarouselWithContent({
       swipeScrollTolerance={5}
       className={withBorder ? classes.carouselBorderTop : null}
     >
-      {carouselContent.map(({ image, content }, key) => (
-        <div
-          key={key}
-          className={classes.carouselImage}
-          style={{
-            background: `url(${image}) center 100% no-repeat`,
-            backgroundSize: "cover",
-          }}
-        >
-          {content && (
-            <div className={className("content")}>
-              {content.title && (
-                <div className={className("title")}>{content.title}</div>
-              )}
-              {content.subtitle && (
-                <div className={className("subtitle")}>{content.subtitle}</div>
-              )}
-              {content.button && (
-                <Button
-                  variant="contained"
-                  color="primary"
-                  size="medium"
-                  className={className("button")}
-                >
-                  {content.button}
-                </Button>
-              )}
-            </div>
-          )}
-        </div>
-      ))}
+      {carouselContent.map(({ image, content }, key) =>
+        content ? (
+          <ImageWithContent key={key} image={image} content={content} />
+        ) : (
+          <img alt="" src={image} />
+        )
+      )}
     </Carousel>
   );
 }

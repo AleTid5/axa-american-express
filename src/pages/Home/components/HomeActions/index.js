@@ -4,56 +4,43 @@ import { actions } from "../../../../mocks/home.mock";
 import styles from "./styles";
 import useScreenResizer from "../../../../customHooks/useScreenResizer";
 
-const box = {
-  width: 165,
-  height: 130,
-};
-const gridRootStyle = (showAsBoxes) =>
-  showAsBoxes
-    ? {
-        height: box.height / 2,
-        top: -box.height / 2,
-      }
-    : {
-        height: "auto",
-        top: 0,
-      };
-
 export default function HomeActions() {
   const [{ width }] = useScreenResizer();
   const classes = styles();
-  const maxScreenWidth = box.width * 4 + 2; // Borders
-  const showAsBoxes = width >= maxScreenWidth;
-  const isMiddleAction = (key) => key !== 0 && key !== actions.length - 1;
+  const isMobile = width < 576;
+  const isMiddleBox = (key) => key !== 0 && key !== actions.length - 1;
 
   return (
-    <div className={classes.gridRoot} style={gridRootStyle(showAsBoxes)}>
+    <div className={classes.gridRoot}>
       <Grid container className={classes.root}>
-        {actions.map(({ icon: Icon, title, backgroundColor, color }, key) => (
+        {actions.map(({ icon, title, backgroundColor, color }, key) => (
           <Grid
             key={key}
             item
-            style={{
-              borderRight:
-                showAsBoxes && isMiddleAction(key) ? "1px solid #c5c5c5" : 0,
-              borderBottom:
-                !showAsBoxes && isMiddleAction(key) ? "1px solid #c5c5c5" : 0,
-            }}
-            {...(!showAsBoxes && { xs: 12 })}
+            {...(isMobile && { xs: 12 })}
+            className={classes.boxContainer}
           >
             <div
               style={{
                 backgroundColor,
                 color,
-                width: showAsBoxes ? box.width : "100%",
               }}
-              className={classes.box}
+              className={`${classes.box} ${
+                isMiddleBox(key) &&
+                (isMobile ? classes.borderBottom : classes.borderRight)
+              }`}
             >
               <div>
                 <div>
-                  <Icon className={classes.icon} />
+                  <img alt="" src={icon} className={classes.icon} />
                 </div>
-                <div className={classes.title}>{title}</div>
+                <div
+                  className={`${classes.title} ${
+                    key ? classes.semiBoldText : classes.boldText
+                  }`}
+                >
+                  {title}
+                </div>
               </div>
             </div>
           </Grid>

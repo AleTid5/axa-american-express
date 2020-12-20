@@ -9,11 +9,11 @@ import {
   MenuItem,
 } from "@material-ui/core";
 import {
-  AccountCircleOutlined,
   KeyboardArrowDown,
   KeyboardArrowRight,
   KeyboardArrowUp,
 } from "@material-ui/icons";
+import userIcon from "../../assets/icons/ico-user.png";
 import { actions } from "../../mocks/navbar.mock";
 import styles from "./styles";
 
@@ -61,16 +61,16 @@ export const Authorized = ({ fullName }) => {
       {actions.map(({ name, path }, key) => (
         <div key={key}>
           {key !== 0 && <Divider />}
-          <MenuItem>
+          <MenuItem className={classes.menuItem}>
             <NavLink
               to={path}
               exact
               activeClassName={classes.textPrimaryBoldDark}
               className={classes.displayContents}
             >
-              <span>{name}</span>
+              <span className={classes.menuName}>{name}</span>
               <div className={classes.horizontalDivider} />
-              <KeyboardArrowRight />
+              <KeyboardArrowRight className={classes.menuRightArrowIcon} />
             </NavLink>
           </MenuItem>
         </div>
@@ -82,19 +82,24 @@ export const Authorized = ({ fullName }) => {
     <>
       <Box display="flex">
         <Box>
-          <AccountCircleOutlined color="primary" className={classes.userIcon} />
+          <img alt="" src={userIcon} className={classes.userIcon} />
         </Box>
         <Box>
           <div className={classes.userName}>{fullName}</div>
         </Box>
-        <Box>
+        <Box className={classes.displayFlex}>
           <IconButton
             edge="end"
             aria-label="account of current user"
             color="primary"
             onClick={({ currentTarget }) => setAnchorEl(currentTarget)}
+            className={classes.menuIcon}
           >
-            {anchorEl ? <KeyboardArrowUp /> : <KeyboardArrowDown />}
+            {anchorEl ? (
+              <KeyboardArrowUp className={classes.arrowIcon} />
+            ) : (
+              <KeyboardArrowDown className={classes.arrowIcon} />
+            )}
           </IconButton>
         </Box>
       </Box>

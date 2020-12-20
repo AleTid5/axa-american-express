@@ -13,7 +13,11 @@ export default function CreditCardsCarousel({ creditCards }) {
 
   return (
     <Container fixed className={classes.container}>
-      <Typography variant="h6" style={{ textAlign: "center" }}>
+      <Typography
+        variant="h6"
+        classes={{ h6: classes.cardTitle }}
+        style={{ textAlign: "center" }}
+      >
         Tus tarjetas American Express
       </Typography>
       <Slider
