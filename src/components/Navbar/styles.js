@@ -20,13 +20,73 @@ export default makeStyles((theme) =>
         height: 180,
       },
     },
-    menuButton: {
-      marginLeft: theme.spacing(0),
-      padding: "12px 12px 12px 0",
-      [theme.breakpoints.up("sm")]: {
-        marginLeft: theme.spacing(2),
-        padding: 12,
+    toolbar: {
+      display: "grid",
+      gridTemplateColumns: "20% 0 80%",
+      [theme.breakpoints.up("xs")]: {
+        gridTemplateColumns: "15% 0 85%",
       },
+    },
+    toolbarWithShortcuts: {
+      display: "grid",
+      gridTemplateColumns: "20% 0 80%",
+      [theme.breakpoints.up("sm")]: {
+        gridTemplateColumns: "10% 50% 40%",
+      },
+      [theme.breakpoints.up(796)]: {
+        gridTemplateColumns: "10% 60% 30%",
+      },
+      [theme.breakpoints.up("md")]: {
+        gridTemplateColumns: "15% 60% 25%",
+      },
+      [theme.breakpoints.up("lg")]: {
+        gridTemplateColumns: "15% 60% 25%",
+      },
+      [theme.breakpoints.up("xl")]: {
+        gridTemplateColumns: "20% 60% 20%",
+      },
+    },
+    menuButton: {
+      gridColumn: 1,
+      display: "flex",
+      justifyContent: "flex-start",
+      marginLeft: theme.spacing(0),
+      padding: 0,
+      [theme.breakpoints.up("lg")]: {
+        marginLeft: theme.spacing(2),
+      },
+    },
+    shortcutsContainer: {
+      gridColumn: 2,
+      justifyContent: "center",
+    },
+    shortcutTitle: {
+      ...styles.textPrimaryDark,
+      textAlign: "center",
+      display: "none",
+      [theme.breakpoints.up(796)]: {
+        gridTemplateColumns: "10% 60% 30%",
+        display: "inline",
+        fontSize: 14,
+        maxWidth: 100,
+      },
+      [theme.breakpoints.up("md")]: {
+        fontSize: 18,
+        maxWidth: 130,
+      },
+      [theme.breakpoints.up("lg")]: {
+        fontSize: 20,
+        maxWidth: 140,
+      },
+      [theme.breakpoints.up("xl")]: {
+        fontSize: 30,
+        maxWidth: 210,
+      },
+    },
+    rightContent: {
+      gridColumn: 3,
+      display: "flex",
+      justifyContent: "flex-end",
     },
     logo: {
       height: 30,

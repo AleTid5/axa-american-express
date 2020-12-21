@@ -11,7 +11,6 @@ import {
 import { LanguageContext } from "../../contexts/LanguageContext";
 import styles from "./styles";
 import useScreenResizer from "../../customHooks/useScreenResizer";
-import { brown } from "@material-ui/core/colors";
 
 export default function Footer() {
   const { language, setLanguage, languages } = useContext(LanguageContext);

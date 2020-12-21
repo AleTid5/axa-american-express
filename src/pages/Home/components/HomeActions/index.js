@@ -3,6 +3,7 @@ import { Grid } from "@material-ui/core";
 import { actions } from "../../../../mocks/home.mock";
 import styles from "./styles";
 import useScreenResizer from "../../../../customHooks/useScreenResizer";
+import { NavLink } from "react-router-dom";
 
 export default function HomeActions() {
   const [{ width }] = useScreenResizer();
@@ -13,36 +14,38 @@ export default function HomeActions() {
   return (
     <div className={classes.gridRoot}>
       <Grid container className={classes.root}>
-        {actions.map(({ icon, title, backgroundColor, color }, key) => (
+        {actions.map(({ icon, title, backgroundColor, color, path }, key) => (
           <Grid
             key={key}
             item
             {...(isMobile && { xs: 12 })}
             className={classes.boxContainer}
           >
-            <div
-              style={{
-                backgroundColor,
-                color,
-              }}
-              className={`${classes.box} ${
-                isMiddleBox(key) &&
-                (isMobile ? classes.borderBottom : classes.borderRight)
-              }`}
-            >
-              <div>
+            <NavLink key={key} to={path} exact>
+              <div
+                style={{
+                  backgroundColor,
+                  color,
+                }}
+                className={`${classes.box} ${
+                  isMiddleBox(key) &&
+                  (isMobile ? classes.borderBottom : classes.borderRight)
+                }`}
+              >
                 <div>
-                  <img alt="" src={icon} className={classes.icon} />
-                </div>
-                <div
-                  className={`${classes.title} ${
-                    key ? classes.semiBoldText : classes.boldText
-                  }`}
-                >
-                  {title}
+                  <div>
+                    <img alt="" src={icon} className={classes.icon} />
+                  </div>
+                  <div
+                    className={`${classes.title} ${
+                      key ? classes.semiBoldText : classes.boldText
+                    }`}
+                  >
+                    {title}
+                  </div>
                 </div>
               </div>
-            </div>
+            </NavLink>
           </Grid>
         ))}
       </Grid>

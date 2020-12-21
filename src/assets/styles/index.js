@@ -8,14 +8,23 @@ const styles = {
   displayFlex: {
     display: "flex",
   },
+  primaryDarkBackground: {
+    backgroundColor: "#0b276d",
+  },
   whiteBackground: {
     backgroundColor: "white",
   },
   lightgreyBackground: {
     backgroundColor: "#f1f1f1",
   },
+  greyBackground: {
+    backgroundColor: "#e6e6e6",
+  },
   textWhite: {
     color: "white",
+  },
+  textPrimary: {
+    color: "#007ad5",
   },
   textPrimaryDark: {
     color: "#0b276d",

@@ -26,23 +26,27 @@ export const actions = [
     title: "Conocer mis beneficios",
     backgroundColor: "white",
     color: "#0b276d",
+    path: "/benefits",
   },
   {
     icon: iconCert,
     title: "Emitir certificados",
     backgroundColor: "#f2f2f2",
     color: "#007ad5",
+    path: "/certs",
   },
   {
     icon: iconClaim,
     title: "Generar un reclamo",
     backgroundColor: "#f2f2f2",
     color: "#007ad5",
+    path: "/claims",
   },
   {
     icon: iconInfo,
     title: "Estado de mi reclamo",
     backgroundColor: "#f2f2f2",
     color: "#007ad5",
+    path: "/claims/status",
   },
 ];

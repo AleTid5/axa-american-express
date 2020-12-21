@@ -61,7 +61,7 @@ export default function CarouselWithContent({
         content ? (
           <ImageWithContent key={key} image={image} content={content} />
         ) : (
-          <img alt="" src={image} />
+          <img key={key} alt="" src={image} />
         )
       )}
     </Carousel>
