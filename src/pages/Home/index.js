@@ -8,13 +8,15 @@ import HomeHeader from "./components/HomeHeader";
 import CarouselWithContent from "../../components/CarouselWithContent";
 import HomeActions from "./components/HomeActions";
 import CreditCardsCarousel from "../../components/CreditCardsCarousel";
+import styles from "../../assets/styles/background";
 
-export default function Home() {
+export default function Home({ background }) {
+  const classes = styles();
   const fullName = "Felipe X";
   const [name] = fullName.split(" ");
 
   return (
-    <>
+    <div className={classes[background]}>
       <Navbar fullName={fullName} />
       <HomeHeader name={name} />
       <CarouselWithContent
@@ -30,6 +32,6 @@ export default function Home() {
         cardSelected={null}
       />
       <Footer />
-    </>
+    </div>
   );
 }

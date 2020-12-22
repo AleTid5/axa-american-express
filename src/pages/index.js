@@ -9,9 +9,17 @@ export default function Pages() {
   return (
     <Router>
       <Switch>
-        <Route path="/benefits" exact component={Benefits} />
-        <Route path="/home" exact component={Home} />
-        <Route path="/" component={Landing} />
+        <Route
+          path="/benefits"
+          exact
+          component={(props) => <Benefits background="gradient" />}
+        />
+        <Route
+          path="/home"
+          exact
+          component={(props) => <Home background="gradient" />}
+        />
+        <Route path="/" component={(props) => <Landing background="solid" />} />
       </Switch>
     </Router>
   );

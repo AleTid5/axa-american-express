@@ -5,16 +5,14 @@ export default makeStyles((theme) =>
   createStyles({
     ...styles,
     mobileContainer: {
-      ...styles.whiteBackground,
       display: "grid",
       gridTemplateRows: "42px auto",
       gridTemplateColumns: "1fr",
-      padding: 0,
+      padding: "0 0 50px 0",
     },
     container: {
-      ...styles.whiteBackground,
       display: "grid",
-      padding: 0,
+      padding: "0 0 50px 0",
       gridTemplateColumns: "25% 50% 25%",
       [theme.breakpoints.up("md")]: {
         maxWidth: 850,
@@ -27,6 +25,7 @@ export default makeStyles((theme) =>
       },
     },
     mobileMainActions: {
+      ...styles.whiteBackground,
       gridRow: 1,
       gridColumn: "1 / 2 span",
       display: "grid",
@@ -41,6 +40,7 @@ export default makeStyles((theme) =>
       },
     },
     mainActions: {
+      ...styles.whiteBackground,
       gridColumn: 1,
       padding: 16,
       maxWidth: "unset",
@@ -137,22 +137,22 @@ export default makeStyles((theme) =>
       },
     },
     mobileMainContent: {
-      ...styles.greyBackground,
+      backgroundColor: "transparent",
       gridRow: 2,
     },
     mainContent: {
-      ...styles.greyBackground,
+      backgroundColor: "transparent",
       gridColumn: 2,
     },
     mobileMainBanner: {
-      ...styles.greyBackground,
+      backgroundColor: "transparent",
       gridRow: 3,
       display: "flex",
       alignItems: "center",
       padding: 10,
     },
     mainBanner: {
-      ...styles.greyBackground,
+      backgroundColor: "transparent",
       gridColumn: 3,
     },
     mobileImageBanner: {
