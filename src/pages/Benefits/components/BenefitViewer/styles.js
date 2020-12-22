@@ -83,14 +83,8 @@ export default makeStyles((theme) =>
       justifyContent: "flex-start",
     },
     iconImage: {
-      maxHeight: 25,
-      [theme.breakpoints.up("sm")]: {
-        maxHeight: 25,
-      },
-      [theme.breakpoints.up("md")]: {
-        maxHeight: "unset",
-        maxWidth: 35,
-      },
+      maxHeight: "unset",
+      maxWidth: 35,
       [theme.breakpoints.up("lg")]: {
         maxWidth: 50,
       },
@@ -173,6 +167,21 @@ export default makeStyles((theme) =>
       marginTop: 0,
       [theme.breakpoints.up("md")]: {
         marginTop: 20,
+      },
+    },
+    mobileNavbarTitle: {
+      ...styles.textPrimary,
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100%",
+      paddingLeft: 15,
+      fontSize: 12,
+      [theme.breakpoints.up("xs")]: {
+        fontSize: 14,
+      },
+      [theme.breakpoints.up("sm")]: {
+        fontSize: 16,
       },
     },
   })

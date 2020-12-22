@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CardDataHeader from "../../../../components/CardDataHeader";
-import { Container } from "@material-ui/core";
+import { Container, Typography } from "@material-ui/core";
 import { actions } from "../../../../mocks/benefits.mock";
 import banner from "../../../../assets/images/banner-vertical.jpg";
 import styles from "./styles";
@@ -34,7 +34,14 @@ export default function BenefitViewer() {
               actions={actions}
               selectedKey={actionKey}
               handleClick={setActionKey}
-            />
+            >
+              <Typography
+                variant="subtitle1"
+                className={classes.mobileNavbarTitle}
+              >
+                {actions[actionKey].title}
+              </Typography>
+            </Navbar>
           ) : (
             actions.map(({ icon, title }, key) => (
               <Sidebar

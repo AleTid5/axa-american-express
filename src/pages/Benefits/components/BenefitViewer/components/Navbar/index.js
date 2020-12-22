@@ -6,11 +6,17 @@ import {
   Menu,
   MenuItem,
   Typography,
+  Grid,
 } from "@material-ui/core";
-import { MoreVert } from "@material-ui/icons";
-import styles from "../../styles";
+import { KeyboardArrowDown, MoreVert } from "@material-ui/icons";
+import styles from "./styles";
 
-export default function Navbar({ actions, selectedKey, handleClick }) {
+export default function Navbar({
+  actions,
+  selectedKey,
+  handleClick,
+  children,
+}) {
   const [anchorEl, setAnchorEl] = useState(null);
   const classes = styles();
 
@@ -20,15 +26,18 @@ export default function Navbar({ actions, selectedKey, handleClick }) {
   };
 
   return (
-    <div>
-      <IconButton
-        aria-label="more"
-        aria-controls="long-menu"
-        aria-haspopup="true"
-        onClick={({ currentTarget }) => setAnchorEl(currentTarget)}
-      >
-        <MoreVert />
-      </IconButton>
+    <Grid container className={classes.navbarContainer}>
+      <Grid item>{children}</Grid>
+      <Grid item>
+        <IconButton
+          aria-label="more"
+          aria-controls="long-menu"
+          aria-haspopup="true"
+          onClick={({ currentTarget }) => setAnchorEl(currentTarget)}
+        >
+          <KeyboardArrowDown className={classes.textPrimary} />
+        </IconButton>
+      </Grid>
       <Menu
         id="long-menu"
         anchorEl={anchorEl}
@@ -50,6 +59,6 @@ export default function Navbar({ actions, selectedKey, handleClick }) {
           </MenuItem>
         ))}
       </Menu>
-    </div>
+    </Grid>
   );
 }

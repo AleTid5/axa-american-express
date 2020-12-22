@@ -1,4 +1,5 @@
 import React from "react";
+import "../../assets/styles/scss/index.scss";
 import { carouselContent } from "../../mocks/home.mock";
 import { creditsCards } from "../../mocks/creditCards.mock";
 import Navbar from "../../components/Navbar";

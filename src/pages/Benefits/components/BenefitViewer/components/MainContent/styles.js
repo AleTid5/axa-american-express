@@ -20,7 +20,10 @@ export default makeStyles((theme) =>
       },
     },
     title: {
-      fontSize: 11,
+      fontSize: 12,
+      [theme.breakpoints.up("xs")]: {
+        fontSize: 14,
+      },
       [theme.breakpoints.up("sm")]: {
         fontSize: 16,
       },
@@ -32,7 +35,10 @@ export default makeStyles((theme) =>
       },
     },
     subtitle: {
-      fontSize: 11,
+      fontSize: 12,
+      [theme.breakpoints.up("xs")]: {
+        fontSize: 14,
+      },
       [theme.breakpoints.up("sm")]: {
         fontSize: 16,
       },
@@ -66,7 +72,10 @@ export default makeStyles((theme) =>
     actionLink: {
       ...styles.boldText,
       textDecoration: "underline",
-      fontSize: 11,
+      fontSize: 12,
+      [theme.breakpoints.up("xs")]: {
+        fontSize: 14,
+      },
       [theme.breakpoints.up("sm")]: {
         fontSize: 16,
       },
