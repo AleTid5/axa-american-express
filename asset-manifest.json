@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/axa-american-express/static/css/main.fccd4a94.chunk.css",
-    "main.js": "/axa-american-express/static/js/main.ebe8de0f.chunk.js",
-    "main.js.map": "/axa-american-express/static/js/main.ebe8de0f.chunk.js.map",
+    "main.js": "/axa-american-express/static/js/main.c8ac93c1.chunk.js",
+    "main.js.map": "/axa-american-express/static/js/main.c8ac93c1.chunk.js.map",
     "runtime-main.js": "/axa-american-express/static/js/runtime-main.8edc30a6.js",
     "runtime-main.js.map": "/axa-american-express/static/js/runtime-main.8edc30a6.js.map",
     "static/css/2.83dd55a3.chunk.css": "/axa-american-express/static/css/2.83dd55a3.chunk.css",
-    "static/js/2.3161a68c.chunk.js": "/axa-american-express/static/js/2.3161a68c.chunk.js",
-    "static/js/2.3161a68c.chunk.js.map": "/axa-american-express/static/js/2.3161a68c.chunk.js.map",
+    "static/js/2.7aae3730.chunk.js": "/axa-american-express/static/js/2.7aae3730.chunk.js",
+    "static/js/2.7aae3730.chunk.js.map": "/axa-american-express/static/js/2.7aae3730.chunk.js.map",
     "index.html": "/axa-american-express/index.html",
     "static/css/2.83dd55a3.chunk.css.map": "/axa-american-express/static/css/2.83dd55a3.chunk.css.map",
     "static/css/main.fccd4a94.chunk.css.map": "/axa-american-express/static/css/main.fccd4a94.chunk.css.map",
-    "static/js/2.3161a68c.chunk.js.LICENSE.txt": "/axa-american-express/static/js/2.3161a68c.chunk.js.LICENSE.txt",
+    "static/js/2.7aae3730.chunk.js.LICENSE.txt": "/axa-american-express/static/js/2.7aae3730.chunk.js.LICENSE.txt",
     "static/media/BentonSans-Bold.86cfda7e.ttf": "/axa-american-express/static/media/BentonSans-Bold.86cfda7e.ttf",
     "static/media/BentonSans-Book.6fb8fd1f.ttf": "/axa-american-express/static/media/BentonSans-Book.6fb8fd1f.ttf",
     "static/media/BentonSans-Light.a3c899c2.ttf": "/axa-american-express/static/media/BentonSans-Light.a3c899c2.ttf",
@@ -31,8 +31,8 @@
   "entrypoints": [
     "static/js/runtime-main.8edc30a6.js",
     "static/css/2.83dd55a3.chunk.css",
-    "static/js/2.3161a68c.chunk.js",
+    "static/js/2.7aae3730.chunk.js",
     "static/css/main.fccd4a94.chunk.css",
-    "static/js/main.ebe8de0f.chunk.js"
+    "static/js/main.c8ac93c1.chunk.js"
   ]
 }
