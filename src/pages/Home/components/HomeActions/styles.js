@@ -30,6 +30,11 @@ export default makeStyles((theme) =>
       gridColumn: 2,
       justifyContent: "center",
     },
+    boxShadow: {
+      display: "flex",
+      boxShadow: "0px 0px 20px 0px #0000004d",
+      flexWrap: "wrap",
+    },
     borderRight: {
       borderRight: "3px solid #bbbbbb",
     },
@@ -66,7 +71,6 @@ export default makeStyles((theme) =>
         width: 280,
         height: 230,
       },
-      "&:hover": { boxShadow: "inset 0 0 40px -30px black;" },
     },
     icon: {
       maxWidth: "100%",

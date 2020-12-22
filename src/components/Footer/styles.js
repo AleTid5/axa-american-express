@@ -6,6 +6,7 @@ export default makeStyles((theme) =>
     ...styles,
     appFooter: {
       ...styles.whiteBackground,
+      borderTop: "4px solid #575757",
     },
     languageContainer: {
       padding: "32px 0 0 8px",

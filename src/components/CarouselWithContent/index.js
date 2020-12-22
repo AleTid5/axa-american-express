@@ -45,6 +45,8 @@ export default function CarouselWithContent({
     </div>
   );
 
+  const LeftArrow = (clickHandler, hasPrev, label) => {};
+
   return (
     <Carousel
       autoPlay={false}

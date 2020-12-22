@@ -1,19 +1,53 @@
-.slick-prev:before, .slick-next:before {
-  font-size: 30px;
-  line-height: 0;
-  color: #007ad5;
-}
-
-.slick-next:before {
-  content: '>';
-}
-
-.slick-prev:before {
-  content: '<';
-}
+@import "../../assets/styles/scss/media-queries";
 
 .slick-slider .slick-track, .slick-slider .slick-list {
   min-height: inherit;
   display: flex;
   align-items: center;
+}
+
+.slick-slider {
+  .slick-arrow:before {
+    content: '';
+    border: solid #007ad5;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+
+    @include media(sm) {
+      padding: 8px;
+    }
+
+    @include media(md) {
+      padding: 10px;
+    }
+
+    @include media(lg) {
+      padding: 10px;
+    }
+
+    @include media(xl) {
+      padding: 14px;
+    }
+  }
+
+  .slick-next, .slick-next:hover {
+    background-color: transparent;
+    right: -20px;
+  }
+
+  .slick-next:before {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+  .slick-prev, .slick-prev:hover {
+    background-color: transparent;
+    left: -20px;
+  }
+
+  .slick-prev:before {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
 }

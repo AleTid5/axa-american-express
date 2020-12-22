@@ -13,7 +13,6 @@ export default function Index({ content: { title, subtitle, actions } }) {
           <Link
             key={key}
             href="#"
-            onClick={({ preventDefault }) => preventDefault()}
             className={classes.actionLink}
             style={{ gridColumn: key + 1 }}
           >

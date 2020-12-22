@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import {
   Box,
@@ -44,7 +44,7 @@ export const Unauthorized = () => {
 };
 
 export const Authorized = ({ fullName }) => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const classes = styles();
   const isMenuOpen = Boolean(anchorEl);
 

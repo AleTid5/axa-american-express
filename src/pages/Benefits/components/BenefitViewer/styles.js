@@ -1,5 +1,5 @@
 import { createStyles, makeStyles } from "@material-ui/core/styles";
-import styles from "../../../assets/styles";
+import styles from "../../../../assets/styles";
 
 export default makeStyles((theme) =>
   createStyles({
@@ -7,8 +7,8 @@ export default makeStyles((theme) =>
     mobileContainer: {
       ...styles.whiteBackground,
       display: "grid",
-      gridTemplateRows: "110px auto",
-      gridTemplateColumns: "70% 30%",
+      gridTemplateRows: "42px auto",
+      gridTemplateColumns: "1fr",
       padding: 0,
     },
     container: {
@@ -46,6 +46,7 @@ export default makeStyles((theme) =>
       maxWidth: "unset",
     },
     mobileActionContainer: {
+      cursor: "pointer",
       display: "grid",
       gridTemplateRows: "repeat(2, 1fr)",
       padding: 0,
@@ -54,12 +55,15 @@ export default makeStyles((theme) =>
       },
     },
     actionContainer: {
+      cursor: "pointer",
       display: "grid",
       gridTemplateColumns: "25% 60% 15%",
       [theme.breakpoints.up("md")]: {
+        gridTemplateColumns: "25% 65% 10%",
         height: 60,
       },
       [theme.breakpoints.up("lg")]: {
+        gridTemplateColumns: "25% 60% 15%",
         height: 84,
       },
       [theme.breakpoints.up("xl")]: {
@@ -84,7 +88,8 @@ export default makeStyles((theme) =>
         maxHeight: 25,
       },
       [theme.breakpoints.up("md")]: {
-        maxWidth: 40,
+        maxHeight: "unset",
+        maxWidth: 35,
       },
       [theme.breakpoints.up("lg")]: {
         maxWidth: 50,
@@ -113,7 +118,7 @@ export default makeStyles((theme) =>
       justifyContent: "flex-start",
       fontWeight: 300,
       [theme.breakpoints.up("md")]: {
-        fontSize: 10,
+        fontSize: 11,
       },
       [theme.breakpoints.up("lg")]: {
         fontSize: 14,
@@ -121,14 +126,6 @@ export default makeStyles((theme) =>
       [theme.breakpoints.up("xl")]: {
         fontSize: 20,
       },
-    },
-    mobileRightArrowContainer: {
-      ...styles.textPrimary,
-      gridRow: 2,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "flex-end",
-      fontSize: 15,
     },
     rightArrowContainer: {
       ...styles.textPrimary,
@@ -155,13 +152,21 @@ export default makeStyles((theme) =>
     },
     mobileMainBanner: {
       ...styles.greyBackground,
-      gridRow: 2,
+      gridRow: 3,
       display: "flex",
       alignItems: "center",
+      padding: 10,
     },
     mainBanner: {
       ...styles.greyBackground,
       gridColumn: 3,
+    },
+    mobileImageBanner: {
+      width: "100%",
+      height: 120,
+      [theme.breakpoints.up("sm")]: {
+        height: 180,
+      },
     },
     imageBanner: {
       maxWidth: "100%",

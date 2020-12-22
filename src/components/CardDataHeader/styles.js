@@ -5,8 +5,8 @@ export default makeStyles((theme) =>
   createStyles({
     ...styles,
     container: {
-      ...styles.primaryDarkBackground,
       ...styles.textWhite,
+      backgroundColor: "#00175a",
       padding: "16px 0 16px 16px",
       [theme.breakpoints.up("md")]: {
         maxWidth: 850,

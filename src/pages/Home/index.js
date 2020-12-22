@@ -23,7 +23,11 @@ export default function Home() {
         carouselContent={carouselContent}
       />
       <HomeActions />
-      <CreditCardsCarousel creditCards={creditsCards} />
+      <CreditCardsCarousel
+        creditCards={creditsCards}
+        canSelectCard={false}
+        cardSelected={null}
+      />
       <Footer />
     </>
   );

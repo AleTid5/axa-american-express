@@ -30,26 +30,26 @@ export default makeStyles((theme) =>
     subtitle: {
       fontWeight: 300,
       fontSize: 15,
+      marginTop: -5,
       [theme.breakpoints.up("xs")]: {
         fontSize: 18,
       },
       [theme.breakpoints.up("sm")]: {
         fontSize: 20,
-        marginTop: 5,
+        marginTop: -10,
       },
       [theme.breakpoints.up("md")]: {
         fontSize: 26,
-        marginTop: 15,
       },
       [theme.breakpoints.up("lg")]: {
         fontSize: 36,
-        marginTop: 15,
-        marginBottom: 10,
+        marginBottom: 0,
+        marginTop: -15,
       },
       [theme.breakpoints.up("xl")]: {
         fontSize: 42,
-        marginBottom: 20,
-        marginTop: 20,
+        marginBottom: 10,
+        marginTop: -20,
       },
     },
   })

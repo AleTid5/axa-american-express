@@ -46,7 +46,6 @@ export default function Navbar({
                 >
                   <NavLink
                     key={key}
-                    className={classes.shortcutTitle}
                     to={path}
                     exact
                     activeClassName={classes.textPrimaryBoldDark}

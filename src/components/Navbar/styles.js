@@ -37,13 +37,13 @@ export default makeStyles((theme) =>
         gridTemplateColumns: "10% 60% 30%",
       },
       [theme.breakpoints.up("md")]: {
-        gridTemplateColumns: "15% 60% 25%",
+        gridTemplateColumns: "10% 65% 25%",
       },
       [theme.breakpoints.up("lg")]: {
         gridTemplateColumns: "15% 60% 25%",
       },
       [theme.breakpoints.up("xl")]: {
-        gridTemplateColumns: "20% 60% 20%",
+        gridTemplateColumns: "15% 65% 20%",
       },
     },
     menuButton: {
@@ -55,32 +55,43 @@ export default makeStyles((theme) =>
       [theme.breakpoints.up("lg")]: {
         marginLeft: theme.spacing(2),
       },
+      "&:hover": {
+        backgroundColor: "unset",
+      },
     },
     shortcutsContainer: {
       gridColumn: 2,
       justifyContent: "center",
+      display: "grid",
+      gridTemplateColumns: "repeat(4, 1fr)",
     },
     shortcutTitle: {
       ...styles.textPrimaryDark,
       textAlign: "center",
       display: "none",
+      height: "100%",
+      maxWidth: "100%",
+      alignItems: "center",
+      justifyContent: "center",
       [theme.breakpoints.up(796)]: {
-        gridTemplateColumns: "10% 60% 30%",
-        display: "inline",
         fontSize: 14,
-        maxWidth: 100,
+        display: "flex",
+        padding: "0 8px",
       },
       [theme.breakpoints.up("md")]: {
         fontSize: 18,
-        maxWidth: 130,
+        padding: "0 16px",
       },
       [theme.breakpoints.up("lg")]: {
         fontSize: 20,
-        maxWidth: 140,
+        padding: "0 25px",
+      },
+      [theme.breakpoints.up(1450)]: {
+        padding: "0 44px",
       },
       [theme.breakpoints.up("xl")]: {
         fontSize: 30,
-        maxWidth: 210,
+        padding: "0 42px",
       },
     },
     rightContent: {
@@ -100,7 +111,7 @@ export default makeStyles((theme) =>
         height: 75,
       },
       [theme.breakpoints.up("lg")]: {
-        height: 100,
+        height: 90,
       },
     },
     horizontalDivider: {
@@ -251,6 +262,9 @@ export default makeStyles((theme) =>
       },
       [theme.breakpoints.up("xs")]: {
         padding: 12,
+      },
+      "&:hover": {
+        backgroundColor: "unset",
       },
     },
     arrowIcon: {

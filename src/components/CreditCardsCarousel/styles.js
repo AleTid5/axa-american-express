@@ -2,6 +2,7 @@ import { createStyles, makeStyles } from "@material-ui/core/styles";
 import styles from "../../assets/styles";
 
 const image = {
+  ...styles.mb15,
   width: "100%",
   maxWidth: 180,
   margin: "auto",
@@ -18,13 +19,13 @@ export default makeStyles((theme) =>
     cardTitle: {
       fontSize: 12,
       whiteSpace: "nowrap",
-      paddingBottom: 15,
+      paddingBottom: 0,
       [theme.breakpoints.up(264)]: {
         fontSize: 14,
       },
       [theme.breakpoints.up("xs")]: {
         fontSize: 16,
-        paddingBottom: 30,
+        paddingBottom: 10,
       },
       [theme.breakpoints.up("sm")]: {
         fontSize: 16,
@@ -36,15 +37,13 @@ export default makeStyles((theme) =>
       },
       [theme.breakpoints.up("md")]: {
         fontSize: 18,
-        paddingBottom: 30,
+        paddingBottom: 20,
       },
       [theme.breakpoints.up("lg")]: {
         fontSize: 23,
-        paddingBottom: 50,
       },
       [theme.breakpoints.up("xl")]: {
         fontSize: 30,
-        paddingBottom: 0,
       },
     },
     creditCard: {
@@ -52,15 +51,15 @@ export default makeStyles((theme) =>
       textAlign: "center",
     },
     slider: {
-      minHeight: "calc(18vh + 40px)",
+      minHeight: "calc(20vh + 45px)",
       display: "flex",
       alignItems: "flex-end",
     },
-    image: { ...image, ...styles.mb15 },
+    image: { ...image },
     selectedImage: {
       ...image,
       position: "relative",
-      top: -30,
+      top: -20,
     },
     shadow: {
       width: "75%",

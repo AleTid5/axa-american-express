@@ -1,27 +1,66 @@
-@import "../../assets/styles/scss/index";
+@import "../../assets/styles/scss/media-queries";
 
-.carousel-slider {
-  /*max-height: 300px;
+.carousel {
+  &.carousel-slider {
+    overflow: inherit;
 
-  @include media(md) {
-    max-height: 400px;
-  }
+    .slider-wrapper {
+      .slide {
+        background: transparent;
+      }
+    }
 
-  @include media(lg) {
-    max-height: 500px;
-  }
+    .control-arrow {
+      opacity: 1;
+    }
 
-  @include media(xl) {
-    max-height: 600px;
-  }*/
+    .control-arrow:hover {
+      background: none;
+    }
 
-  .slider-wrapper {
-    .slide {
-      background: transparent;
+    .control-arrow:before {
+      content: '';
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 6px;
+
+      @include media(sm) {
+        padding: 8px;
+      }
+
+      @include media(md) {
+        padding: 10px;
+      }
+
+      @include media(lg) {
+        padding: 10px;
+      }
+
+      @include media(xl) {
+        padding: 14px;
+      }
+    }
+
+    .control-next, .control-next:hover {
+      background-color: transparent;
+      right: 10px;
+    }
+
+    .control-next:before {
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+    .control-prev, .control-prev:hover {
+      background-color: transparent;
+      left: 10px;
+    }
+
+    .control-prev:before {
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
     }
   }
 }
 
-.carousel.carousel-slider .control-arrow:hover {
-  background: none;
-}

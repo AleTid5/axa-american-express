@@ -7,8 +7,12 @@ import { Container, Typography } from "@material-ui/core";
 import styles from "./styles";
 import CreditCard from "./CreditCard";
 
-export default function CreditCardsCarousel({ creditCards }) {
-  const [selectedCard, setSelectedCard] = useState(null);
+export default function CreditCardsCarousel({
+  creditCards,
+  canSelectCard = true,
+  cardSelected = 0,
+}) {
+  const [selectedCard, setSelectedCard] = useState(cardSelected);
   const classes = styles();
 
   return (
@@ -22,7 +26,7 @@ export default function CreditCardsCarousel({ creditCards }) {
       </Typography>
       <Slider
         className={classes.slider}
-        infinite={false}
+        infinite
         speed={500}
         slidesToShow={4}
         responsive={[
@@ -47,7 +51,7 @@ export default function CreditCardsCarousel({ creditCards }) {
             image={image}
             name={name}
             number={number}
-            setSelectedCard={(key) => setSelectedCard(key)}
+            setSelectedCard={(key) => canSelectCard && setSelectedCard(key)}
             isCardSelected={key === selectedCard}
           />
         ))}
