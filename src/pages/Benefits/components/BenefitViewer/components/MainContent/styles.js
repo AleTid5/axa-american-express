@@ -87,6 +87,7 @@ export default makeStyles((theme) =>
       },
     },
     button: {
+      textTransform: "none",
       fontSize: 10,
       marginTop: 15,
       [theme.breakpoints.up("sm")]: {

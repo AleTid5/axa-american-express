@@ -18,6 +18,7 @@ export default makeStyles((theme) =>
       padding: "0 32px 0 32px",
     },
     cardTitle: {
+      paddingBottom: 20,
       fontSize: 12,
       whiteSpace: "nowrap",
       [theme.breakpoints.up(264)]: {
@@ -47,6 +48,7 @@ export default makeStyles((theme) =>
       minHeight: "calc(20vh + 45px)",
       display: "flex",
       alignItems: "flex-end",
+      paddingBottom: 20,
     },
     image: { ...image },
     selectedImage: {
