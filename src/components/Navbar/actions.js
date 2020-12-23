@@ -96,9 +96,9 @@ export const Authorized = ({ fullName }) => {
             className={classes.menuIcon}
           >
             {anchorEl ? (
-              <KeyboardArrowUp className={classes.arrowIcon} />
+              <KeyboardArrowUp classes={{ root: classes.arrowIcon }} />
             ) : (
-              <KeyboardArrowDown className={classes.arrowIcon} />
+              <KeyboardArrowDown classes={{ root: classes.arrowIcon }} />
             )}
           </IconButton>
         </Box>

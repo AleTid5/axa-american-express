@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import {
-  IconButton,
   Fade,
+  Grid,
+  IconButton,
   ListItemIcon,
   Menu,
   MenuItem,
   Typography,
-  Grid,
 } from "@material-ui/core";
-import { KeyboardArrowDown, MoreVert } from "@material-ui/icons";
+import { KeyboardArrowDown } from "@material-ui/icons";
 import styles from "./styles";
 
 export default function Navbar({

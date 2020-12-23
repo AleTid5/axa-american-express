@@ -22,10 +22,7 @@ export default function BenefitViewer() {
         subtitle="American Express | Argentina"
         cardNumber="37641800000"
       />
-      <Container
-        fixed
-        className={isMobile ? classes.mobileContainer : classes.container}
-      >
+      <Container fixed className={classes.container}>
         <div
           className={isMobile ? classes.mobileMainActions : classes.mainActions}
         >
@@ -55,20 +52,16 @@ export default function BenefitViewer() {
             ))
           )}
         </div>
-        <div
-          className={isMobile ? classes.mobileMainContent : classes.mainContent}
-        >
+        <div className={classes.mainContent}>
           <MainContent content={actions[actionKey].content} />
         </div>
-        <div
-          className={isMobile ? classes.mobileMainBanner : classes.mainBanner}
-        >
+        <div className={classes.mainBanner}>
           {isMobile ? (
             <div
               style={{
                 background: `url(${banner}) center center / cover no-repeat`,
               }}
-              className={classes.mobileImageBanner}
+              className={classes.imageBanner}
             />
           ) : (
             <img alt="" src={banner} className={classes.imageBanner} />

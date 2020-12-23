@@ -4,17 +4,14 @@ import styles from "../../../../assets/styles";
 export default makeStyles((theme) =>
   createStyles({
     ...styles,
-    mobileContainer: {
-      display: "grid",
-      gridTemplateRows: "42px auto",
-      gridTemplateColumns: "1fr",
-      padding: "0 0 50px 0",
-    },
     container: {
       display: "grid",
       padding: "0 0 50px 0",
-      gridTemplateColumns: "25% 50% 25%",
+      gridTemplateColumns: "1fr",
+      gridTemplateRows: "42px auto",
       [theme.breakpoints.up("md")]: {
+        gridTemplateColumns: "25% 50% 25%",
+        gridTemplateRows: "inherit",
         maxWidth: 850,
       },
       [theme.breakpoints.up("lg")]: {
@@ -136,36 +133,35 @@ export default makeStyles((theme) =>
         fontSize: 60,
       },
     },
-    mobileMainContent: {
-      backgroundColor: "transparent",
-      gridRow: 2,
-    },
     mainContent: {
       backgroundColor: "transparent",
-      gridColumn: 2,
-    },
-    mobileMainBanner: {
-      backgroundColor: "transparent",
-      gridRow: 3,
-      display: "flex",
-      alignItems: "center",
-      padding: 10,
+      gridRow: 2,
+      [theme.breakpoints.up("md")]: {
+        gridColumn: 2,
+        gridRow: 1,
+      },
     },
     mainBanner: {
       backgroundColor: "transparent",
-      gridColumn: 3,
+      display: "flex",
+      alignItems: "center",
+      gridRow: 3,
+      padding: 10,
+      [theme.breakpoints.up("md")]: {
+        gridColumn: 3,
+        gridRow: 1,
+        padding: 0,
+      },
     },
-    mobileImageBanner: {
+    imageBanner: {
+      maxWidth: "100%",
       width: "100%",
       height: 120,
       [theme.breakpoints.up("sm")]: {
         height: 180,
       },
-    },
-    imageBanner: {
-      maxWidth: "100%",
-      marginTop: 0,
       [theme.breakpoints.up("md")]: {
+        height: "auto",
         marginTop: 20,
       },
     },
