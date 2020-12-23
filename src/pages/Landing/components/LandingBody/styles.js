@@ -22,6 +22,17 @@ export default makeStyles((theme) =>
         paddingBottom: 70,
       },
     },
+    mobileTypographyH4: {
+      fontWeight: 300,
+      fontSize: 20,
+      padding: "30px 20px",
+      backgroundColor: "#0b276d",
+      color: "white",
+      [theme.breakpoints.up("sm")]: {
+        padding: "30px 90px",
+        fontSize: 26,
+      },
+    },
     typographyH4: {
       fontWeight: 300,
       fontSize: 20,
