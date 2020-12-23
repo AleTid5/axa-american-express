@@ -2,8 +2,10 @@ import React from "react";
 import { Button, Container, Grid, Typography } from "@material-ui/core";
 import { appFeatures } from "../../../../mocks/landing.mock";
 import styles from "./styles";
+import useScreenResizer from "../../../../customHooks/useScreenResizer";
 
 export default function LandingBody() {
+  const [{ isTablet }] = useScreenResizer();
   const classes = styles();
   return (
     <Container

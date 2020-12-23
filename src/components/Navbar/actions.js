@@ -78,7 +78,11 @@ export const Authorized = ({ fullName }) => {
             <NavLink
               to={path}
               exact
-              activeClassName={classes.textPrimaryBoldDark}
+              activeClassName={
+                isTablet
+                  ? classes.mobileItemSelected
+                  : classes.textPrimaryBoldDark
+              }
               className={classes.displayContents}
             >
               <span className={classes.menuName}>{name}</span>

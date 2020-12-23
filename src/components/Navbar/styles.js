@@ -303,5 +303,13 @@ export default makeStyles((theme) =>
       top: 5,
       zIndex: 1,
     },
+    mobileItemSelected: {
+      ...styles.textPrimaryBoldDark,
+      display: "flex",
+      position: "absolute",
+      left: 0,
+      paddingLeft: 12,
+      borderLeft: "4px solid #0b276d",
+    },
   })
 );

@@ -8,7 +8,7 @@ export default makeStyles((theme) =>
       display: "grid",
       padding: "0 0 50px 0",
       gridTemplateColumns: "1fr",
-      gridTemplateRows: "42px auto",
+      gridTemplateRows: "48px auto",
       [theme.breakpoints.up("md")]: {
         gridTemplateColumns: "25% 50% 25%",
         gridTemplateRows: "inherit",
@@ -28,6 +28,8 @@ export default makeStyles((theme) =>
       display: "grid",
       gridTemplateColumns: "repeat(5, 1fr)",
       overflowX: "auto",
+      height: 48,
+      border: "2px solid #00165D",
       [theme.breakpoints.up(240)]: {
         minWidth: 240,
       },
@@ -87,18 +89,6 @@ export default makeStyles((theme) =>
       },
       [theme.breakpoints.up("xl")]: {
         maxWidth: "100%",
-      },
-    },
-    mobileTitle: {
-      ...styles.textPrimaryDark,
-      gridRow: 2,
-      display: "flex",
-      alignItems: "flex-start",
-      justifyContent: "flex-start",
-      textAlign: "center",
-      fontSize: 9,
-      [theme.breakpoints.up("xs")]: {
-        fontSize: 11,
       },
     },
     title: {
@@ -162,7 +152,7 @@ export default makeStyles((theme) =>
       },
     },
     mobileNavbarTitle: {
-      ...styles.textPrimary,
+      ...styles.textPrimaryBoldDark,
       display: "flex",
       justifyContent: "center",
       alignItems: "center",

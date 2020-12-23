@@ -37,7 +37,7 @@ export default function CreditCardsCarousel({
             },
           },
           {
-            breakpoint: 600,
+            breakpoint: 576,
             settings: {
               slidesToShow: 1,
             },

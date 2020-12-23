@@ -21,3 +21,11 @@ a {
     }
   }
 }
+
+@include media(md) {
+  div[role="presentation"] {
+    div[aria-hidden="true"] {
+      background-color: transparent!important;
+    }
+  }
+}

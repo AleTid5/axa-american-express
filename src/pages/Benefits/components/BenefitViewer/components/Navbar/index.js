@@ -33,13 +33,13 @@ export default function Navbar({
         onClick={({ currentTarget }) => setAnchorEl(currentTarget)}
       >
         <Grid item>{children}</Grid>
-        <Grid item>
+        <Grid item className={classes.downArrowContainer}>
           <IconButton
             aria-label="more"
             aria-controls="long-menu"
             aria-haspopup="true"
           >
-            <KeyboardArrowDown className={classes.textPrimary} />
+            <KeyboardArrowDown className={classes.textPrimaryDark} />
           </IconButton>
         </Grid>
       </Grid>
@@ -57,10 +57,12 @@ export default function Navbar({
             selected={key === selectedKey}
             onClick={(event) => handleMenuClick(event, key)}
           >
-            <ListItemIcon>
+            <ListItemIcon className={classes.iconContainer}>
               <img alt={title} src={icon} className={classes.iconImage} />
             </ListItemIcon>
-            <Typography variant="inherit">{title}</Typography>
+            <Typography variant="inherit" className={classes.title}>
+              {title}
+            </Typography>
           </MenuItem>
         ))}
       </Menu>
