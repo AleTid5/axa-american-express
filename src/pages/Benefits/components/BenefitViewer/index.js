@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import CardDataHeader from "../../../../components/CardDataHeader";
 import { Container, Typography } from "@material-ui/core";
 import { actions } from "../../../../mocks/benefits.mock";
-import banner from "../../../../assets/images/banner-vertical.jpg";
+import banner from "../../../../assets/images/banner-benefits_aumentacobertura.jpg";
+import mobileBanner from "../../../../assets/images/banner-benefits_mobile_aumentarcobertura.jpg";
 import styles from "./styles";
 import MainContent from "./components/MainContent";
 import useScreenResizer from "../../../../customHooks/useScreenResizer";
@@ -11,9 +12,8 @@ import Navbar from "./components/Navbar";
 
 export default function BenefitViewer() {
   const [actionKey, setActionKey] = useState(0);
-  const [{ width }] = useScreenResizer();
+  const [{ isTablet }] = useScreenResizer();
   const classes = styles();
-  const isMobile = width < 960;
 
   return (
     <>
@@ -24,9 +24,9 @@ export default function BenefitViewer() {
       />
       <Container fixed className={classes.container}>
         <div
-          className={isMobile ? classes.mobileMainActions : classes.mainActions}
+          className={isTablet ? classes.mobileMainActions : classes.mainActions}
         >
-          {isMobile ? (
+          {isTablet ? (
             <Navbar
               actions={actions}
               selectedKey={actionKey}
@@ -56,16 +56,11 @@ export default function BenefitViewer() {
           <MainContent content={actions[actionKey].content} />
         </div>
         <div className={classes.mainBanner}>
-          {isMobile ? (
-            <div
-              style={{
-                background: `url(${banner}) center center / cover no-repeat`,
-              }}
-              className={classes.imageBanner}
-            />
-          ) : (
-            <img alt="" src={banner} className={classes.imageBanner} />
-          )}
+          <img
+            alt="Aumentá tu cobertura aquí"
+            src={isTablet ? mobileBanner : banner}
+            className={classes.imageBanner}
+          />
         </div>
       </Container>
     </>

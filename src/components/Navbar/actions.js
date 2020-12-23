@@ -9,6 +9,8 @@ import {
   MenuItem,
 } from "@material-ui/core";
 import {
+  Close,
+  Dehaze,
   KeyboardArrowDown,
   KeyboardArrowRight,
   KeyboardArrowUp,
@@ -16,6 +18,7 @@ import {
 import userIcon from "../../assets/icons/ico-user.png";
 import { actions } from "../../mocks/navbar.mock";
 import styles from "./styles";
+import useScreenResizer from "../../customHooks/useScreenResizer";
 
 export const Unauthorized = () => {
   const classes = styles();
@@ -45,6 +48,7 @@ export const Unauthorized = () => {
 
 export const Authorized = ({ fullName }) => {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [{ isTablet }] = useScreenResizer();
   const classes = styles();
   const isMenuOpen = Boolean(anchorEl);
 
@@ -56,8 +60,17 @@ export const Authorized = ({ fullName }) => {
       transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMenuOpen}
       onClose={() => setAnchorEl(null)}
-      classes={{ list: classes.menuList, paper: classes.menuPaper }}
+      classes={{
+        list: classes.menuList,
+        paper: isTablet ? classes.mobileMenuPaper : classes.menuPaper,
+      }}
     >
+      {isTablet && (
+        <Close
+          className={classes.closeButton}
+          onClick={() => setAnchorEl(null)}
+        />
+      )}
       {actions.map(({ name, path }, key) => (
         <div key={key}>
           {key !== 0 && <Divider />}
@@ -69,25 +82,40 @@ export const Authorized = ({ fullName }) => {
               className={classes.displayContents}
             >
               <span className={classes.menuName}>{name}</span>
-              <div className={classes.horizontalDivider} />
-              <KeyboardArrowRight className={classes.menuRightArrowIcon} />
+              {!isTablet && (
+                <>
+                  <div className={classes.horizontalDivider} />
+                  <KeyboardArrowRight className={classes.menuRightArrowIcon} />
+                </>
+              )}
             </NavLink>
           </MenuItem>
         </div>
       ))}
+      {isTablet && (
+        <>
+          <Divider />
+          <Box display="flex" className={classes.userDataContainer}>
+            <Box>
+              <img
+                alt="Icono de usuario"
+                src={userIcon}
+                className={classes.userIcon}
+              />
+            </Box>
+            <Box>
+              <div className={classes.userName}>{fullName}</div>
+            </Box>
+          </Box>
+        </>
+      )}
     </Menu>
   );
 
   return (
     <>
-      <Box display="flex">
-        <Box>
-          <img alt="" src={userIcon} className={classes.userIcon} />
-        </Box>
-        <Box>
-          <div className={classes.userName}>{fullName}</div>
-        </Box>
-        <Box className={classes.displayFlex}>
+      {isTablet ? (
+        <Box display="flex">
           <IconButton
             edge="end"
             aria-label="account of current user"
@@ -95,14 +123,38 @@ export const Authorized = ({ fullName }) => {
             onClick={({ currentTarget }) => setAnchorEl(currentTarget)}
             className={classes.menuIcon}
           >
-            {anchorEl ? (
-              <KeyboardArrowUp classes={{ root: classes.arrowIcon }} />
-            ) : (
-              <KeyboardArrowDown classes={{ root: classes.arrowIcon }} />
-            )}
+            <Dehaze />
           </IconButton>
         </Box>
-      </Box>
+      ) : (
+        <Box display="flex" className={classes.userDataContainer}>
+          <Box>
+            <img
+              alt="Icono de usuario"
+              src={userIcon}
+              className={classes.userIcon}
+            />
+          </Box>
+          <Box>
+            <div className={classes.userName}>{fullName}</div>
+          </Box>
+          <Box className={classes.displayFlex}>
+            <IconButton
+              edge="end"
+              aria-label="account of current user"
+              color="primary"
+              onClick={({ currentTarget }) => setAnchorEl(currentTarget)}
+              className={classes.menuIcon}
+            >
+              {anchorEl ? (
+                <KeyboardArrowUp classes={{ root: classes.arrowIcon }} />
+              ) : (
+                <KeyboardArrowDown classes={{ root: classes.arrowIcon }} />
+              )}
+            </IconButton>
+          </Box>
+        </Box>
+      )}
       {renderMenu}
     </>
   );

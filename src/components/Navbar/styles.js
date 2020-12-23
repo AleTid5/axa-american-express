@@ -73,12 +73,8 @@ export default makeStyles((theme) =>
       maxWidth: "100%",
       alignItems: "center",
       justifyContent: "center",
-      [theme.breakpoints.up(796)]: {
-        fontSize: 14,
-        display: "flex",
-        padding: "0 8px",
-      },
       [theme.breakpoints.up("md")]: {
+        display: "flex",
         fontSize: 18,
         padding: "0 16px",
       },
@@ -158,7 +154,6 @@ export default makeStyles((theme) =>
       backgroundColor: "#e9e9e9",
     },
     menuPaper: {
-      marginTop: 45,
       [theme.breakpoints.up("md")]: {
         marginTop: 55,
       },
@@ -166,12 +161,16 @@ export default makeStyles((theme) =>
         marginTop: 70,
       },
     },
+    mobileMenuPaper: {
+      width: "100%",
+      maxWidth: "100%",
+      left: "0!important",
+      top: "0!important",
+      borderRadius: 0,
+    },
     menuItem: {
-      width: 180,
+      width: "100%",
       height: 40,
-      [theme.breakpoints.up("sm")]: {
-        width: 190,
-      },
       [theme.breakpoints.up("md")]: {
         width: 220,
       },
@@ -184,10 +183,8 @@ export default makeStyles((theme) =>
       },
     },
     menuName: {
+      width: "100%",
       fontSize: 16,
-      [theme.breakpoints.up("sm")]: {
-        fontSize: 16,
-      },
       [theme.breakpoints.up("md")]: {
         fontSize: 18,
       },
@@ -207,6 +204,14 @@ export default makeStyles((theme) =>
         fontSize: 30,
       },
     },
+    userDataContainer: {
+      paddingLeft: 15,
+      paddingBottom: 5,
+      [theme.breakpoints.up("md")]: {
+        paddingBottom: 0,
+        paddingLeft: 0,
+      },
+    },
     userIcon: {
       marginTop: 12,
       maxWidth: 20,
@@ -214,7 +219,7 @@ export default makeStyles((theme) =>
         maxWidth: 30,
       },
       [theme.breakpoints.up("sm")]: {
-        maxWidth: 40,
+        maxWidth: 30,
       },
       [theme.breakpoints.up("md")]: {
         maxWidth: 50,
@@ -238,7 +243,7 @@ export default makeStyles((theme) =>
       },
       [theme.breakpoints.up("sm")]: {
         margin: "12px 0 0 12px",
-        fontSize: 22,
+        fontSize: 16,
       },
       [theme.breakpoints.up("md")]: {
         margin: "12px 0 0 12px",
@@ -276,7 +281,7 @@ export default makeStyles((theme) =>
       },
       [theme.breakpoints.up("sm")]: {
         ...styles.mt5,
-        fontSize: 32,
+        fontSize: 24,
       },
       [theme.breakpoints.up("md")]: {
         ...styles.mt5,
@@ -290,6 +295,13 @@ export default makeStyles((theme) =>
         ...styles.mt5,
         fontSize: 50,
       },
+    },
+    closeButton: {
+      ...styles.textGrey,
+      position: "absolute",
+      right: 8,
+      top: 5,
+      zIndex: 1,
     },
   })
 );

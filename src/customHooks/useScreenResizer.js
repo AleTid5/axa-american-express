@@ -21,6 +21,11 @@ const reducer = (state, action) => {
 
 export default function useScreenResizer() {
   const [state, dispatch] = useReducer(reducer, {}, initialState);
+  const responsive = {
+    isMiniMobile: state.width < 270,
+    isMobile: state.width < 576,
+    isTablet: state.width < 960,
+  };
 
   useEffect(() => {
     const handleResize = () =>
@@ -36,5 +41,5 @@ export default function useScreenResizer() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return [state];
+  return [responsive];
 }

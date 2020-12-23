@@ -14,9 +14,8 @@ import useScreenResizer from "../../customHooks/useScreenResizer";
 
 export default function Footer() {
   const { language, setLanguage, languages } = useContext(LanguageContext);
-  const [{ width }] = useScreenResizer();
+  const [{ isMiniMobile }] = useScreenResizer();
   const classes = styles();
-  const isTinyMobile = width < 270;
 
   const FAQLinks = () => (
     <>
@@ -61,9 +60,9 @@ export default function Footer() {
               </Select>
             </FormControl>
           </Box>
-          {!isTinyMobile && <FAQLinks />}
+          {!isMiniMobile && <FAQLinks />}
         </Box>
-        {isTinyMobile && (
+        {isMiniMobile && (
           <Box display="flex" style={{ padding: "8px 0 0 8px" }}>
             <FAQLinks />
           </Box>

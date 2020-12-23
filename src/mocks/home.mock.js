@@ -1,5 +1,9 @@
-import imageHome1 from "../assets/images/slider-home.png";
-import imageHome2 from "../assets/images/slider-home1.png";
+import imageHome1 from "../assets/images/slider-home-1.jpg";
+import imageHome2 from "../assets/images/slider-home-2.jpg";
+import imageHome3 from "../assets/images/slider-home-3.jpg";
+import mobileImageHome1 from "../assets/images/slider-home-mobile-1.jpg";
+import mobileImageHome2 from "../assets/images/slider-home-mobile-2.jpg";
+import mobileImageHome3 from "../assets/images/slider-home-mobile-3.jpg";
 import iconGift from "../assets/icons/ico-beneficios-azul.png";
 import iconCert from "../assets/icons/ico-certificados-celeste.png";
 import iconClaim from "../assets/icons/ico-reclamo-celeste.png";
@@ -8,15 +12,19 @@ import iconInfo from "../assets/icons/ico-estado-celeste.png";
 export const carouselContent = [
   {
     image: imageHome1,
-    /*content: {
-      title: "Certificados de Viaje",
-      subtitle:
-        "Si querés generar un certificado de viaje, hacelo sin problemas, de forma 100% online aquí. Solo tomará unos minutos.",
-      button: "Generá certificados",
-    },*/
+    mobileImage: mobileImageHome1,
+    alt:
+      "Tu tarjeta American Express te acompaña en tus viajes en todo momento",
   },
   {
     image: imageHome2,
+    mobileImage: mobileImageHome2,
+    alt: "Estamos para ayudarte en todo momento",
+  },
+  {
+    image: imageHome3,
+    mobileImage: mobileImageHome3,
+    alt: "Si querés generar un certificado de viajes, hacelo sin problemas",
   },
 ];
 

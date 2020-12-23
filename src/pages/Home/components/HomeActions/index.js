@@ -6,9 +6,8 @@ import useScreenResizer from "../../../../customHooks/useScreenResizer";
 import { NavLink } from "react-router-dom";
 
 export default function HomeActions() {
-  const [{ width }] = useScreenResizer();
+  const [{ isMobile }] = useScreenResizer();
   const classes = styles();
-  const isMobile = width < 576;
   const isMiddleBox = (key) => key !== 0 && key !== actions.length - 1;
 
   return (
@@ -35,7 +34,7 @@ export default function HomeActions() {
                 >
                   <div>
                     <div>
-                      <img alt="" src={icon} className={classes.icon} />
+                      <img alt={title} src={icon} className={classes.icon} />
                     </div>
                     <div
                       className={`${classes.title} ${

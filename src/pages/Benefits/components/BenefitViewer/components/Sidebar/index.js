@@ -19,7 +19,7 @@ export default function Sidebar({
         onClick={() => handleClick(index)}
       >
         <div className={classes.icon}>
-          <img alt="" src={icon} className={classes.iconImage} />
+          <img alt={title} src={icon} className={classes.iconImage} />
         </div>
         <div
           className={classes.title}

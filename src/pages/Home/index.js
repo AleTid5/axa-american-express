@@ -20,8 +20,6 @@ export default function Home({ background }) {
       <Navbar fullName={fullName} />
       <HomeHeader name={name} />
       <CarouselWithContent
-        align="left"
-        color="white"
         withBorder={false}
         carouselContent={carouselContent}
       />

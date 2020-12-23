@@ -1,6 +1,9 @@
-import imageLanding1 from "../assets/images/slider-landing.jpg";
-import imageLanding2 from "../assets/images/slider-landing1.png";
-import imageLanding3 from "../assets/images/slider-landing2.png";
+import imageLanding1 from "../assets/images/slider-landing-1.jpg";
+import imageLanding2 from "../assets/images/slider-landing-2.jpg";
+import imageLanding3 from "../assets/images/slider-landing-3.jpg";
+import mobileImageLanding1 from "../assets/images/slider-landing-mobile-1.jpg";
+import mobileImageLanding2 from "../assets/images/slider-landing-mobile-2.jpg";
+import mobileImageLanding3 from "../assets/images/slider-landing-mobile-3.jpg";
 import IconGift from "../assets/icons/ico-beneficios-azul.png";
 import IconCert from "../assets/icons/ico-certificados-azul.png";
 import IconClaim from "../assets/icons/ico-reclamo-azul.png";
@@ -8,17 +11,18 @@ import IconClaim from "../assets/icons/ico-reclamo-azul.png";
 export const carouselContent = [
   {
     image: imageLanding1,
-    /*content: {
-      title: "¿Estás por irte de viaje?",
-      subtitle: "Genera tu certificado de viaje y disfruta sin preocupaciones",
-      button: "Generá certificados",
-    },*/
+    mobileImage: mobileImageLanding1,
+    alt: "Te ayudamos a gestionar tus certificados de viaje y reclamos",
   },
   {
     image: imageLanding2,
+    mobileImage: mobileImageLanding2,
+    alt: "Genera tu certificado de viaje y disfruta sin preocupaciones",
   },
   {
     image: imageLanding3,
+    mobileImage: mobileImageLanding3,
+    alt: "Viajá con todos los beneficios",
   },
 ];
 

@@ -26,17 +26,22 @@ export default function Navbar({
   };
 
   return (
-    <Grid container className={classes.navbarContainer}>
-      <Grid item>{children}</Grid>
-      <Grid item>
-        <IconButton
-          aria-label="more"
-          aria-controls="long-menu"
-          aria-haspopup="true"
-          onClick={({ currentTarget }) => setAnchorEl(currentTarget)}
-        >
-          <KeyboardArrowDown className={classes.textPrimary} />
-        </IconButton>
+    <>
+      <Grid
+        container
+        className={classes.navbarContainer}
+        onClick={({ currentTarget }) => setAnchorEl(currentTarget)}
+      >
+        <Grid item>{children}</Grid>
+        <Grid item>
+          <IconButton
+            aria-label="more"
+            aria-controls="long-menu"
+            aria-haspopup="true"
+          >
+            <KeyboardArrowDown className={classes.textPrimary} />
+          </IconButton>
+        </Grid>
       </Grid>
       <Menu
         id="long-menu"
@@ -53,12 +58,12 @@ export default function Navbar({
             onClick={(event) => handleMenuClick(event, key)}
           >
             <ListItemIcon>
-              <img alt="" src={icon} className={classes.iconImage} />
+              <img alt={title} src={icon} className={classes.iconImage} />
             </ListItemIcon>
             <Typography variant="inherit">{title}</Typography>
           </MenuItem>
         ))}
       </Menu>
-    </Grid>
+    </>
   );
 }

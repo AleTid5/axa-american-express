@@ -33,6 +33,9 @@ const styles = {
     color: "#0b276d",
     fontWeight: 700,
   },
+  textGrey: {
+    color: "#929292",
+  },
   smallText: {
     fontSize: "10px",
   },

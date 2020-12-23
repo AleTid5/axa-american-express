@@ -156,10 +156,6 @@ export default makeStyles((theme) =>
     imageBanner: {
       maxWidth: "100%",
       width: "100%",
-      height: 120,
-      [theme.breakpoints.up("sm")]: {
-        height: 180,
-      },
       [theme.breakpoints.up("md")]: {
         height: "auto",
         marginTop: 20,

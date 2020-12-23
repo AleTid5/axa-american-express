@@ -15,7 +15,7 @@ export default function CreditCard({
     <div key={index} className={classes.creditCard}>
       <div>
         <img
-          alt=""
+          alt="Tarjeta de crédito"
           src={image}
           className={isCardSelected ? classes.selectedImage : classes.image}
           onClick={() => setSelectedCard(isCardSelected ? null : index)}
