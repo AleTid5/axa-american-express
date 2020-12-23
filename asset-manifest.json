@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/axa-american-express/static/css/main.fccd4a94.chunk.css",
-    "main.js": "/axa-american-express/static/js/main.d171cb7a.chunk.js",
-    "main.js.map": "/axa-american-express/static/js/main.d171cb7a.chunk.js.map",
+    "main.js": "/axa-american-express/static/js/main.d6ed0c1a.chunk.js",
+    "main.js.map": "/axa-american-express/static/js/main.d6ed0c1a.chunk.js.map",
     "runtime-main.js": "/axa-american-express/static/js/runtime-main.8edc30a6.js",
     "runtime-main.js.map": "/axa-american-express/static/js/runtime-main.8edc30a6.js.map",
     "static/css/2.83dd55a3.chunk.css": "/axa-american-express/static/css/2.83dd55a3.chunk.css",
@@ -16,23 +16,25 @@
     "static/media/BentonSans-Book.6fb8fd1f.ttf": "/axa-american-express/static/media/BentonSans-Book.6fb8fd1f.ttf",
     "static/media/BentonSans-Light.a3c899c2.ttf": "/axa-american-express/static/media/BentonSans-Light.a3c899c2.ttf",
     "static/media/BentonSans-Medium.3cd826c4.ttf": "/axa-american-express/static/media/BentonSans-Medium.3cd826c4.ttf",
-    "static/media/banner-vertical.bbf1b23b.jpg": "/axa-american-express/static/media/banner-vertical.bbf1b23b.jpg",
+    "static/media/banner-benefits_aumentacobertura.049b5952.jpg": "/axa-american-express/static/media/banner-benefits_aumentacobertura.049b5952.jpg",
+    "static/media/banner-benefits_mobile_aumentarcobertura.04a8ee64.jpg": "/axa-american-express/static/media/banner-benefits_mobile_aumentarcobertura.04a8ee64.jpg",
     "static/media/card-aaplus.6e3e77dd.png": "/axa-american-express/static/media/card-aaplus.6e3e77dd.png",
     "static/media/card-green.a5629fff.png": "/axa-american-express/static/media/card-green.a5629fff.png",
     "static/media/card-platinum-cc.91905aea.png": "/axa-american-express/static/media/card-platinum-cc.91905aea.png",
     "static/media/card-platinum.23ecdc79.png": "/axa-american-express/static/media/card-platinum.23ecdc79.png",
     "static/media/slick-theme.css": "/axa-american-express/static/media/slick.c94f7671.ttf",
-    "static/media/slider-home.7a14ffe8.png": "/axa-american-express/static/media/slider-home.7a14ffe8.png",
-    "static/media/slider-home1.e6656961.png": "/axa-american-express/static/media/slider-home1.e6656961.png",
-    "static/media/slider-landing.87d876df.jpg": "/axa-american-express/static/media/slider-landing.87d876df.jpg",
-    "static/media/slider-landing1.004658cd.png": "/axa-american-express/static/media/slider-landing1.004658cd.png",
-    "static/media/slider-landing2.a3ec602b.png": "/axa-american-express/static/media/slider-landing2.a3ec602b.png"
+    "static/media/slider-home-1.ae8db521.jpg": "/axa-american-express/static/media/slider-home-1.ae8db521.jpg",
+    "static/media/slider-home-2.02749efd.jpg": "/axa-american-express/static/media/slider-home-2.02749efd.jpg",
+    "static/media/slider-home-3.23cea530.jpg": "/axa-american-express/static/media/slider-home-3.23cea530.jpg",
+    "static/media/slider-landing-1.df0b1630.jpg": "/axa-american-express/static/media/slider-landing-1.df0b1630.jpg",
+    "static/media/slider-landing-2.2a4557e4.jpg": "/axa-american-express/static/media/slider-landing-2.2a4557e4.jpg",
+    "static/media/slider-landing-3.403ae741.jpg": "/axa-american-express/static/media/slider-landing-3.403ae741.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.8edc30a6.js",
     "static/css/2.83dd55a3.chunk.css",
     "static/js/2.6f49ea1a.chunk.js",
     "static/css/main.fccd4a94.chunk.css",
-    "static/js/main.d171cb7a.chunk.js"
+    "static/js/main.d6ed0c1a.chunk.js"
   ]
 }
