@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/axa-american-express/static/css/main.fccd4a94.chunk.css",
-    "main.js": "/axa-american-express/static/js/main.d6ed0c1a.chunk.js",
-    "main.js.map": "/axa-american-express/static/js/main.d6ed0c1a.chunk.js.map",
+    "main.css": "/axa-american-express/static/css/main.954f378b.chunk.css",
+    "main.js": "/axa-american-express/static/js/main.ca05aaed.chunk.js",
+    "main.js.map": "/axa-american-express/static/js/main.ca05aaed.chunk.js.map",
     "runtime-main.js": "/axa-american-express/static/js/runtime-main.8edc30a6.js",
     "runtime-main.js.map": "/axa-american-express/static/js/runtime-main.8edc30a6.js.map",
     "static/css/2.83dd55a3.chunk.css": "/axa-american-express/static/css/2.83dd55a3.chunk.css",
-    "static/js/2.6f49ea1a.chunk.js": "/axa-american-express/static/js/2.6f49ea1a.chunk.js",
-    "static/js/2.6f49ea1a.chunk.js.map": "/axa-american-express/static/js/2.6f49ea1a.chunk.js.map",
+    "static/js/2.d65bffa2.chunk.js": "/axa-american-express/static/js/2.d65bffa2.chunk.js",
+    "static/js/2.d65bffa2.chunk.js.map": "/axa-american-express/static/js/2.d65bffa2.chunk.js.map",
     "index.html": "/axa-american-express/index.html",
     "static/css/2.83dd55a3.chunk.css.map": "/axa-american-express/static/css/2.83dd55a3.chunk.css.map",
-    "static/css/main.fccd4a94.chunk.css.map": "/axa-american-express/static/css/main.fccd4a94.chunk.css.map",
-    "static/js/2.6f49ea1a.chunk.js.LICENSE.txt": "/axa-american-express/static/js/2.6f49ea1a.chunk.js.LICENSE.txt",
+    "static/css/main.954f378b.chunk.css.map": "/axa-american-express/static/css/main.954f378b.chunk.css.map",
+    "static/js/2.d65bffa2.chunk.js.LICENSE.txt": "/axa-american-express/static/js/2.d65bffa2.chunk.js.LICENSE.txt",
     "static/media/BentonSans-Bold.86cfda7e.ttf": "/axa-american-express/static/media/BentonSans-Bold.86cfda7e.ttf",
     "static/media/BentonSans-Book.6fb8fd1f.ttf": "/axa-american-express/static/media/BentonSans-Book.6fb8fd1f.ttf",
     "static/media/BentonSans-Light.a3c899c2.ttf": "/axa-american-express/static/media/BentonSans-Light.a3c899c2.ttf",
@@ -26,15 +26,21 @@
     "static/media/slider-home-1.ae8db521.jpg": "/axa-american-express/static/media/slider-home-1.ae8db521.jpg",
     "static/media/slider-home-2.02749efd.jpg": "/axa-american-express/static/media/slider-home-2.02749efd.jpg",
     "static/media/slider-home-3.23cea530.jpg": "/axa-american-express/static/media/slider-home-3.23cea530.jpg",
+    "static/media/slider-home-mobile-1.54d31362.jpg": "/axa-american-express/static/media/slider-home-mobile-1.54d31362.jpg",
+    "static/media/slider-home-mobile-2.d98675f5.jpg": "/axa-american-express/static/media/slider-home-mobile-2.d98675f5.jpg",
+    "static/media/slider-home-mobile-3.a41e7e1c.jpg": "/axa-american-express/static/media/slider-home-mobile-3.a41e7e1c.jpg",
     "static/media/slider-landing-1.df0b1630.jpg": "/axa-american-express/static/media/slider-landing-1.df0b1630.jpg",
     "static/media/slider-landing-2.2a4557e4.jpg": "/axa-american-express/static/media/slider-landing-2.2a4557e4.jpg",
-    "static/media/slider-landing-3.403ae741.jpg": "/axa-american-express/static/media/slider-landing-3.403ae741.jpg"
+    "static/media/slider-landing-3.403ae741.jpg": "/axa-american-express/static/media/slider-landing-3.403ae741.jpg",
+    "static/media/slider-landing-mobile-1.16704cc6.jpg": "/axa-american-express/static/media/slider-landing-mobile-1.16704cc6.jpg",
+    "static/media/slider-landing-mobile-2.4507910f.jpg": "/axa-american-express/static/media/slider-landing-mobile-2.4507910f.jpg",
+    "static/media/slider-landing-mobile-3.9c0a30a1.jpg": "/axa-american-express/static/media/slider-landing-mobile-3.9c0a30a1.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.8edc30a6.js",
     "static/css/2.83dd55a3.chunk.css",
-    "static/js/2.6f49ea1a.chunk.js",
-    "static/css/main.fccd4a94.chunk.css",
-    "static/js/main.d6ed0c1a.chunk.js"
+    "static/js/2.d65bffa2.chunk.js",
+    "static/css/main.954f378b.chunk.css",
+    "static/js/main.ca05aaed.chunk.js"
   ]
 }
