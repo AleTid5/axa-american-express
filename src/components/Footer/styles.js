@@ -23,7 +23,7 @@ export default makeStyles((theme) =>
       fontSize: 12,
       ...styles.textPrimaryDark,
       fontWeight: 700,
-      border: "1px solid #0b276d",
+      border: `1px solid ${theme.palette.primary.dark}`,
       padding: 5,
     },
     actionsContainer: {

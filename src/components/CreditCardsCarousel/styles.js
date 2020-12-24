@@ -15,7 +15,7 @@ export default makeStyles((theme) =>
     ...styles,
     container: {
       ...styles.mt30,
-      padding: "0 32px 0 32px",
+      padding: "0 32px",
     },
     cardTitle: {
       paddingBottom: 20,

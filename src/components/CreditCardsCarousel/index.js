@@ -11,19 +11,22 @@ export default function CreditCardsCarousel({
   creditCards,
   canSelectCard = true,
   cardSelected = 0,
+  withTitle = true,
 }) {
   const [selectedCard, setSelectedCard] = useState(cardSelected);
   const classes = styles();
 
   return (
     <Container fixed className={classes.container}>
-      <Typography
-        variant="h6"
-        classes={{ h6: classes.cardTitle }}
-        style={{ textAlign: "center" }}
-      >
-        Tus tarjetas American Express
-      </Typography>
+      {withTitle && (
+        <Typography
+          variant="h6"
+          classes={{ h6: classes.cardTitle }}
+          style={{ textAlign: "center" }}
+        >
+          Tus tarjetas American Express
+        </Typography>
+      )}
       <Slider
         className={classes.slider}
         infinite

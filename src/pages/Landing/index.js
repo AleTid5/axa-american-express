@@ -6,10 +6,10 @@ import Footer from "../../components/Footer";
 import LandingBody from "./components/LandingBody";
 import styles from "../../assets/styles/background";
 
-export default function Landing({ background }) {
+export default function Landing() {
   const classes = styles();
   return (
-    <div className={classes[background]}>
+    <div className={classes.solid}>
       <Navbar isAuthenticated={false} />
       <CarouselWithContent carouselContent={carouselContent} />
       <LandingBody />

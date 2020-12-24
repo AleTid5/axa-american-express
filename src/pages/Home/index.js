@@ -10,13 +10,13 @@ import HomeActions from "./components/HomeActions";
 import CreditCardsCarousel from "../../components/CreditCardsCarousel";
 import styles from "../../assets/styles/background";
 
-export default function Home({ background }) {
+export default function Home() {
   const classes = styles();
   const fullName = "Felipe X";
   const [name] = fullName.split(" ");
 
   return (
-    <div className={classes[background]}>
+    <div className={classes.gradient}>
       <Navbar fullName={fullName} />
       <HomeHeader name={name} />
       <CarouselWithContent

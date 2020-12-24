@@ -232,7 +232,7 @@ export default makeStyles((theme) =>
       },
     },
     userName: {
-      color: "#007ad5",
+      color: theme.palette.primary.main,
       fontWeight: 700,
       lineHeight: 2,
       margin: "10px 0 0 6px",
@@ -309,7 +309,7 @@ export default makeStyles((theme) =>
       position: "absolute",
       left: 0,
       paddingLeft: 12,
-      borderLeft: "4px solid #0b276d",
+      borderLeft: `4px solid ${theme.palette.primary.dark}`,
     },
   })
 );

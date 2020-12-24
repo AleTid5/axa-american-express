@@ -26,7 +26,7 @@ export default makeStyles((theme) =>
       fontWeight: 300,
       fontSize: 20,
       padding: "30px 20px",
-      backgroundColor: "#0b276d",
+      backgroundColor: theme.palette.primary.dark,
       color: "white",
       [theme.breakpoints.up("sm")]: {
         padding: "30px 90px",
