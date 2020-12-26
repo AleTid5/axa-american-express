@@ -151,7 +151,7 @@ export default makeStyles((theme) =>
     menuList: {
       ...styles.textPrimaryDark,
       padding: 0,
-      backgroundColor: "#e9e9e9",
+      backgroundColor: theme.palette.secondary.main,
     },
     menuPaper: {
       [theme.breakpoints.up("md")]: {
