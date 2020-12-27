@@ -6,10 +6,12 @@ import Footer from "../../components/Footer";
 import React from "react";
 import ContentHeader from "../../components/ContentHeader";
 import CertManager from "./components/CertManager";
+import withChat from "../../components/WithChat";
 
 export default function Certs() {
   const classes = styles();
   const fullName = "Felipe X";
+  const FooterWithChat = withChat(Footer);
 
   return (
     <div className={classes.gradient}>
@@ -20,7 +22,7 @@ export default function Certs() {
       />
       <CreditCardsCarousel creditCards={creditsCards} withTitle={false} />
       <CertManager />
-      <Footer />
+      <FooterWithChat />
     </div>
   );
 }
