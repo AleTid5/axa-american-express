@@ -25,6 +25,9 @@ export default function useScreenResizer() {
     isMiniMobile: state.width < 270,
     isMobile: state.width < 576,
     isTablet: state.width < 960,
+    isBiggerThanTablet: state.width >= 960,
+    isNotebook: state.width >= 960 && state.width < 1200,
+    isScreen: state.width >= 1200 && state.width < 1680,
   };
 
   useEffect(() => {

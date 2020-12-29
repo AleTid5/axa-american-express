@@ -1,21 +1,22 @@
 import "react-app-polyfill/ie11";
 import "react-app-polyfill/stable";
-import React, { StrictMode } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "@material-ui/styles";
 import { CssBaseline } from "@material-ui/core";
+import { StylesProvider } from "@material-ui/core/styles";
 import theme from "./assets/styles/theme";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import Pages from "./pages";
 
 ReactDOM.render(
-  <StrictMode>
-    <ThemeProvider theme={theme}>
-      <LanguageProvider>
-        <CssBaseline />
+  <ThemeProvider theme={theme}>
+    <LanguageProvider>
+      <CssBaseline />
+      <StylesProvider injectFirst>
         <Pages />
-      </LanguageProvider>
-    </ThemeProvider>
-  </StrictMode>,
+      </StylesProvider>
+    </LanguageProvider>
+  </ThemeProvider>,
   document.getElementById("root")
 );

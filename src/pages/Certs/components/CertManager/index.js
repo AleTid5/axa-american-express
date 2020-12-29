@@ -35,7 +35,7 @@ export default function CertManager() {
         </Button>
         <Grid container spacing={3} className={classes.mt30}>
           {certs.map(({ title, subtitle, icon }, key) => (
-            <IconCard key={key} icon={icon}>
+            <IconCard key={key} icon={icon} xs={12} md={6} lg={4}>
               <Grid container spacing={1}>
                 <Grid item xs={9}>
                   <Typography variant="h6" className={classes.cardTitle}>
@@ -65,7 +65,7 @@ export default function CertManager() {
         <Divider className={classes.divider} />
         <Grid container spacing={3} className={classes.mt20}>
           {actions.map(({ icon, title }, key) => (
-            <IconCard key={key} icon={icon}>
+            <IconCard key={key} icon={icon} xs={12} md={6} lg={4}>
               <Typography variant="h6" className={classes.cardTitle}>
                 {title}
               </Typography>

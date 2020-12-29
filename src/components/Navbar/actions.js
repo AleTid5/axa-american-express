@@ -96,23 +96,21 @@ export const Authorized = ({ fullName }) => {
           </MenuItem>
         </div>
       ))}
-      {isTablet && (
-        <>
-          <Divider />
-          <Box display="flex" className={classes.userDataContainer}>
-            <Box>
-              <img
-                alt="Icono de usuario"
-                src={userIcon}
-                className={classes.userIcon}
-              />
-            </Box>
-            <Box>
-              <div className={classes.userName}>{fullName}</div>
-            </Box>
+      {isTablet && [
+        <Divider key={0} />,
+        <Box display="flex" className={classes.userDataContainer} key={1}>
+          <Box>
+            <img
+              alt="Icono de usuario"
+              src={userIcon}
+              className={classes.userIcon}
+            />
           </Box>
-        </>
-      )}
+          <Box>
+            <div className={classes.userName}>{fullName}</div>
+          </Box>
+        </Box>,
+      ]}
     </Menu>
   );
 

@@ -8,6 +8,30 @@ const styles = {
   displayFlex: {
     display: "flex",
   },
+  justifyContentFlexEnd: {
+    justifyContent: "flex-end",
+  },
+  middleAlign: {
+    display: "flex",
+    alignItems: "center",
+  },
+  topAlign: {
+    display: "flex",
+    alignItems: "flex-start",
+  },
+  rightAlign: {
+    display: "flex",
+    justifyContent: "flex-end",
+  },
+  centerAlign: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  middleStartAlign: {
+    display: "flex",
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
   primaryDarkBackground: {
     backgroundColor: "#0b276d",
   },
