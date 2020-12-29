@@ -4,9 +4,9 @@ import styles from "./styles";
 
 export default function IconCard({
   icon,
-  iconContainerClassName,
   className,
   children,
+  iconContainerClassName,
   xs,
   sm,
   md,

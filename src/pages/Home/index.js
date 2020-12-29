@@ -9,11 +9,13 @@ import CarouselWithContent from "../../components/CarouselWithContent";
 import HomeActions from "./components/HomeActions";
 import CreditCardsCarousel from "../../components/CreditCardsCarousel";
 import styles from "../../assets/styles/background";
+import withChat from "../../components/WithChat";
 
 export default function Home() {
   const classes = styles();
   const fullName = "Felipe X";
   const [name] = fullName.split(" ");
+  const FooterWithChat = withChat(Footer);
 
   return (
     <div className={classes.gradient}>
@@ -29,7 +31,7 @@ export default function Home() {
         canSelectCard={false}
         cardSelected={null}
       />
-      <Footer />
+      <FooterWithChat />
     </div>
   );
 }

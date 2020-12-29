@@ -85,6 +85,7 @@ export default makeStyles(
         },
       },
       icon: {
+        cursor: "pointer",
         color: theme.palette.primary.main,
         fontSize: 22,
         marginTop: 20,
