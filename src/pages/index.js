@@ -6,6 +6,7 @@ import Certs from "./Certs";
 import Claims from "./Claims";
 import Home from "./Home";
 import Landing from "./Landing";
+import Profile from "./Profile";
 
 export default function Pages() {
   return (
@@ -15,6 +16,7 @@ export default function Pages() {
         <Route path="/certs" exact component={Certs} />
         <Route path="/claims" exact component={Claims} />
         <Route path="/home" exact component={Home} />
+        <Route path="/profile" exact component={Profile} />
         <Route path="/" component={Landing} />
       </Switch>
     </Router>

@@ -1,7 +1,7 @@
 export const actions = [
   {
     name: "Mi perfil",
-    path: "/home",
+    path: "/profile",
   },
   {
     name: "Mis certificados",
