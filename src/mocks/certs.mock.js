@@ -1,10 +1,10 @@
 import iconCar from "../assets/icons/ico-seguro-de-alquiler-auto.png";
-import iconCert from "../assets/icons/ico-certificados-celeste.png";
+import iconHeartHands from "../assets/icons/ico-heart-hands.png";
 
 export const actions = [
   {
     title: "Asistencia Médica en viajes",
-    icon: iconCert,
+    icon: iconHeartHands,
   },
   {
     title: "Seguro de Alquiler de Auto",

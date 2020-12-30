@@ -33,6 +33,10 @@ export default makeStyles(
       copyrightContainer: {
         padding: "0 0 32px 8px",
       },
+      link: {
+        color: theme.palette.primary.main,
+        textDecoration: "underline",
+      },
     }),
   { index: 1 }
 );

@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
 import styles from "./styles";
+import { Link } from "react-router-dom";
 
 export default function ContactHeader() {
   const classes = styles();
@@ -12,14 +13,15 @@ export default function ContactHeader() {
         <a
           href="mailto:aexp.gns.claims@axa-assistance.us"
           target="_blank"
+          rel="noreferrer"
           className={classes.link}
         >
           aexp.gns.claims@axa-assistance.us
         </a>
         <span className={classes.text}>, completa el </span>
-        <a href="#" className={classes.link}>
+        <Link to="#" className={classes.link}>
           formulario
-        </a>
+        </Link>
       </Typography>
       <Typography className={classes.text}>O llámenos a:</Typography>
     </div>

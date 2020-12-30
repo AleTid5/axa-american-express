@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Grid, Typography } from "@material-ui/core";
-import iconCert from "../../../../assets/icons/ico-certificados-celeste.png";
+import iconHeartHands from "../../../../assets/icons/ico-heart-hands.png";
 import IconCard from "../../../../components/IconCard";
 import styles from "./styles";
 import { Note, Publish } from "@material-ui/icons";
@@ -11,7 +11,7 @@ export default function CertsViewer() {
   return (
     <Container fixed maxWidth="xl" className={classes.container}>
       <IconCard
-        icon={iconCert}
+        icon={iconHeartHands}
         xs={12}
         md={6}
         lg={4}

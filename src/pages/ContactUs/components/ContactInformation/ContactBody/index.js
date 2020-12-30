@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles";
-import { Container, Divider, Grid, Typography } from "@material-ui/core";
+import { Divider, Grid, Typography } from "@material-ui/core";
 
 export default function ContactBody() {
   const classes = styles();

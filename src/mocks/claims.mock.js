@@ -1,12 +1,12 @@
 import iconCar from "../assets/icons/ico-seguro-de-alquiler-auto.png";
-import iconCert from "../assets/icons/ico-certificados-celeste.png";
-import iconExtendedWarranty from "../assets/icons/ico-garantia-extendida.png";
-import iconTravelAssistance from "../assets/icons/ico-asistencia-en-viajes.png";
+import iconHeartHands from "../assets/icons/ico-heart-hands.png";
+import iconCash from "../assets/icons/ico-cash.png";
+import iconBag from "../assets/icons/ico-bag.png";
 
 export const actions = [
   {
     title: "Asistencia Médica en viajes",
-    icon: iconCert,
+    icon: iconHeartHands,
   },
   {
     title: "Seguro de Alquiler de Auto",
@@ -16,7 +16,7 @@ export const actions = [
 
 export const claims = [
   {
-    icon: iconExtendedWarranty,
+    icon: iconCash,
     title: "Garantía de Precio",
     code: "PRIPRO-ROLAC-SEQ1",
     dateData: "29/10/2019 - 10",
@@ -24,7 +24,7 @@ export const claims = [
     completed: true,
   },
   {
-    icon: iconTravelAssistance,
+    icon: iconBag,
     title: "Pérdida de equipaje",
     code: "BALROL00041",
     dateData: "10/12/2020 - 1 - Incompleto",

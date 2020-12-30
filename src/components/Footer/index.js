@@ -3,7 +3,6 @@ import {
   Box,
   Container,
   FormControl,
-  Link,
   MenuItem,
   Select,
   Typography,
@@ -11,6 +10,7 @@ import {
 import { LanguageContext } from "../../contexts/LanguageContext";
 import styles from "./styles";
 import useScreenResizer from "../../customHooks/useScreenResizer";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const { language, setLanguage, languages } = useContext(LanguageContext);
@@ -20,12 +20,12 @@ export default function Footer() {
   const FAQLinks = () => (
     <>
       <Box flexShrink={1} className={classes.mt10}>
-        <Link href="#" style={{ textDecoration: "underline" }}>
+        <Link className={classes.link} to="#">
           FAQ
         </Link>
       </Box>
       <Box flexShrink={0} className={`${classes.mt10} ${classes.ml10}`}>
-        <Link href="/contact-us" style={{ textDecoration: "underline" }}>
+        <Link className={classes.link} to="/contact-us">
           Contactanos
         </Link>
       </Box>
@@ -60,26 +60,22 @@ export default function Footer() {
           </Box>
         )}
         <Box display="flex" className={classes.actionsContainer}>
-          <Link
-            href="#"
-            variant="caption"
-            style={{ textDecoration: "underline" }}
-          >
+          <Link className={classes.link} to="#" variant="caption">
             Requisitos Regulatorios
           </Link>
           <Link
-            href="#"
-            className={classes.ml10}
+            className={classes.link}
+            to="#"
             variant="caption"
-            style={{ textDecoration: "underline" }}
+            style={{ marginLeft: 10 }}
           >
             Términos y Condiciones
           </Link>
           <Link
-            href="#"
-            className={classes.ml10}
+            className={classes.link}
+            to="#"
             variant="caption"
-            style={{ textDecoration: "underline" }}
+            style={{ marginLeft: 10 }}
           >
             Política de Privacidad
           </Link>
