@@ -19,7 +19,7 @@ export default makeStyles(
         },
       },
       iconCard: {
-        border: `2px solid ${theme.palette.primary.dark}`,
+        border: `1px solid ${theme.palette.primary.dark}`,
       },
       title: {
         color: theme.palette.primary.dark,

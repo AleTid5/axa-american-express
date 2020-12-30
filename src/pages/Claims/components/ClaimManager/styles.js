@@ -8,10 +8,11 @@ export default makeStyles(
       container: {
         padding: "0px 16px",
         [theme.breakpoints.up("md")]: {
-          padding: 0,
+          padding: "0px 0 80px 0",
           maxWidth: 850,
         },
         [theme.breakpoints.up("lg")]: {
+          padding: "0px 0 120px 0",
           maxWidth: 1100,
         },
         [theme.breakpoints.up("xl")]: {

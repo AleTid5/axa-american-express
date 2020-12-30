@@ -21,7 +21,7 @@ export default makeStyles(
       },
       title: {
         color: theme.palette.primary.dark,
-        fontWeight: 500,
+        fontWeight: 700,
         fontSize: 18,
         marginBottom: 30,
         [theme.breakpoints.up("md")]: {
@@ -67,7 +67,7 @@ export default makeStyles(
           fontSize: 18,
         },
         [theme.breakpoints.up("lg")]: {
-          fontSize: 15,
+          fontSize: 14,
         },
         [theme.breakpoints.up("xl")]: {
           fontSize: 22,

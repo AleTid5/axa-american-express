@@ -87,7 +87,7 @@ export default makeStyles(
           padding: "0 44px",
         },
         [theme.breakpoints.up("xl")]: {
-          fontSize: 30,
+          fontSize: 28,
           padding: "0 42px",
         },
       },

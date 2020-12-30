@@ -10,16 +10,16 @@ export default makeStyles(
         textAlign: "center",
         padding: "0 12px",
         [theme.breakpoints.up("md")]: {
-          padding: "0 32px",
+          padding: "0 22px",
         },
         [theme.breakpoints.up("md")]: {
-          padding: "0 190px",
+          padding: "0 180px",
         },
         [theme.breakpoints.up("lg")]: {
-          padding: "0 290px",
+          padding: "0 280px",
         },
         [theme.breakpoints.up("xl")]: {
-          padding: "0 230px",
+          padding: "0 220px",
         },
       },
       title: {

@@ -42,7 +42,11 @@ export default makeStyles(
         borderRadius: 8,
       },
       inputOutlined: {
-        padding: "25px 14px",
+        backgroundColor: "white",
+        padding: "15px 14px",
+        [theme.breakpoints.up("sm")]: {
+          padding: "25px 14px",
+        },
       },
       inputNotchedOutline: {
         border: "3px solid #f0f0f0",
@@ -51,7 +55,7 @@ export default makeStyles(
         backgroundColor: theme.palette.primary.dark,
         borderRadius: 2,
         textTransform: "initial",
-        margin: "40px 0",
+        margin: "30px 0",
         fontWeight: 400,
         fontSize: 12,
         minWidth: 150,
@@ -59,6 +63,7 @@ export default makeStyles(
           fontSize: 14,
         },
         [theme.breakpoints.up("sm")]: {
+          margin: "40px 0",
           fontSize: 16,
           minWidth: 180,
         },
