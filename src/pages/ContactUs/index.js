@@ -1,14 +1,12 @@
 import React from "react";
 import styles from "../../assets/styles/background";
 import Navbar from "../../components/Navbar";
-import CreditCardsCarousel from "../../components/CreditCardsCarousel";
-import { creditsCards } from "../../mocks/creditCards.mock";
 import Footer from "../../components/Footer";
 import ContentHeader from "../../components/ContentHeader";
-import ClaimManager from "./components/ClaimManager";
 import withChat from "../../components/WithChat";
+import ContactInformation from "./components/ContactInformation";
 
-export default function Certs() {
+export default function ContactUs() {
   const classes = styles();
   const fullName = "Felipe X";
   const FooterWithChat = withChat(Footer);
@@ -16,12 +14,8 @@ export default function Certs() {
   return (
     <div className={classes.gradient}>
       <Navbar fullName={fullName} withShortcuts />
-      <ContentHeader
-        title="Reclamos"
-        subtitle="Para crear un nuevo reclamo, seleccione una tarjeta de crédito y los beneficios del panel a continuación."
-      />
-      <CreditCardsCarousel creditCards={creditsCards} withTitle={false} />
-      <ClaimManager />
+      <ContentHeader title="Contactanos" />
+      <ContactInformation />
       <FooterWithChat />
     </div>
   );

@@ -10,9 +10,11 @@ export default function ContentHeader({ title, subtitle }) {
       <Typography variant="h2" className={classes.title}>
         {title}
       </Typography>
-      <Typography variant="h6" className={classes.subtitle}>
-        {subtitle}
-      </Typography>
+      {subtitle && (
+        <Typography variant="h6" className={classes.subtitle}>
+          {subtitle}
+        </Typography>
+      )}
     </Container>
   );
 }

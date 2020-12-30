@@ -1,9 +1,9 @@
+import React from "react";
 import styles from "../../assets/styles/background";
 import Navbar from "../../components/Navbar";
 import CreditCardsCarousel from "../../components/CreditCardsCarousel";
 import { creditsCards } from "../../mocks/creditCards.mock";
 import Footer from "../../components/Footer";
-import React from "react";
 import ContentHeader from "../../components/ContentHeader";
 import CertManager from "./components/CertManager";
 import withChat from "../../components/WithChat";

@@ -20,20 +20,12 @@ export default function Footer() {
   const FAQLinks = () => (
     <>
       <Box flexShrink={1} className={classes.mt10}>
-        <Link
-          href="#"
-          onClick={({ preventDefault }) => preventDefault()}
-          style={{ textDecoration: "underline" }}
-        >
+        <Link href="#" style={{ textDecoration: "underline" }}>
           FAQ
         </Link>
       </Box>
       <Box flexShrink={0} className={`${classes.mt10} ${classes.ml10}`}>
-        <Link
-          href="#"
-          onClick={({ preventDefault }) => preventDefault()}
-          style={{ textDecoration: "underline" }}
-        >
+        <Link href="/contact-us" style={{ textDecoration: "underline" }}>
           Contactanos
         </Link>
       </Box>
@@ -70,7 +62,6 @@ export default function Footer() {
         <Box display="flex" className={classes.actionsContainer}>
           <Link
             href="#"
-            onClick={({ preventDefault }) => preventDefault()}
             variant="caption"
             style={{ textDecoration: "underline" }}
           >
@@ -79,7 +70,6 @@ export default function Footer() {
           <Link
             href="#"
             className={classes.ml10}
-            onClick={({ preventDefault }) => preventDefault()}
             variant="caption"
             style={{ textDecoration: "underline" }}
           >
@@ -88,7 +78,6 @@ export default function Footer() {
           <Link
             href="#"
             className={classes.ml10}
-            onClick={({ preventDefault }) => preventDefault()}
             variant="caption"
             style={{ textDecoration: "underline" }}
           >
