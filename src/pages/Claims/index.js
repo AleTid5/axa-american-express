@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../../assets/styles/background";
 import Navbar from "../../components/Navbar";
 import CreditCardsCarousel from "../../components/CreditCardsCarousel";
 import { creditsCards } from "../../mocks/creditCards.mock";
@@ -7,14 +6,14 @@ import Footer from "../../components/Footer";
 import ContentHeader from "../../components/ContentHeader";
 import ClaimManager from "./components/ClaimManager";
 import withChat from "../../components/WithChat";
+import Background from "../../components/Background";
 
 export default function Certs() {
-  const classes = styles();
   const fullName = "Felipe X";
   const FooterWithChat = withChat(Footer);
 
   return (
-    <div className={classes.gradient}>
+    <Background>
       <Navbar fullName={fullName} withShortcuts />
       <ContentHeader
         title="Reclamos"
@@ -23,6 +22,6 @@ export default function Certs() {
       <CreditCardsCarousel creditCards={creditsCards} withTitle={false} />
       <ClaimManager />
       <FooterWithChat />
-    </div>
+    </Background>
   );
 }

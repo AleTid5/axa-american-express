@@ -4,16 +4,15 @@ import CarouselWithContent from "../../components/CarouselWithContent";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import LandingBody from "./components/LandingBody";
-import styles from "../../assets/styles/background";
+import Background from "../../components/Background";
 
 export default function Landing() {
-  const classes = styles();
   return (
-    <div className={classes.solid}>
+    <Background gradient={false}>
       <Navbar isAuthenticated={false} />
       <CarouselWithContent carouselContent={carouselContent} />
       <LandingBody />
       <Footer />
-    </div>
+    </Background>
   );
 }

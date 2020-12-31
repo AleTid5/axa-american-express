@@ -8,17 +8,16 @@ import HomeHeader from "./components/HomeHeader";
 import CarouselWithContent from "../../components/CarouselWithContent";
 import HomeActions from "./components/HomeActions";
 import CreditCardsCarousel from "../../components/CreditCardsCarousel";
-import styles from "../../assets/styles/background";
 import withChat from "../../components/WithChat";
+import Background from "../../components/Background";
 
 export default function Home() {
-  const classes = styles();
   const fullName = "Felipe X";
   const [name] = fullName.split(" ");
   const FooterWithChat = withChat(Footer);
 
   return (
-    <div className={classes.gradient}>
+    <Background>
       <Navbar fullName={fullName} />
       <HomeHeader name={name} />
       <CarouselWithContent
@@ -32,6 +31,6 @@ export default function Home() {
         cardSelected={null}
       />
       <FooterWithChat />
-    </div>
+    </Background>
   );
 }
