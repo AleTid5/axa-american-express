@@ -9,8 +9,11 @@ export default makeStyles(
         display: "none",
         justifyContent: "flex-end",
         padding: 0,
-        [theme.breakpoints.up("md")]: {
+        [theme.breakpoints.up("sm")]: {
           display: "flex",
+          padding: "0px 16px",
+        },
+        [theme.breakpoints.up("md")]: {
           maxWidth: 850,
         },
         [theme.breakpoints.up("lg")]: {
@@ -28,9 +31,13 @@ export default makeStyles(
         alignItems: "center",
         justifyContent: "center",
         cursor: "pointer",
+        [theme.breakpoints.up("sm")]: {
+          maxWidth: 230,
+          height: 40,
+          padding: 8,
+        },
         [theme.breakpoints.up("md")]: {
           maxWidth: 270,
-          height: 40,
           padding: 8,
         },
         [theme.breakpoints.up("lg")]: {
@@ -49,6 +56,9 @@ export default makeStyles(
       },
       chatIcon: {
         width: 20,
+        [theme.breakpoints.up("sm")]: {
+          width: 18,
+        },
         [theme.breakpoints.up("md")]: {
           width: 22,
         },
@@ -64,8 +74,8 @@ export default makeStyles(
         alignItems: "center",
       },
       chatText: {
-        fontSize: 20,
-        [theme.breakpoints.up("md")]: {
+        fontSize: 14,
+        [theme.breakpoints.up("sm")]: {
           fontSize: 16,
         },
         [theme.breakpoints.up("xl")]: {
@@ -77,7 +87,10 @@ export default makeStyles(
         alignItems: "center",
       },
       closeIcon: {
-        fontSize: 35,
+        fontSize: 20,
+        [theme.breakpoints.up("sm")]: {
+          fontSize: 22,
+        },
         [theme.breakpoints.up("md")]: {
           fontSize: 25,
         },

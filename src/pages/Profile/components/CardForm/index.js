@@ -1,13 +1,7 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Container,
-  FormControl,
-  OutlinedInput,
-  Typography,
-} from "@material-ui/core";
+import { Button, Container, Typography } from "@material-ui/core";
 import styles from "./styles";
-import "./styles.scss";
+import OutlinedInput from "../../../../components/Outlined/Input";
 
 export default function CardForm() {
   const [value, setValue] = useState("");
@@ -19,20 +13,11 @@ export default function CardForm() {
         Ingrese los primeros 10 dígitos del número de su tarjeta American
         Express
       </Typography>
-      <Typography className={classes.subtitle}>
-        Identificación de tarjeta
-      </Typography>
-      <FormControl fullWidth variant="outlined" className={classes.input}>
-        <OutlinedInput
-          value={value}
-          onChange={({ target: { value } }) => setValue(value)}
-          classes={{
-            input: classes.inputOutlined,
-            notchedOutline: classes.inputNotchedOutline,
-            root: classes.inputRoot,
-          }}
-        />
-      </FormControl>
+      <OutlinedInput
+        title="Identificación de tarjeta"
+        value={value}
+        setValue={setValue}
+      />
       <Button
         variant="contained"
         size="large"

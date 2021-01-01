@@ -48,7 +48,7 @@ export const actions = [
     title: "Generar un reclamo",
     backgroundColor: "#fafafa",
     color: "#007ad5",
-    path: "/claims",
+    path: "/claims/generate",
   },
   {
     icon: iconInfo,

@@ -1,0 +1,11 @@
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #f0f0f0;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-width: 3px;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-width: 0;
+}
