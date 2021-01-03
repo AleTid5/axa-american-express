@@ -9,10 +9,10 @@ export default function FormHeader() {
   return (
     <div className={classes.container}>
       <Grid container>
-        <Grid item xs={1} className={classes.iconContainer}>
+        <Grid item xs={2} sm={1} className={classes.iconContainer}>
           <img alt="Card Icon" src={iconCar} className={classes.icon} />
         </Grid>
-        <Grid item xs={11} className={classes.textContainer}>
+        <Grid item xs={10} sm={11} className={classes.textContainer}>
           <Typography className={classes.text}>
             Template de Librería para Formularios
           </Typography>

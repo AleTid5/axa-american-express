@@ -1,6 +1,5 @@
-import React from "react";
+import CustomRadio from "./Radio";
 import OutlinedInput from "./Input";
 import OutlinedSelect from "./Select";
-import "./styles.scss";
 
-export { OutlinedInput, OutlinedSelect };
+export { CustomRadio, OutlinedInput, OutlinedSelect };

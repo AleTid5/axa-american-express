@@ -6,10 +6,10 @@ import VehicleData from "../VehicleData";
 import VehicleRentalCompanyData from "../VehicleRentalCompanyData";
 import ActionButtons from "../ActionButtons";
 import FormHeader from "../FormHeader";
-import styles from "./styles";
+import { mainStyles } from "./styles";
 
 export default function MainForm() {
-  const classes = styles();
+  const classes = mainStyles();
   const accountHolderRef = useRef(null);
   const locationRef = useRef(null);
   const vehicleDataRef = useRef(null);

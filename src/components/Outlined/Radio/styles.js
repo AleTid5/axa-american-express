@@ -1,47 +1,46 @@
 import { createStyles, makeStyles } from "@material-ui/core/styles";
-import styles from "../MainForm/styles";
+import styles from "../styles";
 
 export default makeStyles(
   (theme) =>
     createStyles({
       ...styles(theme),
-      container: {
-        marginTop: 15,
+      radioVerticalRoot: {
+        paddingRight: 15,
         [theme.breakpoints.up("sm")]: {
-          marginTop: 20,
+          paddingRight: 25,
         },
         [theme.breakpoints.up("md")]: {
-          marginTop: 15,
+          paddingRight: 20,
         },
         [theme.breakpoints.up("lg")]: {
-          marginTop: 20,
+          paddingRight: 30,
         },
         [theme.breakpoints.up("xl")]: {
-          marginTop: 30,
+          paddingRight: 40,
         },
       },
-      titleMargin: {
-        marginBottom: 15,
+      radioMarginLeft: {
+        paddingLeft: 15,
         [theme.breakpoints.up("sm")]: {
-          marginBottom: 20,
+          paddingLeft: 20,
         },
+        [theme.breakpoints.up("lg")]: {
+          paddingLeft: 40,
+        },
+        [theme.breakpoints.up("xl")]: {
+          paddingLeft: 60,
+        },
+      },
+      horizontallyMarginTop: {
         [theme.breakpoints.up("md")]: {
-          marginBottom: 15,
+          marginTop: 18,
         },
         [theme.breakpoints.up("lg")]: {
-          marginBottom: 20,
+          marginTop: 25,
         },
         [theme.breakpoints.up("xl")]: {
-          marginBottom: 30,
-        },
-      },
-      rowContainer: {
-        marginTop: 5,
-        [theme.breakpoints.up("sm")]: {
-          marginTop: 10,
-        },
-        [theme.breakpoints.up("xl")]: {
-          marginTop: 15,
+          marginTop: 20,
         },
       },
     }),

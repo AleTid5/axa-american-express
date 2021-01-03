@@ -6,24 +6,21 @@ export default makeStyles(
     createStyles({
       ...styles(theme),
       container: {
-        marginTop: 15,
+        marginTop: 20,
         [theme.breakpoints.up("sm")]: {
           marginTop: 20,
-        },
-        [theme.breakpoints.up("md")]: {
-          marginTop: 15,
         },
         [theme.breakpoints.up("lg")]: {
-          marginTop: 20,
+          marginTop: 40,
         },
         [theme.breakpoints.up("xl")]: {
-          marginTop: 30,
+          marginTop: 60,
         },
       },
-      titleMargin: {
-        marginBottom: 15,
+      titleContainer: {
+        marginBottom: 5,
         [theme.breakpoints.up("sm")]: {
-          marginBottom: 20,
+          marginBottom: 10,
         },
         [theme.breakpoints.up("md")]: {
           marginBottom: 15,
@@ -32,18 +29,42 @@ export default makeStyles(
           marginBottom: 20,
         },
         [theme.breakpoints.up("xl")]: {
-          marginBottom: 30,
+          marginBottom: 25,
         },
       },
-      rowContainer: {
+      spacing1: {
         marginTop: 5,
-        [theme.breakpoints.up("sm")]: {
+        [theme.breakpoints.up("lg")]: {
           marginTop: 10,
         },
         [theme.breakpoints.up("xl")]: {
           marginTop: 15,
         },
       },
+      spacing2: {
+        [theme.breakpoints.up("md")]: {
+          marginTop: 15,
+        },
+        [theme.breakpoints.up("lg")]: {
+          marginTop: 20,
+        },
+        [theme.breakpoints.up("xl")]: {
+          marginTop: 25,
+        },
+      },
+      spacing3: {
+        marginTop: 15,
+        [theme.breakpoints.up("lg")]: {
+          marginTop: 20,
+        },
+        [theme.breakpoints.up("xl")]: {
+          marginTop: 25,
+        },
+      },
+      radioMarginLeft: {
+        marginLeft: 30,
+      },
+      insuranceContainer: {},
     }),
   { index: 1 }
 );

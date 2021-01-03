@@ -4,20 +4,19 @@ export default function styles(theme) {
   return {
     ...stylesRoot,
     title: {
-      fontSize: 14,
       fontWeight: 700,
-      marginTop: 10,
+      fontSize: 12,
       [theme.breakpoints.up("xs")]: {
-        fontSize: 16,
+        fontSize: 14,
       },
       [theme.breakpoints.up("sm")]: {
         fontSize: 18,
       },
       [theme.breakpoints.up("md")]: {
-        fontSize: 20,
+        fontSize: 15,
       },
       [theme.breakpoints.up("lg")]: {
-        fontSize: 23,
+        fontSize: 20,
       },
       [theme.breakpoints.up("xl")]: {
         fontSize: 28,

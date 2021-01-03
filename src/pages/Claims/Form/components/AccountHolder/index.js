@@ -1,11 +1,7 @@
 import React, { forwardRef, useImperativeHandle, useState } from "react";
-import {
-  FormControlLabel,
-  Radio,
-  RadioGroup,
-  Typography,
-} from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import styles from "./styles";
+import { CustomRadio } from "../../../../../components/Outlined";
 
 export default forwardRef(function AccountHolder(props, ref) {
   const [isAccountHolder, setIsAccountHolder] = useState("is-account-holder");
@@ -20,33 +16,31 @@ export default forwardRef(function AccountHolder(props, ref) {
 
   return (
     <div className={classes.container}>
-      <Typography>
+      <Typography className={classes.paragraph1}>
         Lea atentamente la información y complete todos los campos para evitar
         posibles retrasos al analizar su caso.
       </Typography>
-      <Typography>
+      <Typography className={classes.paragraph2}>
         Debe notificar su reclamo a la compañía dentro de los primeros cuarenta
         y cinco (45) días a partir del incidente y devolver toda la
         documentación requerida dentro de los primeros novento (90) días a
         partir del incidente.
       </Typography>
-      <RadioGroup
-        aria-label="gender"
-        name="gender1"
+      <CustomRadio
+        className={classes.radioMarginTop}
         value={isAccountHolder}
-        onChange={({ target: { value } }) => setIsAccountHolder(value)}
-      >
-        <FormControlLabel
-          value="is-account-holder"
-          control={<Radio />}
-          label="Titular de la cuenta"
-        />
-        <FormControlLabel
-          value="is-not-account-holder"
-          control={<Radio />}
-          label="No es el titular de la Cuenta"
-        />
-      </RadioGroup>
+        setValue={setIsAccountHolder}
+        options={[
+          {
+            label: "Titular de la cuenta",
+            value: "is-account-holder",
+          },
+          {
+            label: "No es el titular de la Cuenta",
+            value: "is-not-account-holder",
+          },
+        ]}
+      />
     </div>
   );
 });

@@ -17,6 +17,7 @@ export default function CardForm() {
         title="Identificación de tarjeta"
         value={value}
         setValue={setValue}
+        className={classes.mt10}
       />
       <Button
         variant="contained"
