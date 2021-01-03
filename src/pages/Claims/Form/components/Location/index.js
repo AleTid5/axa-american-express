@@ -8,14 +8,14 @@ import styles from "./styles";
 import { countries } from "../../../../../mocks/countries.mock";
 
 export default forwardRef(function Location(props, ref) {
-  const [country, setCountry] = useState("");
+  const [vehicleCountry, setVehicleCountry] = useState("");
   const [location, setLocation] = useState("");
   const classes = styles();
 
   useImperativeHandle(ref, () => ({
-    validate: () => console.log(false),
+    validate: () => vehicleCountry !== "" && location !== "",
     getProps: () => ({
-      country,
+      country: vehicleCountry,
       location,
     }),
   }));
@@ -37,8 +37,8 @@ export default forwardRef(function Location(props, ref) {
           <OutlinedSelect
             title="País"
             list={countries}
-            value={country}
-            setValue={setCountry}
+            value={vehicleCountry}
+            setValue={setVehicleCountry}
           />
         </Grid>
       </Grid>

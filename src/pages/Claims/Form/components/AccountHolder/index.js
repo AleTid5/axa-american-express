@@ -8,7 +8,7 @@ export default forwardRef(function AccountHolder(props, ref) {
   const classes = styles();
 
   useImperativeHandle(ref, () => ({
-    validate: () => console.log(isAccountHolder),
+    validate: () => true,
     getProps: () => ({
       isAccountHolder,
     }),

@@ -8,15 +8,16 @@ import {
 import { countries } from "../../../../../mocks/countries.mock";
 
 export default forwardRef(function VehicleRentalCompanyData(props, ref) {
-  const [country, setCountry] = useState("");
+  const [companyCountry, setCompanyCountry] = useState("");
   const [rentalCompany, setRentalCompany] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const classes = styles();
 
   useImperativeHandle(ref, () => ({
-    validate: () => console.log(false),
+    validate: () =>
+      companyCountry !== "" && rentalCompany !== "" && phoneNumber !== "",
     getProps: () => ({
-      country,
+      companyCountry,
       rentalCompany,
       phoneNumber,
     }),
@@ -37,8 +38,8 @@ export default forwardRef(function VehicleRentalCompanyData(props, ref) {
           <OutlinedSelect
             title="País"
             list={countries}
-            value={country}
-            setValue={setCountry}
+            value={companyCountry}
+            setValue={setCompanyCountry}
           />
         </Grid>
         <Grid item xs={12} md={7}>

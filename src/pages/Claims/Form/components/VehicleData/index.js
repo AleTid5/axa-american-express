@@ -19,7 +19,14 @@ export default forwardRef(function VehicleData(props, ref) {
   const classes = styles();
 
   useImperativeHandle(ref, () => ({
-    validate: () => console.log(false),
+    validate: () =>
+      brand !== "" &&
+      model !== "" &&
+      color !== "" &&
+      year !== "" &&
+      rentedDays !== "" &&
+      rentalDate !== "" &&
+      returnDate !== "",
     getProps: () => ({
       brand,
       model,
@@ -29,6 +36,7 @@ export default forwardRef(function VehicleData(props, ref) {
       rentInAXACard,
       rentalDate,
       returnDate,
+      hasInsurancePolicy,
     }),
   }));
 
