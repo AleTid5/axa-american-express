@@ -1,0 +1,24 @@
+@import "../../../../assets/styles/scss/media-queries";
+
+.faq-accordion {
+  svg {
+    color: #007ad5;
+    font-size: 18px !important;
+
+    @include media(sm) {
+      font-size: 24px !important;
+    }
+
+    @include media(md) {
+      font-size: 24px !important;
+    }
+
+    @include media(lg) {
+      font-size: 28px !important;
+    }
+
+    @include media(xl) {
+      font-size: 38px !important;
+    }
+  }
+}

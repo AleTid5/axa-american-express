@@ -20,7 +20,7 @@ export default function Footer() {
   const FAQLinks = () => (
     <>
       <Box flexShrink={1} className={classes.mt10}>
-        <Link className={classes.link} to="#">
+        <Link className={classes.link} to="/faq">
           FAQ
         </Link>
       </Box>

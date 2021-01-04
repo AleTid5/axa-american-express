@@ -13,23 +13,26 @@ export default function OutlinedInput({
   type = "text",
   value,
   setValue,
+  lightBorder = true,
   startIcon = null,
+  endIcon = null,
 }) {
   const classes = styles();
   return (
     <div className={className}>
-      <Typography className={classes.title}>{title}</Typography>
+      {title && <Typography className={classes.title}>{title}</Typography>}
       <FormControl fullWidth variant="outlined" className={classes.input}>
         <MuiOutlinedInput
           type={type}
           value={value}
           onChange={({ target: { value } }) => setValue(value)}
           classes={{
+            root: lightBorder ? classes.inputLightRoot : classes.inputDarkRoot,
             input: classes.inputOutlined,
             notchedOutline: classes.notchedOutline,
-            root: classes.inputRoot,
           }}
           startAdornment={startIcon}
+          endAdornment={endIcon}
         />
       </FormControl>
     </div>

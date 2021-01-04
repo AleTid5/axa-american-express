@@ -1,6 +1,11 @@
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import styles from "../styles";
 
+const root = {
+  borderRadius: 8,
+  backgroundColor: "white",
+};
+
 export default makeStyles(
   (theme) =>
     createStyles({
@@ -8,10 +13,13 @@ export default makeStyles(
       input: {
         paddingTop: 5,
       },
-      inputRoot: {
+      inputLightRoot: {
+        ...root,
         border: "3px solid #f0f0f0",
-        borderRadius: 8,
-        backgroundColor: "white",
+      },
+      inputDarkRoot: {
+        ...root,
+        border: "1px solid #d5d5d5",
       },
       inputOutlined: {
         padding: "15px 14px",

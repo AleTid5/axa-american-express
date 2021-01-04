@@ -69,11 +69,20 @@ const styles = {
   boldText: {
     fontWeight: 700,
   },
+  mb0: {
+    marginBottom: 0,
+  },
+  mb5: {
+    marginBottom: 5,
+  },
   mb15: {
     marginBottom: 15,
   },
   mr10: {
     marginRight: "10px",
+  },
+  mt0: {
+    marginTop: 0,
   },
   mt5: {
     marginTop: 5,

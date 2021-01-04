@@ -6,6 +6,7 @@ import Certs from "./Certs";
 import Claims from "./Claims";
 import ClaimForm from "./Claims/Form";
 import ContactUs from "./ContactUs";
+import Faq from "./Faq";
 import Home from "./Home";
 import Landing from "./Landing";
 import Profile from "./Profile";
@@ -19,6 +20,7 @@ export default function Pages() {
         <Route path="/claims" exact component={Claims} />
         <Route path="/claims/generate" exact component={ClaimForm} />
         <Route path="/contact-us" exact component={ContactUs} />
+        <Route path="/faq" exact component={Faq} />
         <Route path="/home" exact component={Home} />
         <Route path="/profile" exact component={Profile} />
         <Route path="/" component={Landing} />
