@@ -36,8 +36,6 @@ export default makeStyles(
       },
       accordionDetailsRoot: {
         padding: "0 0 24px",
-        position: "relative",
-        top: -15,
       },
       title: {
         color: theme.palette.primary.dark,

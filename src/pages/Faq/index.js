@@ -6,6 +6,7 @@ import Navbar from "../../components/Navbar";
 import AccordionList from "./components/AccordionList";
 import { FilterProvider } from "./components/FilterContext";
 import FaqHeader from "./components/FaqHeader";
+import ActionButtons from "./components/ActionButtons";
 
 export default function Faq() {
   const fullName = "Felipe X";
@@ -18,6 +19,7 @@ export default function Faq() {
         <FaqHeader />
         <AccordionList />
       </FilterProvider>
+      <ActionButtons />
       <FooterWithChat />
     </Background>
   );

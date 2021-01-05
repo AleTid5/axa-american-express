@@ -4,7 +4,7 @@ import styles from "./styles";
 import {
   OutlinedSelect,
   OutlinedInput,
-} from "../../../../../components/Outlined";
+} from "../../../../../components/Extended";
 import { countries } from "../../../../../mocks/countries.mock";
 
 export default forwardRef(function VehicleRentalCompanyData(props, ref) {

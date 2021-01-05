@@ -1,13 +1,10 @@
 import { createStyles, makeStyles } from "@material-ui/core/styles";
-import styles from "../../../../assets/styles";
+import styles from "../styles";
 
 export default makeStyles(
   (theme) =>
     createStyles({
-      ...styles,
-      root: {
-        width: '100%',
-      },
+      ...styles(theme),
     }),
   { index: 1 }
 );

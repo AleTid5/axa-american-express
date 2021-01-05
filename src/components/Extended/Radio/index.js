@@ -17,11 +17,9 @@ export default function CustomRadio({
   setValue,
 }) {
   const classes = styles();
+
   return (
-    <div
-      style={{ height: "100%" }}
-      className={`outlined-custom-radio ${className}`}
-    >
+    <div style={{ height: "100%" }} className={`custom-radio ${className}`}>
       {title && <Typography className={classes.title}>{title}</Typography>}
       <RadioGroup
         value={value}

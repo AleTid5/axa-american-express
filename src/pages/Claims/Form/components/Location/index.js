@@ -3,7 +3,7 @@ import { Grid, Typography } from "@material-ui/core";
 import {
   OutlinedInput,
   OutlinedSelect,
-} from "../../../../../components/Outlined";
+} from "../../../../../components/Extended";
 import styles from "./styles";
 import { countries } from "../../../../../mocks/countries.mock";
 

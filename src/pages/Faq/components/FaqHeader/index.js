@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Container, Typography } from "@material-ui/core";
 import { Search } from "@material-ui/icons";
-import { OutlinedInput } from "../../../../components/Outlined";
+import { OutlinedInput } from "../../../../components/Extended";
 import { FilterContext } from "../FilterContext";
 import styles from "./styles";
 import ContentHeader from "../../../../components/ContentHeader";

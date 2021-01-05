@@ -1,8 +1,14 @@
 import React, { forwardRef, useImperativeHandle, useState } from "react";
 import styles from "./styles";
-import { Grid, Typography } from "@material-ui/core";
-import { CustomRadio, OutlinedInput } from "../../../../../components/Outlined";
+import {
+  Checkbox,
+  FormControlLabel,
+  Grid,
+  Typography,
+} from "@material-ui/core";
+import { CustomRadio, OutlinedInput } from "../../../../../components/Extended";
 import { CalendarToday } from "@material-ui/icons";
+import CustomCheckbox from "../../../../../components/Extended/Checkbox";
 
 export default forwardRef(function VehicleData(props, ref) {
   const [brand, setBrand] = useState("");
@@ -16,6 +22,7 @@ export default forwardRef(function VehicleData(props, ref) {
   const [hasInsurancePolicy, setHasInsurancePolicy] = useState(
     "has-insurance-policy"
   );
+  const [acceptTerms, setAcceptTerms] = useState(false);
   const classes = styles();
 
   useImperativeHandle(ref, () => ({
@@ -26,7 +33,8 @@ export default forwardRef(function VehicleData(props, ref) {
       year !== "" &&
       rentedDays !== "" &&
       rentalDate !== "" &&
-      returnDate !== "",
+      returnDate !== "" &&
+      acceptTerms,
     getProps: () => ({
       brand,
       model,
@@ -37,6 +45,7 @@ export default forwardRef(function VehicleData(props, ref) {
       rentalDate,
       returnDate,
       hasInsurancePolicy,
+      acceptTerms,
     }),
   }));
 
@@ -130,6 +139,11 @@ export default forwardRef(function VehicleData(props, ref) {
             value: "without-insurance-policy",
           },
         ]}
+      />
+      <CustomCheckbox
+        value={acceptTerms}
+        setValue={setAcceptTerms}
+        className={classes.spacing2}
       />
     </div>
   );

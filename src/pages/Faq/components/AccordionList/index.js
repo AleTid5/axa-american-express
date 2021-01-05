@@ -43,7 +43,7 @@ export default function AccordionList() {
               }}
             >
               <Typography className={classes.title}>
-                <div dangerouslySetInnerHTML={{ __html: title }} />
+                <span dangerouslySetInnerHTML={{ __html: title }} />
               </Typography>
             </AccordionSummary>
             <AccordionDetails

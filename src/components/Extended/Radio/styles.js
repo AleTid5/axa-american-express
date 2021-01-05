@@ -21,15 +21,15 @@ export default makeStyles(
         },
       },
       radioMarginLeft: {
-        paddingLeft: 15,
+        marginLeft: 15,
         [theme.breakpoints.up("sm")]: {
-          paddingLeft: 20,
+          marginLeft: 20,
         },
         [theme.breakpoints.up("lg")]: {
-          paddingLeft: 40,
+          marginLeft: 40,
         },
         [theme.breakpoints.up("xl")]: {
-          paddingLeft: 60,
+          marginLeft: 60,
         },
       },
       horizontallyMarginTop: {

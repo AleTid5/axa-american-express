@@ -4,6 +4,7 @@ export default function styles(theme) {
   return {
     ...stylesRoot,
     title: {
+      userSelect: "none",
       fontWeight: 700,
       fontSize: 12,
       [theme.breakpoints.up("xs")]: {

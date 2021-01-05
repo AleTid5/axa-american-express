@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Container, Typography } from "@material-ui/core";
 import styles from "./styles";
-import OutlinedInput from "../../../../components/Outlined/Input";
+import OutlinedInput from "../../../../components/Extended/OutlinedInput";
 
 export default function CardForm() {
   const [value, setValue] = useState("");

@@ -18,6 +18,7 @@ export default function OutlinedInput({
   endIcon = null,
 }) {
   const classes = styles();
+
   return (
     <div className={className}>
       {title && <Typography className={classes.title}>{title}</Typography>}
