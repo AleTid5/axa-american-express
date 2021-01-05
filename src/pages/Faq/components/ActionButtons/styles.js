@@ -40,10 +40,11 @@ export default makeStyles(
         },
         [theme.breakpoints.up("md")]: {
           marginTop: 20,
-          marginBottom: 30,
+          marginBottom: 40,
         },
         [theme.breakpoints.up("lg")]: {
           marginTop: 40,
+          marginBottom: 50,
         },
         [theme.breakpoints.up("xl")]: {
           marginTop: 60,
