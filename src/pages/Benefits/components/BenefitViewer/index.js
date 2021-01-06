@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import CardDataHeader from "../../../../components/CardDataHeader";
 import { Container, Typography } from "@material-ui/core";
+import useScreenResizing from "screen-resizing";
 import { actions } from "../../../../mocks/benefits.mock";
 import banner from "../../../../assets/images/banner-benefits_aumentacobertura.jpg";
 import mobileBanner from "../../../../assets/images/banner-benefits_mobile_aumentarcobertura.jpg";
-import styles from "./styles";
 import MainContent from "./components/MainContent";
-import useScreenResizer from "../../../../customHooks/useScreenResizer";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
+import styles from "./styles";
 
 export default function BenefitViewer() {
   const [actionKey, setActionKey] = useState(0);
-  const [{ isTablet }] = useScreenResizer();
+  const { isTablet } = useScreenResizing();
   const classes = styles();
 
   return (

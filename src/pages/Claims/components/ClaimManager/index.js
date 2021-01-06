@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import CardDataHeader from "../../../../components/CardDataHeader";
 import {
   Button,
   Container,
@@ -8,13 +7,14 @@ import {
   Typography,
 } from "@material-ui/core";
 import { Add, CallMade, CallReceived, Publish } from "@material-ui/icons";
+import useScreenResizing from "screen-resizing";
+import CardDataHeader from "../../../../components/CardDataHeader";
 import { actions, claims } from "../../../../mocks/claims.mock";
 import IconCard from "../../../../components/IconCard";
-import useScreenResizer from "../../../../customHooks/useScreenResizer";
 import styles from "./styles";
 
 export default function ClaimManager() {
-  const [{ isBiggerThanTablet, isNotebook, isMobile }] = useScreenResizer();
+  const { isMobile, isNotebook, isUsingPC } = useScreenResizing();
   const classes = styles();
 
   return (
@@ -134,7 +134,7 @@ export default function ClaimManager() {
                     </>
                   )}
                 </IconCard>
-                {isBiggerThanTablet && <Grid item md={6} />}
+                {isUsingPC && <Grid item md={6} />}
               </Fragment>
             )
           )}

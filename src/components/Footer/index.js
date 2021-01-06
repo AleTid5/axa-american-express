@@ -7,14 +7,14 @@ import {
   Select,
   Typography,
 } from "@material-ui/core";
+import useScreenResizing from "screen-resizing";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import styles from "./styles";
-import useScreenResizer from "../../customHooks/useScreenResizer";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
   const { language, setLanguage, languages } = useContext(LanguageContext);
-  const [{ isMiniMobile }] = useScreenResizer();
+  const { isMiniMobile } = useScreenResizing({ miniMobile: 270 });
   const classes = styles();
 
   const FAQLinks = () => (

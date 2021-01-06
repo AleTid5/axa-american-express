@@ -1,10 +1,10 @@
 import React from "react";
 import { Button, Container, Grid } from "@material-ui/core";
+import useScreenResizing from "screen-resizing";
 import styles from "./styles";
-import useScreenResizer from "../../../../customHooks/useScreenResizer";
 
 export default function ActionButtons() {
-  const [{ isMobile }] = useScreenResizer();
+  const { isMobile } = useScreenResizing();
   const classes = styles();
 
   const scrollToTop = () =>

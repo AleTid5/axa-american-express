@@ -15,10 +15,10 @@ import {
   KeyboardArrowRight,
   KeyboardArrowUp,
 } from "@material-ui/icons";
+import useScreenResizing from "screen-resizing";
 import userIcon from "../../assets/icons/ico-user.png";
 import { actions } from "../../mocks/navbar.mock";
 import styles from "./styles";
-import useScreenResizer from "../../customHooks/useScreenResizer";
 
 export const Unauthorized = () => {
   const classes = styles();
@@ -48,7 +48,7 @@ export const Unauthorized = () => {
 
 export const Authorized = ({ fullName }) => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [{ isTablet }] = useScreenResizer();
+  const { isTablet } = useScreenResizing();
   const classes = styles();
   const isMenuOpen = Boolean(anchorEl);
 

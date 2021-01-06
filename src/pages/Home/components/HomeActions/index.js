@@ -1,12 +1,12 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
+import { NavLink } from "react-router-dom";
+import useScreenResizing from "screen-resizing";
 import { actions } from "../../../../mocks/home.mock";
 import styles from "./styles";
-import useScreenResizer from "../../../../customHooks/useScreenResizer";
-import { NavLink } from "react-router-dom";
 
 export default function HomeActions() {
-  const [{ isMobile }] = useScreenResizer();
+  const { isMobile } = useScreenResizing();
   const classes = styles();
   const isMiddleBox = (key) => key !== 0 && key !== actions.length - 1;
 

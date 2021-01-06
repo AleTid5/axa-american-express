@@ -1,15 +1,15 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
+import useScreenResizing from "screen-resizing";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./styles";
 import "./styles.scss";
-import useScreenResizer from "../../customHooks/useScreenResizer";
 
 export default function CarouselWithContent({
   withBorder = true,
   carouselContent = [],
 }) {
-  const [{ isMobile }] = useScreenResizer();
+  const { isMobile } = useScreenResizing();
   const classes = styles();
 
   return (
