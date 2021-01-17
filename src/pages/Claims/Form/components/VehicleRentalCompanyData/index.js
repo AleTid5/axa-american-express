@@ -1,13 +1,13 @@
 import React, { forwardRef, useImperativeHandle, useState } from "react";
 import { Grid, Typography } from "@material-ui/core";
-import styles from "./styles";
 import {
   OutlinedSelect,
   OutlinedInput,
 } from "../../../../../components/Extended";
 import { countries } from "../../../../../mocks/countries.mock";
+import styles from "./styles";
 
-export default forwardRef(function VehicleRentalCompanyData(props, ref) {
+export default forwardRef(function VehicleRentalCompanyData(_props, ref) {
   const [companyCountry, setCompanyCountry] = useState("");
   const [rentalCompany, setRentalCompany] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");

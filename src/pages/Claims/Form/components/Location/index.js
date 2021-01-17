@@ -4,10 +4,10 @@ import {
   OutlinedInput,
   OutlinedSelect,
 } from "../../../../../components/Extended";
-import styles from "./styles";
 import { countries } from "../../../../../mocks/countries.mock";
+import styles from "./styles";
 
-export default forwardRef(function Location(props, ref) {
+export default forwardRef(function Location(_props, ref) {
   const [vehicleCountry, setVehicleCountry] = useState("");
   const [location, setLocation] = useState("");
   const classes = styles();

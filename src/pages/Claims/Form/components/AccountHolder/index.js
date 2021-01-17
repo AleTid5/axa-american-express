@@ -1,9 +1,9 @@
 import React, { forwardRef, useImperativeHandle, useState } from "react";
 import { Typography } from "@material-ui/core";
-import styles from "./styles";
 import { CustomRadio } from "../../../../../components/Extended";
+import styles from "./styles";
 
-export default forwardRef(function AccountHolder(props, ref) {
+export default forwardRef(function AccountHolder(_props, ref) {
   const [isAccountHolder, setIsAccountHolder] = useState("is-account-holder");
   const classes = styles();
 

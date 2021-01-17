@@ -1,16 +1,11 @@
 import React, { forwardRef, useImperativeHandle, useState } from "react";
-import styles from "./styles";
-import {
-  Checkbox,
-  FormControlLabel,
-  Grid,
-  Typography,
-} from "@material-ui/core";
-import { CustomRadio, OutlinedInput } from "../../../../../components/Extended";
 import { CalendarToday } from "@material-ui/icons";
+import { Grid, Typography } from "@material-ui/core";
+import { CustomRadio, OutlinedInput } from "../../../../../components/Extended";
 import CustomCheckbox from "../../../../../components/Extended/Checkbox";
+import styles from "./styles";
 
-export default forwardRef(function VehicleData(props, ref) {
+export default forwardRef(function VehicleData(_props, ref) {
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
   const [color, setColor] = useState("");

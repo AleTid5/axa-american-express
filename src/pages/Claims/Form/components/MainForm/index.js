@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Container } from "@material-ui/core";
 import AccountHolder from "../AccountHolder";
 import Location from "../Location";
+import ExtraComponents from "../ExtraComponents";
 import VehicleData from "../VehicleData";
 import VehicleRentalCompanyData from "../VehicleRentalCompanyData";
 import ActionButtons from "../ActionButtons";
@@ -22,6 +23,7 @@ export default function MainForm() {
       <VehicleRentalCompanyData ref={vehicleRentalCompanyDataRef} />
       <Location ref={locationRef} />
       <VehicleData ref={vehicleDataRef} />
+      <ExtraComponents />
       <ActionButtons
         refs={[
           accountHolderRef,
