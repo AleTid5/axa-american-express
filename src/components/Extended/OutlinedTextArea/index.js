@@ -1,30 +1,35 @@
 import React from "react";
 import {
-  OutlinedInput as MuiOutlinedInput,
   FormControl,
+  OutlinedInput as MuiOutlinedInput,
   Typography,
 } from "@material-ui/core";
 import styles from "./styles";
 import "../styles.scss";
 
-export default function OutlinedInput({
+export default function OutlinedTextArea({
   className,
   title,
+  subtitle,
   type = "text",
   value,
   setValue,
   lightBorder = true,
-  startIcon = null,
-  endIcon = null,
+  placeholder = "",
 }) {
   const classes = styles();
 
   return (
     <div className={className}>
       {title && <Typography className={classes.title}>{title}</Typography>}
+      {subtitle && (
+        <Typography className={classes.subtitle}>{subtitle}</Typography>
+      )}
       <FormControl fullWidth variant="outlined" className={classes.input}>
         <MuiOutlinedInput
           type={type}
+          multiline
+          placeholder={placeholder}
           value={value}
           onChange={({ target: { value } }) => setValue(value)}
           classes={{
@@ -34,8 +39,6 @@ export default function OutlinedInput({
               ? classes.importantNotchedOutline
               : classes.notchedOutline,
           }}
-          startAdornment={startIcon}
-          endAdornment={endIcon}
         />
       </FormControl>
     </div>

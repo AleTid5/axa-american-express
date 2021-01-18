@@ -23,6 +23,9 @@ export default function styles(theme) {
         fontSize: 28,
       },
     },
+    importantNotchedOutline: {
+      border: "3px solid #f0f0f0!important",
+    },
     notchedOutline: {
       border: "3px solid #f0f0f0",
     },

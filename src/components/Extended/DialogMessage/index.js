@@ -18,9 +18,10 @@ export default function DialogMessage({
   actionTitle,
   dialogTitle,
   dialogContent,
+  fullWidth = false,
   buttons = [
-    { label: "No", action: null },
-    { label: "Yes", action: null },
+    { label: "No", action: null, type: "text" },
+    { label: "Yes", action: null, type: "text" },
   ],
 }) {
   const [open, setOpen] = React.useState(false);
@@ -42,6 +43,8 @@ export default function DialogMessage({
           onClose={() => setOpen(false)}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-content"
+          fullWidth={fullWidth}
+          maxWidth="sm"
         >
           {dialogTitle && (
             <DialogTitle id="alert-dialog-title">{dialogTitle}</DialogTitle>
@@ -52,9 +55,10 @@ export default function DialogMessage({
             </DialogContentText>
           </DialogContent>
           <DialogActions>
-            {buttons.map(({ label, action }, key) => (
+            {buttons.map(({ label, action, variant }, key) => (
               <Button
                 key={key}
+                variant={variant}
                 onClick={action || (() => setOpen(false))}
                 color="primary"
                 autoFocus

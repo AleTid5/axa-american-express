@@ -23,16 +23,33 @@ export default makeStyles(
       inputOutlined: {
         padding: "15px 14px",
         [theme.breakpoints.up("sm")]: {
-          padding: "16px 14px",
+          padding: "0px 14px 25px 14px",
         },
         [theme.breakpoints.up("md")]: {
-          padding: "14px 14px",
+          padding: "0px 14px 25px 14px",
         },
         [theme.breakpoints.up("lg")]: {
-          padding: "18px 14px",
+          padding: "0px 14px 45px 14px",
         },
         [theme.breakpoints.up("xl")]: {
-          padding: "22px 14px",
+          padding: "0px 14px 55px 14px",
+        },
+      },
+      subtitle: {
+        userSelect: "none",
+        fontWeight: 300,
+        fontSize: 12,
+        [theme.breakpoints.up("sm")]: {
+          fontSize: 16,
+        },
+        [theme.breakpoints.up("md")]: {
+          fontSize: 14,
+        },
+        [theme.breakpoints.up("lg")]: {
+          fontSize: 18,
+        },
+        [theme.breakpoints.up("xl")]: {
+          fontSize: 24,
         },
       },
     }),
