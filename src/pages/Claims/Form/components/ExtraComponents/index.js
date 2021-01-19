@@ -1,12 +1,13 @@
 import React, { forwardRef, useState } from "react";
 import { Grid, Typography } from "@material-ui/core";
+import useScreenResizing from "screen-resizing";
 import DialogMessage from "../../../../../components/Extended/DialogMessage";
 import MultipleSelect from "../../../../../components/Extended/MultipleSelect";
+import OutlinedTextArea from "../../../../../components/Extended/OutlinedTextArea";
+import DateTimePicker from "../../../../../components/Extended/DateTimePicker";
+import DropzoneWithButton from "../../../../../components/Extended/DropzoneWithButton";
 import { countries } from "../../../../../mocks/mainForm.mock";
 import styles from "./styles";
-import OutlinedTextArea from "../../../../../components/Extended/OutlinedTextArea";
-import useScreenResizing from "screen-resizing";
-import DateTimePicker from "../../../../../components/Extended/DateTimePicker";
 
 export default forwardRef(function ExtraComponents(_props, ref) {
   const [multipleSelect, setMultipleSelect] = useState([]);
@@ -73,7 +74,7 @@ export default forwardRef(function ExtraComponents(_props, ref) {
         </Grid>
       </Grid>
       <Grid container spacing={2} className={classes.spacing2}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={4}>
           <MultipleSelect
             title="Multiple select"
             value={multipleSelect}
@@ -81,7 +82,10 @@ export default forwardRef(function ExtraComponents(_props, ref) {
             options={countries.map(({ name }) => name)}
           />
         </Grid>
-        <Grid item xs={12} md={6}></Grid>
+        <Grid item xs={12} md={8}>
+          <DropzoneWithButton description="Travel itinerary and/or tickets showing the total amount paid" />
+          <DropzoneWithButton description="Medical records showing the cause of the disease/accident, diagnosis and date of occurrence" />
+        </Grid>
       </Grid>
     </div>
   );
