@@ -1,17 +1,27 @@
 import React from "react";
+import { NavLink, useHistory, useLocation } from "react-router-dom";
 import { AppBar, Grid, IconButton, Toolbar } from "@material-ui/core";
 import logo from "../../assets/images/logo.jpg";
 import { actions } from "../../mocks/home.mock";
 import styles from "./styles";
 import { Authorized, Unauthorized } from "./actions";
-import { NavLink } from "react-router-dom";
 
 export default function Navbar({
   isAuthenticated = true,
   fullName,
   withShortcuts = false,
 }) {
+  const history = useHistory();
+  const { pathname } = useLocation();
   const classes = styles();
+
+  const handleLanding = () => {
+    if (pathname === "/" || pathname.includes("/axa-american-express")) {
+      history.push("/business-landing");
+    } else {
+      history.push("/");
+    }
+  };
 
   return (
     <>
@@ -26,6 +36,7 @@ export default function Navbar({
             className={classes.menuButton}
             color="inherit"
             aria-label="menu"
+            onClick={handleLanding}
           >
             <img src={logo} className={classes.logo} alt="Main logo" />
           </IconButton>

@@ -10,6 +10,7 @@ import Faq from "./Faq";
 import Home from "./Home";
 import Landing from "./Landing";
 import Profile from "./Profile";
+import BusinessLanding from "./BusinessLanding";
 
 export default function Pages() {
   return (
@@ -23,6 +24,7 @@ export default function Pages() {
         <Route path="/faq" exact component={Faq} />
         <Route path="/home" exact component={Home} />
         <Route path="/profile" exact component={Profile} />
+        <Route path="/business-landing" component={BusinessLanding} />
         <Route path="/" component={Landing} />
       </Switch>
     </Router>
