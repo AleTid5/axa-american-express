@@ -44,6 +44,9 @@ const styles = {
   greyBackground: {
     backgroundColor: "#e6e6e6",
   },
+  textAlignCenter: {
+    textAlign: "center",
+  },
   textWhite: {
     color: "white",
   },

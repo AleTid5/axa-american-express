@@ -20,3 +20,22 @@ export const actions = [
     path: "/",
   },
 ];
+
+export const shortcuts = [
+  {
+    title: "Emisión masiva de Certificados",
+    path: "/certs/mass-issuance",
+  },
+  {
+    title: "Mi Perfil",
+    path: "/profile",
+  },
+  {
+    title: "Contáctenos",
+    path: "/contact-us",
+  },
+  {
+    title: "Salir",
+    path: "/",
+  },
+];

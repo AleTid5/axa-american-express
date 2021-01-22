@@ -7,9 +7,11 @@ import styles from "./styles";
 import { Authorized, Unauthorized } from "./actions";
 
 export default function Navbar({
-  isAuthenticated = true,
   fullName,
+  isAuthenticated = true,
   withShortcuts = false,
+  showActions = true,
+  shortcuts = actions,
 }) {
   const history = useHistory();
   const { pathname } = useLocation();
@@ -24,58 +26,61 @@ export default function Navbar({
   };
 
   return (
-    <>
-      <AppBar position="static" className={classes.appbar}>
-        <Toolbar
-          className={
-            withShortcuts ? classes.toolbarWithShortcuts : classes.toolbar
-          }
+    <AppBar position="static" className={classes.appbar}>
+      <Toolbar
+        className={
+          withShortcuts
+            ? showActions
+              ? classes.toolbarWithShortcuts
+              : classes.toolbarWithShortcutsWithoutNameBox
+            : classes.toolbar
+        }
+      >
+        <IconButton
+          edge="start"
+          className={classes.menuButton}
+          color="inherit"
+          aria-label="menu"
+          onClick={handleLanding}
         >
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-            onClick={handleLanding}
+          <img src={logo} className={classes.logo} alt="Main logo" />
+        </IconButton>
+        {withShortcuts && (
+          <Grid
+            container
+            alignItems="center"
+            className={classes.shortcutsContainer}
           >
-            <img src={logo} className={classes.logo} alt="Main logo" />
-          </IconButton>
-          {withShortcuts && (
-            <Grid
-              container
-              alignItems="center"
-              className={classes.shortcutsContainer}
-            >
-              {actions.map(({ title, path }, key) => (
-                <div
+            {shortcuts.map(({ title, path }, key) => (
+              <div
+                key={key}
+                className={classes.shortcutTitle}
+                style={{
+                  borderRight:
+                    key !== actions.length - 1 ? "1px solid #c5c6c5" : 0,
+                }}
+              >
+                <NavLink
                   key={key}
-                  className={classes.shortcutTitle}
-                  style={{
-                    borderRight:
-                      key !== actions.length - 1 ? "1px solid #c5c6c5" : 0,
-                  }}
+                  to={path}
+                  exact
+                  activeClassName={classes.textPrimaryBoldDark}
                 >
-                  <NavLink
-                    key={key}
-                    to={path}
-                    exact
-                    activeClassName={classes.textPrimaryBoldDark}
-                  >
-                    <span>{title}</span>
-                  </NavLink>
-                </div>
-              ))}
-            </Grid>
-          )}
-          <div className={classes.rightContent}>
-            {isAuthenticated ? (
-              <Authorized fullName={fullName} withShortcuts={withShortcuts} />
+                  <span>{title}</span>
+                </NavLink>
+              </div>
+            ))}
+          </Grid>
+        )}
+        <div className={classes.rightContent}>
+          {showActions &&
+            (isAuthenticated ? (
+              <Authorized fullName={fullName} />
             ) : (
               <Unauthorized />
-            )}
-          </div>
-        </Toolbar>
-      </AppBar>
-    </>
+            ))}
+        </div>
+      </Toolbar>
+    </AppBar>
   );
 }

@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Switch } from "react-router";
 import Benefits from "./Benefits";
 import Certs from "./Certs";
+import MassIssuanceOfCerts from "./MassIssuanceOfCerts";
 import Claims from "./Claims";
 import ClaimForm from "./Claims/Form";
 import ContactUs from "./ContactUs";
@@ -18,6 +19,11 @@ export default function Pages() {
       <Switch>
         <Route path="/benefits" exact component={Benefits} />
         <Route path="/certs" exact component={Certs} />
+        <Route
+          path="/certs/mass-issuance"
+          exact
+          component={MassIssuanceOfCerts}
+        />
         <Route path="/claims" exact component={Claims} />
         <Route path="/claims/generate" exact component={ClaimForm} />
         <Route path="/contact-us" exact component={ContactUs} />

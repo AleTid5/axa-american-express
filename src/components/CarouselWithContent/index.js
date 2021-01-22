@@ -6,8 +6,9 @@ import styles from "./styles";
 import "./styles.scss";
 
 export default function CarouselWithContent({
-  withBorder = true,
   carouselContent = [],
+  className = null,
+  withBorder = true,
 }) {
   const { isMobile } = useScreenResizing();
   const classes = styles();
@@ -22,7 +23,7 @@ export default function CarouselWithContent({
       showIndicators={false}
       showThumbs={false}
       swipeScrollTolerance={5}
-      className={withBorder ? classes.carouselBorderTop : null}
+      className={withBorder ? classes.carouselBorderTop : className}
     >
       {carouselContent.map(({ alt, image, mobileImage }, key) => (
         <img key={key} alt={alt} src={isMobile ? mobileImage : image} />

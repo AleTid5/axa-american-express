@@ -30,21 +30,31 @@ export default makeStyles(
       },
       toolbarWithShortcuts: {
         display: "grid",
-        gridTemplateColumns: "20% 0 80%",
+        gridTemplateColumns: "20%",
         [theme.breakpoints.up("sm")]: {
-          gridTemplateColumns: "10% 50% 40%",
-        },
-        [theme.breakpoints.up(796)]: {
-          gridTemplateColumns: "10% 60% 30%",
+          gridTemplateColumns: "10%",
         },
         [theme.breakpoints.up("md")]: {
-          gridTemplateColumns: "10% 65% 25%",
+          gridTemplateColumns: "10% 65%",
         },
         [theme.breakpoints.up("lg")]: {
-          gridTemplateColumns: "15% 60% 25%",
+          gridTemplateColumns: "15% 60%",
         },
         [theme.breakpoints.up("xl")]: {
-          gridTemplateColumns: "15% 65% 20%",
+          gridTemplateColumns: "15% 65%",
+        },
+      },
+      toolbarWithShortcutsWithoutNameBox: {
+        display: "grid",
+        gridTemplateColumns: "20%",
+        [theme.breakpoints.up("md")]: {
+          gridTemplateColumns: "15% 75%",
+        },
+        [theme.breakpoints.up("lg")]: {
+          gridTemplateColumns: "18% 70%",
+        },
+        [theme.breakpoints.up("xl")]: {
+          gridTemplateColumns: "18% 72%",
         },
       },
       menuButton: {
@@ -65,6 +75,10 @@ export default makeStyles(
         justifyContent: "center",
         display: "grid",
         gridTemplateColumns: "repeat(4, 1fr)",
+        /*paddingRight: 20,
+        [theme.breakpoints.up("lg")]: {
+          paddingRight: 50,
+        },*/
       },
       shortcutTitle: {
         ...styles.textPrimaryDark,
@@ -88,7 +102,7 @@ export default makeStyles(
         },
         [theme.breakpoints.up("xl")]: {
           fontSize: 28,
-          padding: "0 42px",
+          padding: "10px 42px",
         },
       },
       rightContent: {

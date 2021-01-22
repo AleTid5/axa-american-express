@@ -4,7 +4,7 @@ import useScreenResizing from "screen-resizing";
 import { appFeatures } from "../../../../mocks/landing.mock";
 import styles from "./styles";
 
-export default function LandingBody() {
+export default function FilesFinder() {
   const { isTablet } = useScreenResizing();
   const classes = styles();
 
