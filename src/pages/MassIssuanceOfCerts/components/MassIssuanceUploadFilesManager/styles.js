@@ -59,9 +59,13 @@ export default makeStyles(
       icon: {
         maxWidth: 50,
       },
-      errorFile: {
+      progressUploaderContainer: {
         display: "flex",
         alignItems: "center",
+        paddingLeft: 10,
+        [theme.breakpoints.up("sm")]: {
+          paddingLeft: 0,
+        },
         "& > div": {
           fontWeight: 300,
           fontSize: 14,
@@ -97,7 +101,9 @@ export default makeStyles(
         },
       },
       progressLabelContainer: {
-        maxWidth: 170,
+        [theme.breakpoints.up("sm")]: {
+          maxWidth: 170,
+        },
         [theme.breakpoints.up("md")]: {
           maxWidth: 180,
         },
@@ -108,7 +114,7 @@ export default makeStyles(
       progress: {
         fontWeight: 700,
         textAlign: "center",
-        fontSize: 22,
+        fontSize: 14,
         [theme.breakpoints.up("sm")]: {
           fontSize: 22,
         },
@@ -163,10 +169,58 @@ export default makeStyles(
         },
       },
       tableCellRow: tableCellRow(theme),
+      tableCellLinkRow: {
+        minWidth: 210,
+        [theme.breakpoints.up("md")]: {
+          minWidth: "auto",
+        },
+      },
       link: {
         ...tableCellRow(theme),
         color: theme.palette.primary.dark,
         textDecoration: "underline",
+      },
+      paginationContainer: {
+        marginTop: 10,
+        [theme.breakpoints.up("sm")]: {
+          marginTop: 20,
+        },
+        [theme.breakpoints.up("md")]: {
+          marginTop: 30,
+        },
+        [theme.breakpoints.up("lg")]: {
+          marginTop: 40,
+        },
+        [theme.breakpoints.up("xl")]: {
+          marginTop: 60,
+        },
+      },
+      filesPerPage: {
+        display: "flex",
+        justifyContent: "flex-end",
+        alignItems: "center",
+      },
+      labelFilesMR: {
+        marginRight: 20,
+      },
+      divider: {
+        backgroundColor: "#0d2a6f",
+        margin: "20px 0",
+      },
+      pagination: {
+        display: "flex",
+        justifyContent: "center",
+      },
+      paginationUl: {
+        "& button": {
+          opacity: 1,
+          color: theme.palette.primary.main,
+        },
+        "& button.Mui-selected": {
+          backgroundColor: `${theme.palette.primary.main}!important`,
+          color: "white",
+          borderRadius: 10,
+        },
       },
     }),
   { index: 1 }

@@ -11,11 +11,14 @@ import {
   TableHead,
   TableRow,
   Typography,
+  Divider,
+  Select,
 } from "@material-ui/core";
 import IconUploadFile from "../../../../assets/icons/ico-upload-file.png";
 import styles from "./styles";
 import ProgressBar from "../../../../components/Extended/ProgressBar";
 import useScreenResizing from "screen-resizing";
+import { Pagination } from "@material-ui/lab";
 
 const getRandomNumber = () =>
   Math.floor(Math.random() * 10 + 1) % 2 ? 10 : 20;
@@ -26,6 +29,7 @@ export default function MassIssuanceUploadFilesManager({
   successFiles = [],
 }) {
   const [progresses, setProgresses] = React.useState([]);
+  const [filesPerPage, setFilesPerPage] = React.useState(10);
   const { isScreen } = useScreenResizing();
   const classes = styles();
 
@@ -86,7 +90,12 @@ export default function MassIssuanceUploadFilesManager({
                     Progreso: {progresses[key]}%
                   </Typography>
                 </Grid>
-                <Grid item xs={9} xl={6} className={classes.errorFile}>
+                <Grid
+                  item
+                  xs={9}
+                  xl={6}
+                  className={classes.progressUploaderContainer}
+                >
                   <ProgressBar
                     variant="determinate"
                     value={progresses[key] || 0}
@@ -133,7 +142,7 @@ export default function MassIssuanceUploadFilesManager({
                     <TableCell className={classes.tableCellRow}>
                       xx/xx/xxxx
                     </TableCell>
-                    <TableCell>
+                    <TableCell className={classes.tableCellLinkRow}>
                       <Link href="#" className={classes.link}>
                         Ver Certificados
                       </Link>
@@ -151,6 +160,30 @@ export default function MassIssuanceUploadFilesManager({
               </TableBody>
             </Table>
           </TableContainer>
+          <div className={classes.paginationContainer}>
+            <div className={classes.filesPerPage}>
+              <div className={classes.labelFilesMR}>Filas por página:</div>
+              <Select
+                native
+                value={filesPerPage}
+                onChange={({ target: { value } }) => setFilesPerPage(value)}
+                className={classes.labelFilesMR}
+              >
+                <option value={10}>10</option>
+                <option value={20}>20</option>
+                <option value={30}>30</option>
+              </Select>
+              <div>1-2 de 2</div>
+            </div>
+            <Divider variant="middle" className={classes.divider} />
+            <Pagination
+              className={classes.pagination}
+              classes={{ ul: classes.paginationUl }}
+              count={Math.ceil(successFiles.length / filesPerPage) * 5}
+              showFirstButton
+              showLastButton
+            />
+          </div>
         </div>
       )}
     </Container>
