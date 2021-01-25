@@ -31,6 +31,7 @@ const fileErrors = [
 
 export default function MassIssuanceUploader() {
   const [open, setOpen] = React.useState(false);
+  const [openModal, setOpenModal] = React.useState(false);
   const [files, setFiles] = React.useState([]);
   const classes = styles();
 
@@ -59,7 +60,7 @@ export default function MassIssuanceUploader() {
               color="primary"
               size="large"
               className={classes.massButton}
-              onClick={() => setOpen(true)}
+              onClick={() => setOpenModal(true)}
             >
               Mass Certificate Upload Spreadsheet
             </Button>
@@ -132,8 +133,8 @@ export default function MassIssuanceUploader() {
         successFiles={files}
       />
       <UploadErrorMessage
-        open={open}
-        handleClose={() => setOpen(false)}
+        open={openModal}
+        handleClose={() => setOpenModal(false)}
         fileName="Massive Upload file with forced errors jul 2020.xlsx"
         fileErrors={fileErrors}
       />

@@ -25,11 +25,11 @@ export default makeStyles(
         },
         [theme.breakpoints.up("md")]: {
           height: 60,
-          fontSize: 18,
+          fontSize: 17,
           padding: "8px 10px",
         },
         [theme.breakpoints.up("xl")]: {
-          fontSize: 22,
+          fontSize: 21,
           padding: "8px 14px",
         },
       },

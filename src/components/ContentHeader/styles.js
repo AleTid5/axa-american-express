@@ -22,6 +22,10 @@ export default makeStyles(
           padding: "0 220px",
         },
       },
+      containerWithoutPadding: {
+        ...styles.mt30,
+        textAlign: "center",
+      },
       title: {
         fontWeight: 700,
         color: theme.palette.primary.dark,

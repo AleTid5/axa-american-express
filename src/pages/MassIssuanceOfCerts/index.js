@@ -23,7 +23,10 @@ export default function MassIssuanceCerts() {
         withBorder={false}
         className={classes.carouselBorder}
       />
-      <ContentHeader title="Emisión masiva de Certificados" />
+      <ContentHeader
+        title="Emisión masiva de Certificados"
+        withPadding={false}
+      />
       <MassIssuanceUploader />
       <FilesFinder />
       <FooterWithChat />
