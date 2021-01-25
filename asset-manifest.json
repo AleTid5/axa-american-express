@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/axa-american-express/static/css/main.e765ea62.chunk.css",
-    "main.js": "/axa-american-express/static/js/main.4740ad00.chunk.js",
-    "main.js.map": "/axa-american-express/static/js/main.4740ad00.chunk.js.map",
+    "main.css": "/axa-american-express/static/css/main.e9f4ef11.chunk.css",
+    "main.js": "/axa-american-express/static/js/main.7d25727a.chunk.js",
+    "main.js.map": "/axa-american-express/static/js/main.7d25727a.chunk.js.map",
     "runtime-main.js": "/axa-american-express/static/js/runtime-main.8edc30a6.js",
     "runtime-main.js.map": "/axa-american-express/static/js/runtime-main.8edc30a6.js.map",
-    "static/css/2.428a3974.chunk.css": "/axa-american-express/static/css/2.428a3974.chunk.css",
-    "static/js/2.f682d112.chunk.js": "/axa-american-express/static/js/2.f682d112.chunk.js",
-    "static/js/2.f682d112.chunk.js.map": "/axa-american-express/static/js/2.f682d112.chunk.js.map",
+    "static/css/2.2183f3d0.chunk.css": "/axa-american-express/static/css/2.2183f3d0.chunk.css",
+    "static/js/2.c5333478.chunk.js": "/axa-american-express/static/js/2.c5333478.chunk.js",
+    "static/js/2.c5333478.chunk.js.map": "/axa-american-express/static/js/2.c5333478.chunk.js.map",
     "index.html": "/axa-american-express/index.html",
-    "static/css/2.428a3974.chunk.css.map": "/axa-american-express/static/css/2.428a3974.chunk.css.map",
-    "static/css/main.e765ea62.chunk.css.map": "/axa-american-express/static/css/main.e765ea62.chunk.css.map",
-    "static/js/2.f682d112.chunk.js.LICENSE.txt": "/axa-american-express/static/js/2.f682d112.chunk.js.LICENSE.txt",
+    "static/css/2.2183f3d0.chunk.css.map": "/axa-american-express/static/css/2.2183f3d0.chunk.css.map",
+    "static/css/main.e9f4ef11.chunk.css.map": "/axa-american-express/static/css/main.e9f4ef11.chunk.css.map",
+    "static/js/2.c5333478.chunk.js.LICENSE.txt": "/axa-american-express/static/js/2.c5333478.chunk.js.LICENSE.txt",
     "static/media/BentonSans-Bold.86cfda7e.ttf": "/axa-american-express/static/media/BentonSans-Bold.86cfda7e.ttf",
     "static/media/BentonSans-Book.6fb8fd1f.ttf": "/axa-american-express/static/media/BentonSans-Book.6fb8fd1f.ttf",
     "static/media/BentonSans-Light.a3c899c2.ttf": "/axa-american-express/static/media/BentonSans-Light.a3c899c2.ttf",
@@ -23,6 +23,7 @@
     "static/media/card-platinum-cc.91905aea.png": "/axa-american-express/static/media/card-platinum-cc.91905aea.png",
     "static/media/card-platinum.23ecdc79.png": "/axa-american-express/static/media/card-platinum.23ecdc79.png",
     "static/media/slick-theme.css": "/axa-american-express/static/media/slick.c94f7671.ttf",
+    "static/media/slider-certs-mass-issuance-1.6e3ebb5f.jpg": "/axa-american-express/static/media/slider-certs-mass-issuance-1.6e3ebb5f.jpg",
     "static/media/slider-home-1.ae8db521.jpg": "/axa-american-express/static/media/slider-home-1.ae8db521.jpg",
     "static/media/slider-home-2.02749efd.jpg": "/axa-american-express/static/media/slider-home-2.02749efd.jpg",
     "static/media/slider-home-3.23cea530.jpg": "/axa-american-express/static/media/slider-home-3.23cea530.jpg",
@@ -40,9 +41,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.8edc30a6.js",
-    "static/css/2.428a3974.chunk.css",
-    "static/js/2.f682d112.chunk.js",
-    "static/css/main.e765ea62.chunk.css",
-    "static/js/main.4740ad00.chunk.js"
+    "static/css/2.2183f3d0.chunk.css",
+    "static/js/2.c5333478.chunk.js",
+    "static/css/main.e9f4ef11.chunk.css",
+    "static/js/main.7d25727a.chunk.js"
   ]
 }
