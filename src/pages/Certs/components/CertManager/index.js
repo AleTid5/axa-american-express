@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CardDataHeader from "../../../../components/CardDataHeader";
 import {
   Button,
@@ -30,6 +31,8 @@ export default function CertManager() {
           color="primary"
           size="large"
           className={classes.button}
+          component={Link}
+          to="/certs/mass-issuance"
         >
           Añadir nuevo certificado
         </Button>

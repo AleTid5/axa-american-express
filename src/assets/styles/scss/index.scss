@@ -4,28 +4,3 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
-
-@include media(xs) {
-  div[role="presentation"] {
-    div[aria-hidden="true"] {
-      background-color: #00000080!important;
-    }
-  }
-}
-
-@include media(sm) {
-  div[role="presentation"] {
-    div[aria-hidden="true"] {
-      background-color: #00000080!important;
-    }
-  }
-}
-
-@include media(md) {
-  div[role="presentation"] {
-    div[aria-hidden="true"] {
-      background-color: transparent!important;
-    }
-  }
-}

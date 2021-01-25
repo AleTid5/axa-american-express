@@ -4,6 +4,30 @@ import { Add, Search } from "@material-ui/icons";
 import styles from "./styles";
 import { DropzoneDialog } from "material-ui-dropzone";
 import MassIssuanceUploadFilesManager from "../MassIssuanceUploadFilesManager";
+import UploadErrorMessage from "../UploadErrorMessage";
+
+const fileErrors = [
+  {
+    line: 2,
+    column: "CPF, Passport",
+    message: "Lorem Ipsum",
+  },
+  {
+    line: 3,
+    column: "Cellphone area code",
+    message: "Lorem Ipsum",
+  },
+  {
+    line: 4,
+    column: "CPF",
+    message: "Lorem Ipsum",
+  },
+  {
+    line: 4,
+    column: "E-mail",
+    message: "Lorem Ipsum",
+  },
+];
 
 export default function MassIssuanceUploader() {
   const [open, setOpen] = React.useState(false);
@@ -35,6 +59,7 @@ export default function MassIssuanceUploader() {
               color="primary"
               size="large"
               className={classes.massButton}
+              onClick={() => setOpen(true)}
             >
               Mass Certificate Upload Spreadsheet
             </Button>
@@ -105,6 +130,12 @@ export default function MassIssuanceUploader() {
         files={files}
         errorFiles={files}
         successFiles={files}
+      />
+      <UploadErrorMessage
+        open={open}
+        handleClose={() => setOpen(false)}
+        fileName="Massive Upload file with forced errors jul 2020.xlsx"
+        fileErrors={fileErrors}
       />
     </>
   );
