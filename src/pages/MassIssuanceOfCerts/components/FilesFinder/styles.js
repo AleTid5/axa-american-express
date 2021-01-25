@@ -5,107 +5,86 @@ export default makeStyles(
   (theme) =>
     createStyles({
       ...styles,
-      containerMaxWidthMd: {
-        [theme.breakpoints.up("xl")]: {
-          maxWidth: 1140,
-        },
-      },
-      container: {
-        ...styles.mt30,
+      title: {
+        fontWeight: 700,
         textAlign: "center",
-        paddingBottom: 30,
+        color: theme.palette.primary.main,
+        marginTop: 40,
+        fontSize: "1.7rem",
+        [theme.breakpoints.up("xs")]: {
+          fontSize: "2.4rem",
+        },
         [theme.breakpoints.up("sm")]: {
-          ...styles.mt50,
-          paddingBottom: 50,
+          fontSize: "2.6rem",
+        },
+        [theme.breakpoints.up("md")]: {
+          fontSize: "2.8rem",
         },
         [theme.breakpoints.up("lg")]: {
-          ...styles.mt100,
-          paddingBottom: 70,
+          marginTop: 50,
+          fontSize: "3rem",
+        },
+        [theme.breakpoints.up("xl")]: {
+          fontSize: "3.75rem",
         },
       },
-      mobileTypographyH4: {
-        fontWeight: 300,
-        fontSize: 20,
-        padding: "30px 20px",
+      formContainer: {
+        marginTop: 10,
+        [theme.breakpoints.up("lg")]: {
+          marginTop: 20,
+        },
+      },
+      findButton: {
         backgroundColor: theme.palette.primary.dark,
-        color: "white",
-        [theme.breakpoints.up("sm")]: {
-          padding: "30px 90px",
-          fontSize: 26,
+        textTransform: "capitalize",
+        fontWeight: 700,
+        marginTop: 20,
+        fontSize: 12,
+        width: "100%",
+        [theme.breakpoints.up("xs")]: {
+          fontSize: 14,
         },
-      },
-      typographyH4: {
-        fontWeight: 300,
-        fontSize: 20,
-        [theme.breakpoints.up("sm")]: {
-          fontSize: 26,
-        },
-        [theme.breakpoints.up("md")]: {
-          fontSize: 36,
-        },
-      },
-      typographyH5: {
-        fontWeight: 300,
-        fontSize: 15,
         [theme.breakpoints.up("sm")]: {
           fontSize: 18,
+          width: "50%",
+          marginLeft: "25%",
         },
         [theme.breakpoints.up("md")]: {
-          fontSize: 28,
-        },
-      },
-      gridItem: {
-        marginBottom: 30,
-        [theme.breakpoints.up("sm")]: {
-          marginBottom: 0,
-          padding: 10,
-        },
-        [theme.breakpoints.up("md")]: {
-          marginBottom: 0,
-          padding: 28,
-        },
-      },
-      typographyST1: {
-        lineHeight: 1.3,
-        fontWeight: 300,
-        fontSize: 13,
-        [theme.breakpoints.up("sm")]: {
           fontSize: 15,
+          marginTop: 20,
+          width: 120,
+          marginLeft: 0,
         },
-        [theme.breakpoints.up("md")]: {
-          fontSize: 21,
-        },
-      },
-      itemTitle: {
-        ...styles.mt10,
-        [theme.breakpoints.up("sm")]: {
-          ...styles.mt30,
-        },
-      },
-      itemSubtitle: {
-        ...styles.mt5,
-        maxWidth: 300,
-        [theme.breakpoints.up("sm")]: {
-          ...styles.mt30,
-        },
-      },
-      icon: {
-        height: 50,
-      },
-      button: {
-        width: "100%",
-        borderRadius: 10,
-        [theme.breakpoints.up("sm")]: {
-          ...styles.mt30,
-          fontSize: 15,
-          maxWidth: 150,
-        },
-        [theme.breakpoints.up("md")]: {
-          ...styles.mt50,
-          maxWidth: 270,
-          height: 70,
+        [theme.breakpoints.up("lg")]: {
           fontSize: 20,
+          marginTop: 25,
+          width: 140,
         },
+        [theme.breakpoints.up("xl")]: {
+          fontSize: 28,
+          marginTop: 30,
+          width: 180,
+        },
+      },
+      searchResultTitle: {
+        color: theme.palette.primary.main,
+        textAlign: "left",
+        fontWeight: 900,
+        fontSize: 14,
+        marginTop: 20,
+        [theme.breakpoints.up("md")]: {
+          fontSize: 22,
+          marginTop: 30,
+        },
+        [theme.breakpoints.up("lg")]: {
+          fontSize: 24,
+        },
+        [theme.breakpoints.up("xl")]: {
+          marginTop: 40,
+        },
+      },
+      filesTableContainer: {
+        margin: "20px 0",
       },
     }),
   { index: 1 }

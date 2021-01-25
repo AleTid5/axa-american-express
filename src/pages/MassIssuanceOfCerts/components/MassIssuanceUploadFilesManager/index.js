@@ -1,24 +1,9 @@
 import React from "react";
-import {
-  Container,
-  Grid,
-  Link,
-  Paper,
-  Table,
-  TableCell,
-  TableBody,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
-  Divider,
-  Select,
-} from "@material-ui/core";
+import { Container, Grid, Typography } from "@material-ui/core";
 import IconUploadFile from "../../../../assets/icons/ico-upload-file.png";
 import styles from "./styles";
 import ProgressBar from "../../../../components/Extended/ProgressBar";
-import useScreenResizing from "screen-resizing";
-import { Pagination } from "@material-ui/lab";
+import FilesTable from "../FilesTable";
 
 const getRandomNumber = () =>
   Math.floor(Math.random() * 10 + 1) % 2 ? 10 : 20;
@@ -29,8 +14,6 @@ export default function MassIssuanceUploadFilesManager({
   successFiles = [],
 }) {
   const [progresses, setProgresses] = React.useState([]);
-  const [filesPerPage, setFilesPerPage] = React.useState(10);
-  const { isScreen } = useScreenResizing();
   const classes = styles();
 
   React.useEffect(() => {
@@ -107,84 +90,11 @@ export default function MassIssuanceUploadFilesManager({
         </div>
       )}
       {successFiles.length > 0 && (
-        <div className={classes.filesMarginTop}>
-          <Typography variant="h6" className={classes.successFilesTitle}>
-            Estado de archivos importados sin errores
-          </Typography>
-          <TableContainer
-            component={Paper}
-            className={classes.tableContainerRoot}
-          >
-            <Table className={classes.table} aria-label="simple table">
-              <TableHead>
-                <TableRow>
-                  <TableCell className={classes.tableCellHead}>
-                    Archivo
-                  </TableCell>
-                  <TableCell className={classes.tableCellHead}>Lote</TableCell>
-                  <TableCell className={classes.tableCellHead}>
-                    Fecha de importación
-                  </TableCell>
-                  <TableCell className={classes.tableCellHead}>
-                    Estado
-                  </TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody className={classes.whiteBackground}>
-                {successFiles.map(({ name }, key) => (
-                  <TableRow key={key}>
-                    <TableCell className={classes.tableCellRow}>
-                      {name}
-                    </TableCell>
-                    <TableCell className={classes.tableCellRow}>
-                      xxxxxx
-                    </TableCell>
-                    <TableCell className={classes.tableCellRow}>
-                      xx/xx/xxxx
-                    </TableCell>
-                    <TableCell className={classes.tableCellLinkRow}>
-                      <Link href="#" className={classes.link}>
-                        Ver Certificados
-                      </Link>
-                      {isScreen ? " | " : <br />}
-                      <Link href="#" className={classes.link}>
-                        Descargar Archivo Enviado
-                      </Link>
-                      {isScreen ? " | " : <br />}
-                      <Link href="#" className={classes.link}>
-                        Reenviar Correos Electrónicos
-                      </Link>
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-          <div className={classes.paginationContainer}>
-            <div className={classes.filesPerPage}>
-              <div className={classes.labelFilesMR}>Filas por página:</div>
-              <Select
-                native
-                value={filesPerPage}
-                onChange={({ target: { value } }) => setFilesPerPage(value)}
-                className={classes.labelFilesMR}
-              >
-                <option value={10}>10</option>
-                <option value={20}>20</option>
-                <option value={30}>30</option>
-              </Select>
-              <div>1-2 de 2</div>
-            </div>
-            <Divider variant="middle" className={classes.divider} />
-            <Pagination
-              className={classes.pagination}
-              classes={{ ul: classes.paginationUl }}
-              count={Math.ceil(successFiles.length / filesPerPage) * 5}
-              showFirstButton
-              showLastButton
-            />
-          </div>
-        </div>
+        <FilesTable
+          className={classes.filesMarginTop}
+          title="Estado de archivos importados sin errores"
+          files={successFiles}
+        />
       )}
     </Container>
   );

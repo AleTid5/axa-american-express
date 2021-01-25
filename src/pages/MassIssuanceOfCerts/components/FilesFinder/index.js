@@ -1,89 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Container, Grid, Typography } from "@material-ui/core";
-import useScreenResizing from "screen-resizing";
-import { appFeatures } from "../../../../mocks/landing.mock";
+import { CalendarToday } from "@material-ui/icons";
+import { OutlinedInput } from "../../../../components/Extended";
 import styles from "./styles";
+import FilesTable from "../FilesTable";
 
 export default function FilesFinder() {
-  const { isTablet } = useScreenResizing();
+  const [value, setValue] = useState("");
   const classes = styles();
 
-  const MainTitle = () => (
-    <Typography
-      variant="h4"
-      align="center"
-      color="primary"
-      classes={{
-        h4: isTablet ? classes.mobileTypographyH4 : classes.typographyH4,
-      }}
-    >
-      Aprovecha las herramientas del Portal de Seguros y Asistencias para
-      clientes American Express
-    </Typography>
-  );
-
   return (
-    <>
-      {isTablet && <MainTitle />}
-      <Container
-        fixed
-        maxWidth="md"
-        className={classes.container}
-        classes={{ maxWidthMd: classes.containerMaxWidthMd }}
-      >
-        {!isTablet && <MainTitle />}
-        <Typography
-          variant="h5"
-          align="center"
-          className={classes.mt30}
-          classes={{ h5: classes.typographyH5 }}
-        >
-          Ahorra tiempo, descubre todos tus beneficios, tramita tus certificados
-          de viaje al momento y siéntete respaldado donde sea que tus viajes te
-          lleven.
-        </Typography>
-        <Grid container justify="center" className={classes.mt20}>
-          {appFeatures.map(({ icon, title, description, withButton }, key) => (
-            <Grid
-              key={key}
-              item
-              sm={4}
-              style={{ textAlign: "center" }}
-              className={classes.gridItem}
-            >
-              <div
-                className={classes.icon}
-                style={{
-                  background: `url(${icon}) center 100% no-repeat`,
-                  backgroundSize: "contain",
-                }}
-              />
-              <Typography
-                variant="h5"
-                classes={{ h5: classes.typographyH5 }}
-                className={classes.itemTitle}
-              >
-                {title}
-              </Typography>
-              <Typography
-                variant="subtitle1"
-                classes={{ subtitle1: classes.typographyST1 }}
-                className={classes.itemSubtitle}
-              >
-                {description}
-              </Typography>
-            </Grid>
-          ))}
+    <Container fixed maxWidth="xl">
+      <Typography variant="h2" className={classes.title}>
+        Búsqueda de archivos
+      </Typography>
+      <Grid container spacing={2} className={classes.formContainer}>
+        <Grid item xs={12} sm={6} md={3}>
+          <OutlinedInput title="Archivo" value={value} setValue={setValue} />
         </Grid>
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          className={classes.button}
-        >
-          Conocé más
-        </Button>
-      </Container>
-    </>
+        <Grid item xs={12} sm={6} md={3}>
+          <OutlinedInput title="Lote" value={value} setValue={setValue} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <OutlinedInput
+            title="Fecha inicial"
+            value={value}
+            setValue={setValue}
+            startIcon={<CalendarToday />}
+          />
+        </Grid>
+        <Grid item xs={12} sm={6} md={3}>
+          <OutlinedInput
+            title="Fecha final"
+            value={value}
+            setValue={setValue}
+            startIcon={<CalendarToday />}
+          />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <OutlinedInput title="Nombre" value={value} setValue={setValue} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <OutlinedInput title="CPF" value={value} setValue={setValue} />
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <OutlinedInput title="Pasaporte" value={value} setValue={setValue} />
+        </Grid>
+      </Grid>
+      <Button
+        variant="contained"
+        color="primary"
+        size="large"
+        className={classes.findButton}
+      >
+        Buscar
+      </Button>
+      <FilesTable
+        className={classes.filesTableContainer}
+        backgroundWhite={false}
+        title="Resultado de la búsqueda"
+        files={[{ name: "Massive Upload Test correct file Mes 2020.xlsx" }]}
+      />
+    </Container>
   );
 }
