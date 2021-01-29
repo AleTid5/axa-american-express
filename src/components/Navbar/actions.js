@@ -16,6 +16,7 @@ import {
   KeyboardArrowUp,
 } from "@material-ui/icons";
 import useScreenResizing from "screen-resizing";
+import { isIE } from "react-device-detect";
 import userIcon from "../../assets/icons/ico-user.png";
 import { actions } from "../../mocks/navbar.mock";
 import styles from "./styles";
@@ -88,7 +89,7 @@ export const Authorized = ({ fullName }) => {
               <span className={classes.menuName}>{name}</span>
               {!isTablet && (
                 <>
-                  <div className={classes.horizontalDivider} />
+                  {!isIE && <div className={classes.horizontalDivider} />}
                   <KeyboardArrowRight className={classes.menuRightArrowIcon} />
                 </>
               )}

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
+import { Container, Typography } from "@material-ui/core";
+import { isIE } from "react-device-detect";
+import CreditCard from "./CreditCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./styles.scss";
-import { Container, Typography } from "@material-ui/core";
 import styles from "./styles";
-import CreditCard from "./CreditCard";
 
 export default function CreditCardsCarousel({
   creditCards,
@@ -15,6 +16,10 @@ export default function CreditCardsCarousel({
 }) {
   const [selectedCard, setSelectedCard] = useState(cardSelected);
   const classes = styles();
+
+  if (isIE) {
+    require("./ie11styles.scss");
+  }
 
   return (
     <Container fixed className={classes.container}>

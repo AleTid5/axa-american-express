@@ -1,10 +1,11 @@
 import React from "react";
 import { Button, Container, Grid, Typography } from "@material-ui/core";
 import { Add, Search } from "@material-ui/icons";
-import styles from "./styles";
+import { isIE } from "react-device-detect";
 import { DropzoneDialog } from "material-ui-dropzone";
 import MassIssuanceUploadFilesManager from "../MassIssuanceUploadFilesManager";
 import UploadErrorMessage from "../UploadErrorMessage";
+import styles from "./styles";
 
 const fileErrors = [
   {
@@ -91,7 +92,11 @@ export default function MassIssuanceUploader() {
               color="primary"
               size="large"
               className={classes.uploadButton}
-              classes={{ label: classes.uploadButtonLabel }}
+              classes={{
+                label: isIE
+                  ? classes.uploadButtonLabelIE11
+                  : classes.uploadButtonLabel,
+              }}
               endIcon={<Add />}
               onClick={() => setOpen(true)}
             >
@@ -119,7 +124,11 @@ export default function MassIssuanceUploader() {
               color="primary"
               size="large"
               className={classes.uploadButton}
-              classes={{ label: classes.uploadButtonLabel }}
+              classes={{
+                label: isIE
+                  ? classes.uploadButtonLabelIE11
+                  : classes.uploadButtonLabel,
+              }}
               endIcon={<Search />}
             >
               Buscar archivos

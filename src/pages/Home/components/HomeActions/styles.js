@@ -36,6 +36,24 @@ export default makeStyles(
         boxShadow: "0px 0px 20px 0px #0000004d",
         flexWrap: "wrap",
       },
+      boxShadowIE11: {
+        display: "table",
+        boxShadow: "0px 0px 20px 0px rgb(0 0 0 / 30%)",
+        width: "100%",
+        [theme.breakpoints.up("sm")]: {
+          width: "auto",
+          marginLeft: "7%",
+        },
+        [theme.breakpoints.up("md")]: {
+          marginLeft: "20%",
+        },
+        [theme.breakpoints.up("lg")]: {
+          marginLeft: "13%",
+        },
+        [theme.breakpoints.up("xl")]: {
+          marginLeft: "34%",
+        },
+      },
       borderRight: {
         borderRight: "3px solid #bbbbbb",
       },
@@ -45,6 +63,14 @@ export default makeStyles(
       boxContainer: {
         margin: -1,
         cursor: "pointer",
+      },
+      boxContainerIE11: {
+        margin: -1,
+        cursor: "pointer",
+        display: "table-row",
+        [theme.breakpoints.up("sm")]: {
+          display: "table-cell",
+        },
       },
       box: {
         padding: 20,

@@ -13,11 +13,13 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.5.0",
     "@types/date-fns": "^2.6.0",
+    "core-js": "^3.8.3",
     "date-fns": "^2.16.1",
     "material-ui-dropzone": "^3.5.0",
     "node-sass": "^4.0.0",
     "react": "^17.0.1",
     "react-app-polyfill": "^2.0.0",
+    "react-device-detect": "^1.15.0",
     "react-dom": "^17.0.1",
     "react-responsive-carousel": "^3.2.11",
     "react-router": "^5.2.0",
@@ -46,12 +48,14 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "IE 11"
     ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 safari version",
+      "IE 11"
     ]
   },
   "devDependencies": {

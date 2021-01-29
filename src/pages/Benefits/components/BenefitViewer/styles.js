@@ -70,6 +70,25 @@ export default makeStyles(
           height: 110,
         },
       },
+      actionContainerIE11: {
+        cursor: "pointer",
+        display: "grid",
+        gridTemplateColumns: "25% 60% 15%",
+        [theme.breakpoints.up("md")]: {
+          gridTemplateColumns: "25% 65% 10%",
+          height: 60,
+          paddingTop: 15,
+        },
+        [theme.breakpoints.up("lg")]: {
+          gridTemplateColumns: "25% 60% 15%",
+          height: 84,
+          paddingTop: 20,
+        },
+        [theme.breakpoints.up("xl")]: {
+          paddingTop: 25,
+          height: 110,
+        },
+      },
       mobileIcon: {
         gridRow: 1,
         display: "flex",

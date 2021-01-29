@@ -75,10 +75,12 @@ export default makeStyles(
         justifyContent: "center",
         display: "grid",
         gridTemplateColumns: "repeat(4, 1fr)",
-        /*paddingRight: 20,
-        [theme.breakpoints.up("lg")]: {
-          paddingRight: 50,
-        },*/
+      },
+      shortcutsContainerIE11: {
+        gridColumn: 2,
+        justifyContent: "center",
+        display: "table",
+        gridTemplateColumns: "repeat(4, 1fr)",
       },
       shortcutTitle: {
         ...styles.textPrimaryDark,
@@ -105,10 +107,44 @@ export default makeStyles(
           padding: "10px 42px",
         },
       },
+      shortcutTitleIE11: {
+        ...styles.textPrimaryDark,
+        textAlign: "center",
+        display: "none",
+        height: "100%",
+        alignItems: "center",
+        justifyContent: "center",
+        maxWidth: 100,
+        [theme.breakpoints.up("md")]: {
+          display: "table-cell",
+          fontSize: 18,
+          padding: "0 16px",
+          maxWidth: 150,
+        },
+        [theme.breakpoints.up("lg")]: {
+          fontSize: 20,
+          padding: "0 25px",
+          maxWidth: 200,
+        },
+        [theme.breakpoints.up(1450)]: {
+          padding: "0 44px",
+          maxWidth: 250,
+        },
+        [theme.breakpoints.up("xl")]: {
+          fontSize: 28,
+          padding: "10px 42px",
+          maxWidth: 300,
+        },
+      },
       rightContent: {
         gridColumn: 3,
         display: "flex",
         justifyContent: "flex-end",
+      },
+      rightContentIE11: {
+        position: "absolute",
+        right: 2,
+        top: "5%",
       },
       logo: {
         height: 30,

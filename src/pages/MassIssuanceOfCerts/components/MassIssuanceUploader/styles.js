@@ -89,6 +89,15 @@ export default makeStyles(
           right: 20,
         },
       },
+      uploadButtonLabelIE11: {
+        display: "flex",
+        justifyContent: "flex-start",
+        "& span": {
+          position: "absolute",
+          right: 20,
+          top: "30%",
+        },
+      },
     }),
   { index: 1 }
 );
