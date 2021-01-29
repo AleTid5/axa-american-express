@@ -28,15 +28,7 @@ export default function Navbar({
 
   return (
     <AppBar position="static" className={classes.appbar}>
-      <Toolbar
-        className={
-          withShortcuts
-            ? showActions
-              ? classes.toolbarWithShortcuts
-              : classes.toolbarWithShortcutsWithoutNameBox
-            : classes.toolbar
-        }
-      >
+      <Toolbar className={classes.toolbar}>
         <IconButton
           edge="start"
           className={classes.menuButton}
@@ -77,7 +69,7 @@ export default function Navbar({
             ))}
           </Grid>
         )}
-        <div className={isIE ? classes.rightContentIE11 : classes.rightContent}>
+        <div className={classes.rightContent}>
           {showActions &&
             (isAuthenticated ? (
               <Authorized fullName={fullName} />

@@ -40,6 +40,7 @@ export default makeStyles(
         display: "table",
         boxShadow: "0px 0px 20px 0px rgb(0 0 0 / 30%)",
         width: "100%",
+        tableLayout: "fixed",
         [theme.breakpoints.up("sm")]: {
           width: "auto",
           marginLeft: "7%",

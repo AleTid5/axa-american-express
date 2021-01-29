@@ -22,40 +22,9 @@ export default makeStyles(
         },
       },
       toolbar: {
-        display: "grid",
-        gridTemplateColumns: "20% 0 80%",
-        [theme.breakpoints.up("xs")]: {
-          gridTemplateColumns: "15% 0 85%",
-        },
-      },
-      toolbarWithShortcuts: {
-        display: "grid",
-        gridTemplateColumns: "20%",
-        [theme.breakpoints.up("sm")]: {
-          gridTemplateColumns: "10%",
-        },
-        [theme.breakpoints.up("md")]: {
-          gridTemplateColumns: "10% 65%",
-        },
-        [theme.breakpoints.up("lg")]: {
-          gridTemplateColumns: "15% 60%",
-        },
-        [theme.breakpoints.up("xl")]: {
-          gridTemplateColumns: "15% 65%",
-        },
-      },
-      toolbarWithShortcutsWithoutNameBox: {
-        display: "grid",
-        gridTemplateColumns: "20%",
-        [theme.breakpoints.up("md")]: {
-          gridTemplateColumns: "15% 75%",
-        },
-        [theme.breakpoints.up("lg")]: {
-          gridTemplateColumns: "18% 70%",
-        },
-        [theme.breakpoints.up("xl")]: {
-          gridTemplateColumns: "18% 72%",
-        },
+        display: "flex",
+        justifyContent: "space-between",
+        width: "100%",
       },
       menuButton: {
         gridColumn: 1,
@@ -75,12 +44,12 @@ export default makeStyles(
         justifyContent: "center",
         display: "grid",
         gridTemplateColumns: "repeat(4, 1fr)",
+        maxWidth: "65%",
       },
       shortcutsContainerIE11: {
         gridColumn: 2,
-        justifyContent: "center",
         display: "table",
-        gridTemplateColumns: "repeat(4, 1fr)",
+        maxWidth: "65%",
       },
       shortcutTitle: {
         ...styles.textPrimaryDark,
@@ -140,11 +109,6 @@ export default makeStyles(
         gridColumn: 3,
         display: "flex",
         justifyContent: "flex-end",
-      },
-      rightContentIE11: {
-        position: "absolute",
-        right: 2,
-        top: "5%",
       },
       logo: {
         height: 30,
