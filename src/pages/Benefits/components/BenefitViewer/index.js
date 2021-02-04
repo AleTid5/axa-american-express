@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import CardDataHeader from "../../../../components/CardDataHeader";
 import { Container, Typography } from "@material-ui/core";
 import useScreenResizing from "screen-resizing";
+import { isIE } from "react-device-detect";
 import { actions } from "../../../../mocks/benefits.mock";
 import banner from "../../../../assets/images/banner-benefits_aumentacobertura.jpg";
 import mobileBanner from "../../../../assets/images/banner-benefits_mobile_aumentarcobertura.jpg";
@@ -55,7 +56,9 @@ export default function BenefitViewer() {
         <div className={classes.mainContent}>
           <MainContent content={actions[actionKey].content} />
         </div>
-        <div className={classes.mainBanner}>
+        <div
+          className={`${classes.mainBanner} ${isIE && classes.mainBannerIE11}`}
+        >
           <img
             alt="Aumentá tu cobertura aquí"
             src={isTablet ? mobileBanner : banner}

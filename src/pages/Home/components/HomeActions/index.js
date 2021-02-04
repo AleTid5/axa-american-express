@@ -12,7 +12,9 @@ export default function HomeActions() {
   const isMiddleBox = (key) => key !== 0 && key !== actions.length - 1;
 
   return (
-    <div className={classes.gridRoot}>
+    <div
+      className={`${classes.gridRoot} ${isIE ? classes.displayBlock : null}`}
+    >
       <Grid container className={classes.root}>
         <div className={isIE ? classes.boxShadowIE11 : classes.boxShadow}>
           {actions.map(({ icon, title, backgroundColor, color, path }, key) => (

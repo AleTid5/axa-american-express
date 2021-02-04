@@ -219,6 +219,11 @@ export default makeStyles(
           fontSize: 30,
         },
       },
+      menuRightArrowIconIE11: {
+        position: "absolute",
+        right: "8%",
+        top: 10,
+      },
       userDataContainer: {
         paddingLeft: 15,
         paddingBottom: 5,

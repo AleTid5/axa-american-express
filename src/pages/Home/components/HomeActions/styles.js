@@ -26,6 +26,9 @@ export default makeStyles(
           height: 115,
         },
       },
+      displayBlock: {
+        display: "block",
+      },
       root: {
         flexGrow: 1,
         gridColumn: 2,
@@ -37,23 +40,11 @@ export default makeStyles(
         flexWrap: "wrap",
       },
       boxShadowIE11: {
-        display: "table",
-        boxShadow: "0px 0px 20px 0px rgb(0 0 0 / 30%)",
-        width: "100%",
-        tableLayout: "fixed",
-        [theme.breakpoints.up("sm")]: {
-          width: "auto",
-          marginLeft: "7%",
-        },
-        [theme.breakpoints.up("md")]: {
-          marginLeft: "20%",
-        },
-        [theme.breakpoints.up("lg")]: {
-          marginLeft: "13%",
-        },
-        [theme.breakpoints.up("xl")]: {
-          marginLeft: "34%",
-        },
+        /*display: "block",
+        position: "absolute",
+        left: "30%",
+        transform: "translate(-20%)",*/
+        boxShadow: "0px 0px 20px 0px rgba(0, 0, 0, 0.3)",
       },
       borderRight: {
         borderRight: "3px solid #bbbbbb",

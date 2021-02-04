@@ -90,7 +90,11 @@ export const Authorized = ({ fullName }) => {
               {!isTablet && (
                 <>
                   {!isIE && <div className={classes.horizontalDivider} />}
-                  <KeyboardArrowRight className={classes.menuRightArrowIcon} />
+                  <KeyboardArrowRight
+                    className={`${classes.menuRightArrowIcon} ${
+                      isIE ? classes.menuRightArrowIconIE11 : null
+                    }`}
+                  />
                 </>
               )}
             </NavLink>

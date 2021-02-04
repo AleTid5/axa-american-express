@@ -164,6 +164,15 @@ export default makeStyles(
           alignItems: "flex-start",
         },
       },
+      mainBannerIE11: {
+        maxWidth: 130,
+        [theme.breakpoints.up("lg")]: {
+          maxWidth: 260,
+        },
+        [theme.breakpoints.up("xl")]: {
+          maxWidth: 450,
+        },
+      },
       imageBanner: {
         maxWidth: "100%",
         width: "100%",
